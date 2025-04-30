@@ -57,7 +57,7 @@ Default CSS
 =================================================*/
 :root {
   --fontFamily: 'Lexend', sans-serif;
-  --mainColor: #fb5607;
+  --mainColor: #1d3041;
   --secounderyColor: #f3f3ff;
   --paragraphColor: #3c3d38;
   --paragraphColorSecond: #B9B9BA;
@@ -939,6 +939,9 @@ About Us Area 2 CSS
 
 .about-us-area-2 .content-items .image.ct-bg-3{
   background-image: url(../img/all-img/about-image-4.png);
+}
+.about-us-area-2 .content-items .image.ct-bg-4{
+  background-image: url(../img/all-img/about-image-5.png);
 }
 
 .about-us-area-2 .content-items .content {
@@ -5161,19 +5164,19 @@ Go Top CSS
 }
 .preloader-dot:nth-child(1) {
   animation-delay: 0.1s;
-  background: #e8e7e8;
+  background: #0571d2;
 }
 .preloader-dot:nth-child(2) {
   animation-delay: 0.2s;
-  background: #d9d0d2;
+  background: #17558c;
 }
 .preloader-dot:nth-child(3) {
   animation-delay: 0.3s;
-  background: #2eca7f;
+  background: #1c4264;
 }
 .preloader-dot:nth-child(4) {
   animation-delay: 0.4s;
-  background: #2eca7f;
+  background: #1d3041;
 }
 .preloader-dot:nth-child(5) {
   animation-delay: 0.5s;
