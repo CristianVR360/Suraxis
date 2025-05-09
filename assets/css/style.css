@@ -57,7 +57,7 @@ Default CSS
 =================================================*/
 :root {
   --fontFamily: 'Lexend', sans-serif;
-  --mainColor: #1d3041;
+  --mainColor: #fb5607;
   --secounderyColor: #f3f3ff;
   --paragraphColor: #3c3d38;
   --paragraphColorSecond: #B9B9BA;
@@ -2250,7 +2250,7 @@ Features Area CSS
 .features-content-2 .academic-item .image .number {
   position: absolute;
   content: '';
-  bottom: -15%;
+  bottom: -5%;
   right: 5%;
 }
 
@@ -2258,7 +2258,7 @@ Features Area CSS
   font-size: 96px;
   color: var(--whiteColor);
   font-family: 'Lexend', sans-serif;
-  color: #fb5607;
+  color: #ffffff;
 
 }
 
@@ -3911,7 +3911,7 @@ Success Award CSS
 .success-award-area .content .arrow {
   position: absolute;
   content: '';
-  bottom: 0%;
+  bottom: 00%;
   right: -20%;
 }
 
@@ -5193,4 +5193,118 @@ Go Top CSS
   100% {
     scale: 1;
  }
+}
+/* Difumina el fondo al abrir el modal */
+.modal-backdrop.show {
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Modal con ancho fijo de 550px */
+.modal-md-custom {
+  max-width: 300px;
+  width: 100%;
+  margin: auto;
+}
+
+@media (max-width: 575px) {
+  .modal-md-custom {
+      max-width: 90%;
+  }
+}
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 75px;
+  background-color: #25D366;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-float i {
+  font-size: 22px;
+  margin-right: 10px;
+}
+
+.whatsapp-float:hover {
+  background-color: #1ebc59;
+}
+function grax_tm_contact_form(){
+	
+	"use strict";
+	
+	document.getElementById('contact_form').addEventListener('submit', function(e) {
+		e.preventDefault();
+		
+		// Obtener los valores del formulario
+		const name = document.getElementById('name').value;
+		const phone = document.getElementById('phone').value;
+		const message = document.getElementById('message').value;
+		
+		// Validar campos
+		if (!name || !phone || !message) {
+			alert('Por favor complete todos los campos requeridos');
+			return;
+		}
+		
+		// Mostrar carga
+		const submitBtn = document.getElementById('send_message');
+		const originalBtnText = submitBtn.textContent;
+		submitBtn.textContent = 'Enviando...';
+		submitBtn.disabled = true;
+		//descargar brochure
+		
+
+		// Enviar datos a Google Sheets
+		fetch('https://script.google.com/macros/s/AKfycbxBUtimAoxO1Qsr7-Nwk9utU3vCmDCiAK6JTqnh57yLEt-LWFx0k8QyrQGFQgAJMuNp0Q/exec', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/x-www-form-urlencoded',
+			},
+			body: new URLSearchParams({
+				'name': name,
+				'phone': phone,
+				'message': message,
+				'timestamp': new Date().toLocaleString()
+			})
+		})
+		.then(response => {
+			if (!response.ok) {
+				throw new Error('Error en la red');
+			}
+			return response.text();
+		})
+		.then(text => {
+			try {
+				const data = JSON.parse(text);
+				if (data.status === 'success') {
+					window.open('https://drive.google.com/uc?export=download&id=1f5CUMx5wZ2yZsmKK3oKxjsK4a5pYuYRO', '_blank');
+					alert('Tu mensaje ha sido enviado. Te contactaremos pronto.');
+					document.getElementById('contact_form').reset();
+				} else {
+					throw new Error(data.message || 'Error desconocido');
+				}
+			} catch (e) {
+				throw new Error('Respuesta no válida del servidor');
+			}
+		})
+		.catch(error => {
+			console.error('Error:', error);
+			alert('Hubo un error al enviar el formulario. Por favor inténtalo de nuevo.');
+		})
+		.finally(() => {
+			submitBtn.textContent = originalBtnText;
+			submitBtn.disabled = false;
+		});
+	});
+	
 }
