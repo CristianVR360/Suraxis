@@ -31,6 +31,28 @@
         </div>
         <!-- preloader -->
 
+        <!-- Incluye el CDN de Boxicons en el <head> -->
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+<!-- Boxicons -->
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+<!-- Botón flotante -->
+<a href="https://api.whatsapp.com/send?phone=56945678910&text=Hola%2C+me+gustar%C3%ADa+tener+m%C3%A1s+informaci%C3%B3n"
+   class="whatsapp-float" target="_blank" id="whatsappBtn">
+    <i class='bx bxl-whatsapp'></i> Contáctanos
+</a>
+
+<!-- Enlazar CSS -->
+<link rel="stylesheet" href="whatsapp-button.css">
+
+
+<!-- Enlaza el CSS externo -->
+<link rel="stylesheet" href="whatsapp-button.css">
+
+
+        
+
        <!-- Start Navbar Area Start -->
        <div class="navbar-area style-2" id="navbar">
         <div class="container-fluid">
@@ -42,7 +64,7 @@
                 <div class="other-option d-lg-none">
                     <div class="option-item">
                         <button type="button" class="search-btn" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop">
-                            <i class='bx bx-user'></i>
+                            <i class='bx bx-id-card'></i>
                         </button>
                     </div>
                 </div>
@@ -396,13 +418,13 @@
                         <!--<li><a href="https://www.linkedin.com" target="_blank"><i class='bx bxl-linkedin' ></i></a></li> -->
                     </ul>
                 </div>
-                <!--
-                <div class="offcanvas-other-options">
-                     <div class="option-item">
-                         <a href="https://api.whatsapp.com/send/?phone=%2B569395996384&text=Necesito+más+información+sobre+el+proyecto&type=phone_number&app_absent=0"" class="default-btn">Contact Us</a>
-                     </div>
-                </div>
-                -->
+                
+                <!-- Incluye el CDN de Boxicons en tu <head> -->
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+
+                
             </div>
         </div>
         <!-- End Responsive Navbar Area -->
@@ -445,10 +467,10 @@
                             <i class="bx bxs-time"></i>
                             <p>Lun - Vie: 9:00 - 18:00</p>
                         </li>
-                        <li><i class="bx bxs-phone-call"></i> Telefono de contacto - <a href="tel:+123 4567 8910">+56 9 45678910</a></li>
+                        <li><i class="bx bxs-phone-call"></i> Telefono de contacto - <p>+56 9 4567 8910</p></li>
                         <li>
                             <i class="bx bxs-envelope"></i>
-                            <a href="contact@Clgunme.edu">contacto@suraxis.cl</a>
+                            <p>contacto@suraxis.cl</p>
                         </li>
                         <li>
                             <i class="bx bxs-map"></i>
@@ -461,6 +483,42 @@
                        <!-- <li><a href="https://www.linkedin.com" target="_blank"><i class='bx bxl-linkedin' ></i></a></li> -->
                     </ul>
                 </div>
+                <!-- Incluye el CDN de Boxicons en tu <head> -->
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+<div class="offcanvas-other-options">
+    <div class="option-item">
+        <a href="https://api.whatsapp.com/send/?phone=%2B56945678910&text=Necesito+más+información+sobre+el+proyecto&type=phone_number&app_absent=0" 
+           class="whatsapp-btn" target="_blank">
+            <i class='bx bxl-whatsapp'></i> Escríbenos por WhatsApp
+        </a>
+    </div>
+</div>
+
+<!-- Estilos CSS -->
+<style>
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: #25D366;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-btn i {
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+.whatsapp-btn:hover {
+    background-color: #1ebc59;
+}
+</style>
+
 
             </div>
         </div>
@@ -471,7 +529,7 @@
             <div class="container">
                 <div class="banner-content-2">
                     <div class="content">
-                        <span data-aos="fade-zoom-in" data-aos-delay="300">Desde la Idea hasta la Realidad</span>
+                        <span data-aos="fade-zoom-in" data-aos-delay="300">Desde el concepto hasta la realidad.</span>
                         <h1 data-aos="fade-up" data-aos-delay="200">Somos Especialistas en Desarrollos Inmobiliarios de Valor</h1>
                         <p data-aos="fade-up" data-aos-delay="300">Convierte tu inversión en proyectos innovadores con alto retorno.</p>
                         <div class="buttons-action" data-aos="fade-up" data-aos-delay="100">
@@ -686,11 +744,13 @@
                             <h4>Cotiza tu proyecto</h4>
                             <div class="search-key">
                                 <input class="form-control" placeholder="Nombre" type="search" value="" id="searchKey1">
+                                <input class="form-control" placeholder="Telefono" type="search" value="" id="searchKey">
                                 <input class="form-control" placeholder="Email" type="search" value="" id="searchKey">
                             
                                 <!-- Campo adicional para que el cliente se explaye -->
+                                <!--
                                 <textarea class="form-control" placeholder="Escribe tu mensaje aquí..." rows="4" id="searchMessage"></textarea>
-                            
+                            -->
                                 <a class="default-btn" href="#">Enviar mis datos</a>
                             </div>
                         </div>
@@ -815,34 +875,79 @@
                         <div class="col-lg-6">
                             <div class="academic-content">
                                 <div class="row">
-                                    <div class="col-lg-6 col-sm-6 col-md-6 pt-25">
-                                        <div class="academic-item" data-aos="fade-up" data-aos-delay="100">
-                                            <div class="image">
-                                                <img src="assets/img/all-img/academic-image-1.png" alt="image">
-                                                <div class="number">
-                                                    <h3>01</h3>
-                                                </div>
-                                            </div>
-                                            <div class="content">
-                                                <h4>Laguna Bonita</h4>
-                                                <a class="btn" href="">Próximanente<i class='bx bx-right-arrow-alt'></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-sm-6 col-md-6">
-                                        <div class="academic-item" data-aos="fade-up" data-aos-delay="200">
-                                            <div class="image">
-                                                <img src="assets/img/all-img/academic-image-2.png" alt="image">
-                                                <div class="number">
-                                                    <h3>02</h3>
-                                                </div>
-                                            </div>
-                                            <div class="content">
-                                                <h4>Estero Molgue</h4>
-                                                <a class="btn" href="">Próximanente <i class='bx bx-right-arrow-alt'></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
+                                   <!-- Objeto con botón que activa el popup -->
+<div class="col-lg-6 col-sm-6 col-md-6 pt-25">
+    <div class="academic-item" data-aos="fade-up" data-aos-delay="100">
+        <div class="image">
+            <img src="assets/img/all-img/academic-image-1.png" alt="image">
+            <div class="number">
+                <h3>01</h3>
+            </div>
+        </div>
+        <div class="content">
+            <h4>Laguna Bonita</h4>
+            <!-- Botón que abre el popup -->
+            <a class="btn" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                Próximamente <i class='bx bx-right-arrow-alt'></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Popup Modal -->
+<div class="modal modal-2 fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md-custom">
+        <div class="modal-content">
+            <div class="row g-0">
+                <div class="col-lg-12">
+                    <div class="modal-body text-center py-4 px-3">
+                        <img src="assets/img/all-img/academic-image-2.png" alt="" class="rounded img-fluid mb-3" style="max-height: 200px;">
+                        <h5 class="text-dark mb-2">Próximamente</h5>
+                        <h6 class="fw-semibold text-dark mb-4">Estero Molgue</h6>
+                        <button class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">Entiendo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+                                    <!-- Objeto con botón que abre el modal -->
+<div class="col-lg-6 col-sm-6 col-md-6">
+    <div class="academic-item" data-aos="fade-up" data-aos-delay="200">
+        <div class="image">
+            <img src="assets/img/all-img/academic-image-2.png" alt="image">
+            <div class="number">
+                <h3>02</h3>
+            </div>
+        </div>
+        <div class="content">
+            <h4>Estero Molgue</h4>
+            <a class="btn" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                Próximamente <i class='bx bx-right-arrow-alt'></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Modal activado por el botón -->
+<div class="modal modal-2 fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md-custom">
+        <div class="modal-content">
+            <div class="row g-0">
+                <div class="col-lg-12">
+                    <div class="modal-body text-center py-4 px-3">
+                        <img src="assets/img/all-img/academic-image-2.png" alt="" class="rounded img-fluid mb-3" style="max-height: 200px;">
+                        <h5 class="text-dark mb-2">Próximamente</h5>
+                        <h6 class="fw-semibold text-dark mb-4">Estero Molgue</h6>
+                        <button class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">Entiendo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
                                     <!--<div class="col-lg-6 col-sm-6 col-md-6 pt-25">
                                         <div class="academic-item" data-aos="fade-up" data-aos-delay="300">
                                             <div class="image">
@@ -1297,5 +1402,7 @@
         <script src="assets/js/main.js"></script>
     </body>
     
+    
 </html>
+
 
