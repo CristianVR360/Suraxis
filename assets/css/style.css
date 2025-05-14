@@ -453,7 +453,7 @@ Banner Area 2 CSS
 =================================================*/
 
 .big-bg-2{
-  background-image: url(../img/banner/bg-Image-1.jpg);
+  background-image: url(../img/banner/bg-Image-1.gif);
   background-size: cover;
   position:relative;
   background-repeat: no-repeat;
@@ -468,14 +468,14 @@ Banner Area 2 CSS
     bottom: 0;
     top: 0;
     right: 0;
-    background:#120f2d;
+    background:#141313;
 	opacity:0.4;
 }
 .nav-style-2.navbar-area {
   top: 0px;
   position: absolute;
   background-color: transparent;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #333333;
 }
 
 .nav-style-2.navbar-area.is-sticky{
@@ -5289,3 +5289,9 @@ Go Top CSS
 .submit-btn {
     width: 100%;
     padding: 12px;
+}
+.centered-title {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
