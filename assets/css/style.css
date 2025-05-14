@@ -458,6 +458,9 @@ Banner Area 2 CSS
     width: 100%;
     height: 100vh;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .video-bg {
@@ -473,8 +476,8 @@ Banner Area 2 CSS
 .banner-content-2 .content {
     position: relative;
     z-index: 1;
-    padding-top: 250px;
-    padding-bottom: 200px;
+    padding-top: 350px;
+    padding-bottom: 300px;
     text-align: center;
     color: white;
 }
@@ -532,11 +535,11 @@ video::-webkit-media-controls {
   color: #fff;
   font-size: 28px;
 }
-
+/* aqui modifico el texto del headder*/
 .banner-content-2 .content h1{
   color: var(--whiteColor);
   font-family: 'Lexend', sans-serif;
-  font-size: 90px;
+  font-size: 60px;
 }
 
 .banner-content-2 .content p {
@@ -4693,6 +4696,18 @@ Subscribe Area CSS
     background-position: center;
     z-index: 1;
 }
+.mapa-overlay2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/all-img/mapa.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+}
 
 
 
@@ -4722,7 +4737,7 @@ Subscribe Area CSS
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../img/all-img/mapa.png');
+    background-image: url('../img/all-img/gestiondeproyectos.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
