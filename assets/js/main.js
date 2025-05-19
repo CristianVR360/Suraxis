@@ -323,3 +323,28 @@ function grax_tm_contact_form(){
 	});
 	
 }
+// JavaScript para el modal
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('expandedImage');
+    const captionText = document.getElementById('caption');
+    const triggers = document.querySelectorAll('.image-modal-trigger');
+    
+    triggers.forEach(trigger => {
+        trigger.onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.querySelector('img').src;
+            captionText.innerHTML = this.querySelector('img').alt;
+        }
+    });
+    
+    document.querySelector('.close-modal').onclick = function() {
+        modal.style.display = "none";
+    }
+    
+    modal.onclick = function(event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    }
+});
