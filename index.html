@@ -3,7 +3,11 @@
     <head>
         <!-- Required meta tags -->
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
 
         <!-- Links of CSS files -->
         <link rel="stylesheet" href="assets/css/aos.css">
@@ -251,8 +255,9 @@
 <!-- Modal para imagen ampliada -->
 <div id="imageModal" class="modal">
     <span class="close-modal">&times;</span>
-    <img class="modal-content" id="expandedImage">
-    <div id="caption"></div>
+    <div class="modal-image-container">
+        <img class="modal-content" id="expandedImage" src="" alt="">
+    </div>
 </div>
                     <!-- Fin contenedor imágenes -->
                     
@@ -341,7 +346,7 @@
                                             <div class="content">
                                                 <h4>Laguna Bonita</h4>
                                                 <!-- Botón que abre el popup -->
-                                                <a class="btn" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                                                <a class="btn" href="#" onclick="openModal('lagunaBonitaModal'); return false;">
                                                     Próximamente <i class='bx bx-right-arrow-alt'></i>
                                                 </a>
                                             </div>
@@ -359,7 +364,7 @@
                                             </div>
                                             <div class="content">
                                                 <h4>Estero Molgue</h4>
-                                                <a class="btn" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                                                <a class="btn" href="#" onclick="openModal('esteroMolgueModal'); return false;">
                                                     Próximamente <i class='bx bx-right-arrow-alt'></i>
                                                 </a>
                                             </div>
@@ -374,19 +379,33 @@
         </div>
         <!-- End Features Area 2 -->
 
-        <!-- Modal -->
-        <div class="modal modal-2 fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-md-custom">
-                <div class="modal-content">
-                    <div class="row g-0">
-                        <div class="col-lg-12">
-                            <div class="modal-body text-center py-4 px-3">
-                                <img src="assets/img/all-img/academic-image-2.png" alt="" class="rounded img-fluid mb-3" style="max-height: 200px;">
-                                <h5 class="text-dark mb-2">Próximamente</h5>
-                                <h6 class="fw-semibold text-dark mb-4">Estero Molgue</h6>
-                                <button class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">Entiendo</button>
-                            </div>
-                        </div>
+        <!-- Modal para Laguna Bonita -->
+        <div class="custom-modal" id="lagunaBonitaModal" style="display: none;">
+            <div class="custom-modal-backdrop" onclick="closeModal('lagunaBonitaModal')"></div>
+            <div class="custom-modal-dialog">
+                <div class="custom-modal-content">
+                    <div class="custom-modal-body">
+                        <button type="button" class="btn-close-custom" onclick="closeModal('lagunaBonitaModal')" aria-label="Close">×</button>
+                        <img src="assets/img/all-img/academic-image-1.png" alt="" class="rounded img-fluid mb-3" style="max-height: 200px;">
+                        <h5 class="text-dark mb-2">Próximamente</h5>
+                        <h6 class="fw-semibold text-dark mb-4">Laguna Bonita</h6>
+                        <button class="btn btn-primary" onclick="closeModal('lagunaBonitaModal')">Entiendo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal para Estero Molgue -->
+        <div class="custom-modal" id="esteroMolgueModal" style="display: none;">
+            <div class="custom-modal-backdrop" onclick="closeModal('esteroMolgueModal')"></div>
+            <div class="custom-modal-dialog">
+                <div class="custom-modal-content">
+                    <div class="custom-modal-body">
+                        <button type="button" class="btn-close-custom" onclick="closeModal('esteroMolgueModal')" aria-label="Close">×</button>
+                        <img src="assets/img/all-img/academic-image-2.png" alt="" class="rounded img-fluid mb-3" style="max-height: 200px;">
+                        <h5 class="text-dark mb-2">Próximamente</h5>
+                        <h6 class="fw-semibold text-dark mb-4">Estero Molgue</h6>
+                        <button class="btn btn-primary" onclick="closeModal('esteroMolgueModal')">Entiendo</button>
                     </div>
                 </div>
             </div>
@@ -395,6 +414,17 @@
         <h1 class="centered-title">Modelo de Negocio</h1>
         <div class="subscribe-area2">
             <div class="mapa-overlay2"></div>
+            <div class="business-model-container">
+                <img src="assets/img/all-img/mapa.png" alt="Modelo de Negocio Sur Axis" class="business-model-image" onclick="openBusinessModelModal()">
+            </div>
+        </div>
+
+        <!-- Modal para el modelo de negocio -->
+        <div id="businessModelModal" class="modal">
+            <span class="close-modal" onclick="closeBusinessModelModal()">&times;</span>
+            <div class="modal-image-container">
+                <img class="modal-content" id="businessModelImage" src="assets/img/all-img/mapa.png" alt="Modelo de Negocio Sur Axis">
+            </div>
         </div>
 
         <!-- Footer Area -->
@@ -403,7 +433,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-4">
                         <div class="cpr-left">
-                            <p>©Copyright 2025. <a href="https://api.whatsapp.com/send?phone=56931354518&text=Hola%2C+me+gustar%C3%ADa+tener+m%C3%A1s+informaci%C3%B3n" target="_blank">Desarrollado por astra360</a></p>
+                            <p>©Copyright 2025. Desarrollado por <a href="https://api.whatsapp.com/send?phone=56931354518&text=Hola%2C+me+gustar%C3%ADa+tener+m%C3%A1s+informaci%C3%B3n" target="_blank">astra360</a></p>
                         </div>
                     </div>
                     <div class="col-lg-8">
