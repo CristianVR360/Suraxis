@@ -184,7 +184,7 @@
                     <div class="content">
                         <span data-aos="fade-zoom-in" data-aos-delay="300">Desde el concepto hasta la realidad.</span>
                         <h1 data-aos="fade-up" data-aos-delay="200">Aportamos valor a tu proyecto para convertirlo en una oportunidad de inversión.</h1>
-                        <p data-aos="fade-up" data-aos-delay="300">Convierte tu inversión en proyectos innovadores con alto retorno.</p>
+                        <p data-aos="fade-up" data-aos-delay="300">Convierte tu terreno en un proyecto viable y con futuro.</p>
                         <div class="buttons-action" data-aos="fade-down" data-aos-delay="100">
                             <a class="default-btn" href="#form-section">Agenda aquí una reunión y te contamos cómo</a>
                         </div>
@@ -232,7 +232,7 @@
                         <p>Desarrollo de proyectos de parcelación.</p>
                     </div>
                     <h2>Oportunidades con Alto Potencial de Retorno</h2>
-                    <p>Nos especializamos en transformar terrenos en oportunidades de inversión para las personas, mediante un modelo 360. Con la correcta entrega a los nuevos propietarios. En Sur Axis nos preocupamos de:</p>
+                    <p>Nos especializamos en transformar terrenos en oportunidades de inversión para las personas, mediante un modelo 360. Desde el concepto y diseño hasta la correcta entrega a los nuevos propietarios</p>
                     
                     <!-- Contenedor de imágenes superpuestas -->
 
@@ -305,9 +305,6 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                            <div class="sub-title">
-                                <p>Próximos nuevos lanzamientos</p>
-                            </div>
                             <div class="content">
                                 <h2>Oportunidades de inversión</h2>
                                 <div class="item">
@@ -333,43 +330,242 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="academic-content">
-                                <div class="row">
-                                    <!-- Objeto con botón que activa el popup -->
-                                    <div class="col-lg-6 col-sm-6 col-md-6 pt-25">
+                                <h2 class="text-center mb-4">Próximos nuevos lanzamientos</h2>
+                                
+                                                                <!-- Contenedor de proyectos con navegación -->
+                                <div class="projects-container-wrapper">
+                                    <!-- Navegación para desktop -->
+                                    <button class="nav-arrow nav-arrow-left desktop-nav" onclick="navigateProjects('prev')">
+                                        <i class='bx bx-chevron-left'></i>
+                                    </button>
+                                    
+                                    <!-- Navegación para móvil (arriba) -->
+                                    <div class="mobile-navigation">
+                                        <button class="nav-arrow nav-arrow-left mobile-nav" onclick="navigateProjects('prev')">
+                                            <i class='bx bx-chevron-left'></i>
+                                        </button>
+                                        <button class="nav-arrow nav-arrow-right mobile-nav" onclick="navigateProjects('next')">
+                                            <i class='bx bx-chevron-right'></i>
+                                        </button>
+                                    </div>
+                                    
+                                    <div class="projects-container">
+                                        <div class="projects-row" id="projectsRow">
+                                            <!-- Desktop: Slide 1 con dos cards -->
+                                            <div class="projects-slide desktop-slide" data-slide="0">
+                                                <!-- Proyecto 1: Laguna Bonita -->
                                         <div class="academic-item" data-aos="fade-up" data-aos-delay="100">
                                             <div class="image">
-                                                <img src="assets/img/all-img/academic-image-1.png" alt="image">
+                                                        <img src="assets/img/all-img/academic-image-1.png" alt="Laguna Bonita">
                                                 <div class="number">
                                                     <h3>01</h3>
                                                 </div>
                                             </div>
                                             <div class="content">
                                                 <h4>Laguna Bonita</h4>
-                                                <!-- Botón que abre el popup -->
-                                                <a class="btn" href="#" onclick="openModal('lagunaBonitaModal'); return false;">
+                                                        <p class="location-info">
+                                                            <i class='bx bx-map-pin'></i> Río Bueno
+                                                        </p>
+                                                        <a class="btn" href="#" onclick="openModal('lagunaBonitaModal'); return false;">
+                                                            Próximamente <i class='bx bx-right-arrow-alt'></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Proyecto 2: Estero Molgue -->
+                                                <div class="academic-item" data-aos="fade-up" data-aos-delay="200">
+                                                    <div class="image">
+                                                        <img src="assets/img/all-img/academic-image-2.png" alt="Estero Molgue">
+                                                        <div class="number">
+                                                            <h3>02</h3>
+                                                        </div>
+                                                    </div>
+                                                    <div class="content">
+                                                        <h4>Estero Molgue</h4>
+                                                        <p class="location-info">
+                                                            <i class='bx bx-map-pin'></i> Rupanco
+                                                        </p>
+                                                        <a class="btn" href="#" onclick="openModal('esteroMolgueModal'); return false;">
                                                     Próximamente <i class='bx bx-right-arrow-alt'></i>
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <!-- Objeto con botón que abre el modal -->
-                                    <div class="col-lg-6 col-sm-6 col-md-6">
+                                            <!-- Desktop: Slide 2 con dos cards -->
+                                            <div class="projects-slide desktop-slide" data-slide="1">
+                                                <!-- Proyecto 3: Los Laureles -->
+                                                <div class="academic-item" data-aos="fade-up" data-aos-delay="300">
+                                                    <div class="image">
+                                                        <img src="assets/img/all-img/Los-Laureles.jpg" alt="Los Laureles">
+                                                        <div class="number">
+                                                            <h3>03</h3>
+                                                        </div>
+                                                    </div>
+                                                    <div class="content">
+                                                        <h4>Los Laureles</h4>
+                                                        <p class="location-info">
+                                                            <i class='bx bx-map-pin'></i> Osorno
+                                                        </p>
+                                                        <a class="btn" href="#" onclick="openModal('losLaurelesModal'); return false;">
+                                                            Próximamente <i class='bx bx-right-arrow-alt'></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Proyecto 4: Tacamó -->
+                                                <div class="academic-item" data-aos="fade-up" data-aos-delay="400">
+                                                    <div class="image">
+                                                        <img src="assets/img/all-img/Tacamó.jpg" alt="Tacamó">
+                                                        <div class="number">
+                                                            <h3>04</h3>
+                                                        </div>
+                                                    </div>
+                                                    <div class="content">
+                                                        <h4>Tacamó</h4>
+                                                        <p class="location-info">
+                                                            <i class='bx bx-map-pin'></i> Osorno
+                                                        </p>
+                                                        <a class="btn" href="#" onclick="openModal('tacamoModal'); return false;">
+                                                            Próximamente <i class='bx bx-right-arrow-alt'></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Desktop: Slide 3 con un card -->
+                                            <div class="projects-slide desktop-slide" data-slide="2">
+                                                <!-- Proyecto 5: Trafún -->
+                                                <div class="academic-item" data-aos="fade-up" data-aos-delay="500">
+                                                    <div class="image">
+                                                        <img src="assets/img/all-img/Trafún.jpg" alt="Trafún">
+                                                        <div class="number">
+                                                            <h3>05</h3>
+                                                        </div>
+                                                    </div>
+                                                    <div class="content">
+                                                        <h4>Trafún</h4>
+                                                        <p class="location-info">
+                                                            <i class='bx bx-map-pin'></i> Osorno
+                                                        </p>
+                                                        <a class="btn" href="#" onclick="openModal('trafunModal'); return false;">
+                                                            Próximamente <i class='bx bx-right-arrow-alt'></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Móvil: Slides individuales -->
+                                            <!-- Móvil Slide 1: Laguna Bonita -->
+                                            <div class="projects-slide mobile-slide" data-slide="0">
+                                                <div class="academic-item" data-aos="fade-up" data-aos-delay="100">
+                                                    <div class="image">
+                                                        <img src="assets/img/all-img/academic-image-1.png" alt="Laguna Bonita">
+                                                        <div class="number">
+                                                            <h3>01</h3>
+                                                        </div>
+                                                    </div>
+                                                    <div class="content">
+                                                        <h4>Laguna Bonita</h4>
+                                                        <p class="location-info">
+                                                            <i class='bx bx-map-pin'></i> Río Bueno
+                                                        </p>
+                                                        <a class="btn" href="#" onclick="openModal('lagunaBonitaModal'); return false;">
+                                                            Próximamente <i class='bx bx-right-arrow-alt'></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Móvil Slide 2: Estero Molgue -->
+                                            <div class="projects-slide mobile-slide" data-slide="1">
                                         <div class="academic-item" data-aos="fade-up" data-aos-delay="200">
                                             <div class="image">
-                                                <img src="assets/img/all-img/academic-image-2.png" alt="image">
+                                                        <img src="assets/img/all-img/academic-image-2.png" alt="Estero Molgue">
                                                 <div class="number">
                                                     <h3>02</h3>
                                                 </div>
                                             </div>
                                             <div class="content">
                                                 <h4>Estero Molgue</h4>
-                                                <a class="btn" href="#" onclick="openModal('esteroMolgueModal'); return false;">
+                                                        <p class="location-info">
+                                                            <i class='bx bx-map-pin'></i> Rupanco
+                                                        </p>
+                                                        <a class="btn" href="#" onclick="openModal('esteroMolgueModal'); return false;">
+                                                            Próximamente <i class='bx bx-right-arrow-alt'></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Móvil Slide 3: Los Laureles -->
+                                            <div class="projects-slide mobile-slide" data-slide="2">
+                                                <div class="academic-item" data-aos="fade-up" data-aos-delay="300">
+                                                    <div class="image">
+                                                        <img src="assets/img/all-img/Los-Laureles.jpg" alt="Los Laureles">
+                                                        <div class="number">
+                                                            <h3>03</h3>
+                                                        </div>
+                                                    </div>
+                                                    <div class="content">
+                                                        <h4>Los Laureles</h4>
+                                                        <p class="location-info">
+                                                            <i class='bx bx-map-pin'></i> Osorno
+                                                        </p>
+                                                        <a class="btn" href="#" onclick="openModal('losLaurelesModal'); return false;">
+                                                            Próximamente <i class='bx bx-right-arrow-alt'></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Móvil Slide 4: Tacamó -->
+                                            <div class="projects-slide mobile-slide" data-slide="3">
+                                                <div class="academic-item" data-aos="fade-up" data-aos-delay="400">
+                                                    <div class="image">
+                                                        <img src="assets/img/all-img/Tacamó.jpg" alt="Tacamó">
+                                                        <div class="number">
+                                                            <h3>04</h3>
+                                                        </div>
+                                                    </div>
+                                                    <div class="content">
+                                                        <h4>Tacamó</h4>
+                                                        <p class="location-info">
+                                                            <i class='bx bx-map-pin'></i> Osorno
+                                                        </p>
+                                                        <a class="btn" href="#" onclick="openModal('tacamoModal'); return false;">
+                                                            Próximamente <i class='bx bx-right-arrow-alt'></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Móvil Slide 5: Trafún -->
+                                            <div class="projects-slide mobile-slide" data-slide="4">
+                                                <div class="academic-item" data-aos="fade-up" data-aos-delay="500">
+                                                    <div class="image">
+                                                        <img src="assets/img/all-img/Trafún.jpg" alt="Trafún">
+                                                        <div class="number">
+                                                            <h3>05</h3>
+                                                        </div>
+                                                    </div>
+                                                    <div class="content">
+                                                        <h4>Trafún</h4>
+                                                        <p class="location-info">
+                                                            <i class='bx bx-map-pin'></i> Osorno
+                                                        </p>
+                                                        <a class="btn" href="#" onclick="openModal('trafunModal'); return false;">
                                                     Próximamente <i class='bx bx-right-arrow-alt'></i>
                                                 </a>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
+                                    
+                                    <button class="nav-arrow nav-arrow-right desktop-nav" onclick="navigateProjects('next')">
+                                        <i class='bx bx-chevron-right'></i>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -402,10 +598,58 @@
                 <div class="custom-modal-content">
                     <div class="custom-modal-body">
                         <button type="button" class="btn-close-custom" onclick="closeModal('esteroMolgueModal')" aria-label="Close">×</button>
-                        <img src="assets/img/all-img/academic-image-2.png" alt="" class="rounded img-fluid mb-3" style="max-height: 200px;">
-                        <h5 class="text-dark mb-2">Próximamente</h5>
-                        <h6 class="fw-semibold text-dark mb-4">Estero Molgue</h6>
+                                <img src="assets/img/all-img/academic-image-2.png" alt="" class="rounded img-fluid mb-3" style="max-height: 200px;">
+                                <h5 class="text-dark mb-2">Próximamente</h5>
+                                <h6 class="fw-semibold text-dark mb-4">Estero Molgue</h6>
                         <button class="btn btn-primary" onclick="closeModal('esteroMolgueModal')">Entiendo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal para Los Laureles -->
+        <div class="custom-modal" id="losLaurelesModal" style="display: none;">
+            <div class="custom-modal-backdrop" onclick="closeModal('losLaurelesModal')"></div>
+            <div class="custom-modal-dialog">
+                <div class="custom-modal-content">
+                    <div class="custom-modal-body">
+                        <button type="button" class="btn-close-custom" onclick="closeModal('losLaurelesModal')" aria-label="Close">×</button>
+                        <img src="assets/img/all-img/Los-Laureles.jpg" alt="" class="rounded img-fluid mb-3" style="max-height: 200px;">
+                        <h5 class="text-dark mb-2">Próximamente</h5>
+                        <h6 class="fw-semibold text-dark mb-4">Los Laureles</h6>
+                        <button class="btn btn-primary" onclick="closeModal('losLaurelesModal')">Entiendo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal para Tacamó -->
+        <div class="custom-modal" id="tacamoModal" style="display: none;">
+            <div class="custom-modal-backdrop" onclick="closeModal('tacamoModal')"></div>
+            <div class="custom-modal-dialog">
+                <div class="custom-modal-content">
+                    <div class="custom-modal-body">
+                        <button type="button" class="btn-close-custom" onclick="closeModal('tacamoModal')" aria-label="Close">×</button>
+                        <img src="assets/img/all-img/Tacamó.jpg" alt="" class="rounded img-fluid mb-3" style="max-height: 200px;">
+                        <h5 class="text-dark mb-2">Próximamente</h5>
+                        <h6 class="fw-semibold text-dark mb-4">Tacamó</h6>
+                        <button class="btn btn-primary" onclick="closeModal('tacamoModal')">Entiendo</button>
+                    </div>
+                </div>
+                            </div>
+                        </div>
+
+        <!-- Modal para Trafún -->
+        <div class="custom-modal" id="trafunModal" style="display: none;">
+            <div class="custom-modal-backdrop" onclick="closeModal('trafunModal')"></div>
+            <div class="custom-modal-dialog">
+                <div class="custom-modal-content">
+                    <div class="custom-modal-body">
+                        <button type="button" class="btn-close-custom" onclick="closeModal('trafunModal')" aria-label="Close">×</button>
+                        <img src="assets/img/all-img/Trafún.jpg" alt="" class="rounded img-fluid mb-3" style="max-height: 200px;">
+                        <h5 class="text-dark mb-2">Próximamente</h5>
+                        <h6 class="fw-semibold text-dark mb-4">Trafún</h6>
+                        <button class="btn btn-primary" onclick="closeModal('trafunModal')">Entiendo</button>
                     </div>
                 </div>
             </div>

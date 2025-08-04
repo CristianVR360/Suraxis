@@ -571,3 +571,76 @@ document.addEventListener('DOMContentLoaded', function() {
     handleResize();
     window.addEventListener('resize', handleResize);
 });
+
+// Variables para la navegación de proyectos
+let currentSlide = 0;
+let totalSlides = 3; // Desktop: 3 slides
+
+// Función para detectar si es móvil
+function isMobileView() {
+    return window.innerWidth <= 768;
+}
+
+// Función para actualizar el número total de slides según el dispositivo
+function updateTotalSlides() {
+    if (isMobileView()) {
+        totalSlides = 5; // Móvil: 5 slides individuales
+    } else {
+        totalSlides = 3; // Desktop: 3 slides con dos cards
+    }
+}
+
+// Función para navegar entre proyectos
+function navigateProjects(direction) {
+    if (direction === 'next') {
+        currentSlide = (currentSlide + 1) % totalSlides;
+    } else if (direction === 'prev') {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    }
+    
+    const projectsRow = document.getElementById('projectsRow');
+    if (projectsRow) {
+        projectsRow.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+    
+    // Actualizar estado de las flechas
+    updateArrowStates();
+}
+
+// Función para actualizar el estado de las flechas
+function updateArrowStates() {
+    const leftArrows = document.querySelectorAll('.nav-arrow-left');
+    const rightArrows = document.querySelectorAll('.nav-arrow-right');
+    
+    leftArrows.forEach(arrow => {
+        arrow.style.opacity = currentSlide === 0 ? '0.5' : '1';
+        arrow.style.pointerEvents = currentSlide === 0 ? 'none' : 'auto';
+    });
+    
+    rightArrows.forEach(arrow => {
+        arrow.style.opacity = currentSlide === totalSlides - 1 ? '0.5' : '1';
+        arrow.style.pointerEvents = currentSlide === totalSlides - 1 ? 'none' : 'auto';
+    });
+}
+
+// Inicializar navegación de proyectos cuando el DOM esté listo
+document.addEventListener('DOMContentLoaded', function() {
+    // Inicializar configuración según dispositivo
+    updateTotalSlides();
+    updateArrowStates();
+    
+    // Agregar navegación con teclado
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'ArrowLeft') {
+            navigateProjects('prev');
+        } else if (event.key === 'ArrowRight') {
+            navigateProjects('next');
+        }
+    });
+    
+    // Actualizar navegación cuando cambie el tamaño de la ventana
+    window.addEventListener('resize', function() {
+        updateTotalSlides();
+        updateArrowStates();
+    });
+});

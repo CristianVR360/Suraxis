@@ -129,6 +129,14 @@ p:last-child {
   padding-bottom: 100px;
 }
 
+/* Reducir padding en escritorio para la sección de features */
+@media (min-width: 769px) {
+  .features-content-2.ptb-100 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
 .pt-100 {
   padding-top: 100px;
 }
@@ -2318,6 +2326,8 @@ Features Area CSS
   position: absolute;
   padding-right: 55px;
   top: 15%;
+  overflow: hidden;
+  max-width: 100%;
 }
 
 /*================================================
@@ -4894,7 +4904,7 @@ Subscribe Area CSS
     animation: zoom 0.3s ease-out;
     border-radius: 8px;
     box-shadow: 0 15px 40px rgba(0,0,0,0.8);
-    background-color: transparent;
+  background-color: transparent;
 }
 
 .close-modal {
@@ -4910,7 +4920,7 @@ Subscribe Area CSS
     background-color: rgba(0,0,0,0.7);
     border-radius: 50%;
     width: 60px;
-    height: 60px;
+  height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -4972,7 +4982,7 @@ Subscribe Area CSS
 
 @media (max-width: 768px) {
     .modal {
-        padding: 0;
+  padding: 0;
     }
     
     .modal-image-container {
@@ -5072,12 +5082,12 @@ Subscribe Area CSS
 .copy-right-area {
     background-color: #ff5722;
     padding: 25px 0;
-    position: relative;
+  position: relative;
     z-index: -1;
 }
 
 .copy-right-area .cpr-left p {
-    color: var(--whiteColor);
+  color: var(--whiteColor);
     margin-bottom: 0;
     font-size: 14px;
 }
@@ -5118,9 +5128,9 @@ Subscribe Area CSS
 /* Responsive footer */
 @media (max-width: 768px) {
     .copy-right-area {
-        padding: 20px 0;
-    }
-    
+  padding: 20px 0;
+}
+
     .copy-right-area .cpr-left p {
   text-align: center;
         margin-bottom: 15px;
@@ -5207,7 +5217,7 @@ Subscribe Area CSS
 
 .go-top:hover {
     background-color: var(--blackColor);
-    color: var(--whiteColor);
+ color: var(--whiteColor);
 }
 
 /* Responsive para botones flotantes */
@@ -5269,9 +5279,9 @@ Subscribe Area CSS
 }
 
 .custom-modal-backdrop {
-    position: absolute;
+  position: absolute;
     top: 0;
-    left: 0;
+  left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
@@ -5296,7 +5306,7 @@ Subscribe Area CSS
 
 .custom-modal-body {
     padding: 2rem;
-    text-align: center;
+  text-align: center;
     position: relative;
 }
 
@@ -5393,12 +5403,12 @@ Subscribe Area CSS
 
 /* Estilos mejorados para el título "Modelo de Negocio" */
 .centered-title {
-    text-align: center;
+  text-align: center;
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--blackColor);
+  color: var(--blackColor);
     margin: 3rem 0 2rem 0;
-    position: relative;
+  position: relative;
     padding-bottom: 1rem;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -5406,7 +5416,7 @@ Subscribe Area CSS
 
 .centered-title::after {
     content: '';
-    position: absolute;
+  position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -5465,6 +5475,409 @@ Subscribe Area CSS
         width: 25px;
         height: 1px;
         bottom: 5px;
+    }
+}
+
+/* Estilos para la información de ubicación en los cards de proyectos */
+.location-info {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.location-info i {
+    color: #ff5722;
+    font-size: 1rem;
+}
+
+/* Responsive para la información de ubicación */
+@media (max-width: 768px) {
+    .location-info {
+        font-size: 0.85rem;
+        margin: 0.4rem 0;
+    }
+    
+    .location-info i {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .location-info {
+        font-size: 0.8rem;
+        margin: 0.3rem 0;
+    }
+    
+    .location-info i {
+        font-size: 0.85rem;
+    }
+}
+
+/* Estilos para la navegación de proyectos */
+.projects-container-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 0 auto;
+    max-width: 75%;
+    padding: 0 10px;
+}
+
+.projects-container {
+    overflow: hidden;
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.projects-row {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.projects-slide {
+    display: flex;
+    gap: 4px;
+    min-width: 100%;
+    flex-shrink: 0;
+}
+
+.projects-slide .academic-item {
+    flex: 1;
+    max-width: calc(50% - 2px);
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+
+.projects-slide .academic-item:hover {
+    transform: scale(0.85);
+}
+
+.nav-arrow {
+    background: rgba(255, 87, 34, 0.9);
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    flex-shrink: 0;
+  position: relative;
+}
+
+.nav-arrow:hover {
+    background: rgba(255, 87, 34, 1);
+    transform: scale(1.1);
+}
+
+.nav-arrow i {
+    color: white;
+    font-size: 18px;
+}
+
+/* Responsive para la navegación de proyectos */
+@media (max-width: 1200px) {
+    .projects-container-wrapper {
+        max-width: 85%;
+        gap: 12px;
+    }
+    
+    .projects-slide {
+        gap: 3px;
+    }
+    
+    .projects-slide .academic-item {
+        transform: scale(0.75);
+    }
+}
+
+@media (max-width: 992px) {
+    .projects-container-wrapper {
+        max-width: 90%;
+        gap: 10px;
+        padding: 0 5px;
+    }
+    
+    .projects-slide {
+        gap: 2px;
+    }
+    
+    .projects-slide .academic-item {
+        transform: scale(0.7);
+    }
+    
+    .nav-arrow {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .nav-arrow i {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-container-wrapper {
+        gap: 8px;
+        padding: 0 3px;
+    }
+    
+    .projects-slide {
+        gap: 12px;
+    }
+    
+    .projects-slide .academic-item {
+        transform: scale(0.85);
+    }
+    
+    .nav-arrow {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .nav-arrow i {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .projects-container-wrapper {
+        gap: 5px;
+        padding: 0 2px;
+    }
+    
+    .projects-slide {
+        gap: 10px;
+    }
+    
+    .projects-slide .academic-item {
+        transform: scale(0.9);
+    }
+    
+    .nav-arrow {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .nav-arrow i {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-container-wrapper {
+        gap: 3px;
+        padding: 0 1px;
+    }
+    
+    .projects-slide {
+        gap: 8px;
+    }
+    
+    .projects-slide .academic-item {
+        transform: scale(0.95);
+    }
+    
+    .nav-arrow {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .nav-arrow i {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 360px) {
+    .projects-container-wrapper {
+        gap: 2px;
+        padding: 0;
+    }
+    
+    .projects-slide {
+        gap: 6px;
+    }
+    
+    .projects-slide .academic-item {
+        transform: scale(1);
+    }
+    
+    .nav-arrow {
+        width: 22px;
+        height: 22px;
+    }
+    
+    .nav-arrow i {
+        font-size: 10px;
+    }
+}
+
+/* Estilos para mostrar/ocultar slides según dispositivo */
+.desktop-slide {
+  display: flex;
+}
+
+.mobile-slide {
+    display: none;
+}
+
+/* Estilos para navegación móvil */
+.mobile-navigation {
+    display: none;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.desktop-nav {
+  display: flex;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+/* Estilos para móviles - mostrar solo un card */
+@media (max-width: 768px) {
+    .desktop-slide {
+        display: none !important;
+    }
+    
+    .mobile-slide {
+        display: flex !important;
+        justify-content: center;
+    }
+    
+    .projects-slide .academic-item {
+        max-width: 100% !important;
+        flex: none !important;
+        width: 100% !important;
+    }
+    
+    .projects-slide {
+        justify-content: center;
+    }
+    
+    /* Mostrar navegación móvil */
+    .mobile-navigation {
+        display: flex !important;
+    }
+    
+    .desktop-nav {
+        display: none !important;
+    }
+    
+    .mobile-nav {
+        display: flex !important;
+    }
+    
+    /* Ajustar contenedor para móvil */
+    .projects-container-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .projects-container {
+    width: 100%;
+    max-width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .desktop-slide {
+        display: none !important;
+    }
+    
+    .mobile-slide {
+        display: flex !important;
+    justify-content: center;
+    }
+    
+    .projects-slide .academic-item {
+        max-width: 100% !important;
+        flex: none !important;
+        width: 100% !important;
+    }
+    
+    .projects-slide {
+    justify-content: center;
+    }
+    
+    /* Mostrar navegación móvil */
+    .mobile-navigation {
+        display: flex !important;
+    }
+    
+    .desktop-nav {
+        display: none !important;
+    }
+    
+    .mobile-nav {
+        display: flex !important;
+    }
+    
+    /* Ajustar contenedor para móvil */
+    .projects-container-wrapper {
+        flex-direction: column;
+    align-items: center;
+    }
+    
+    .projects-container {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .desktop-slide {
+        display: none !important;
+    }
+    
+    .mobile-slide {
+        display: flex !important;
+        justify-content: center;
+    }
+    
+    .projects-slide .academic-item {
+        max-width: 100% !important;
+        flex: none !important;
+        width: 100% !important;
+    }
+    
+    .projects-slide {
+        justify-content: center;
+    }
+    
+    /* Mostrar navegación móvil */
+    .mobile-navigation {
+        display: flex !important;
+    }
+    
+    .desktop-nav {
+        display: none !important;
+    }
+    
+    .mobile-nav {
+        display: flex !important;
+    }
+    
+    /* Ajustar contenedor para móvil */
+    .projects-container-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .projects-container {
+        width: 100%;
+        max-width: 100%;
     }
 }
 
