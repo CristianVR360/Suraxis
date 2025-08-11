@@ -4,24 +4,24 @@
     font-size: 14px;
   }
   .ptb-100 {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
   .pt-100 {
-    padding-top: 60px;
+    padding-top: 80px;
   }
   .pb-100 {
-    padding-bottom: 60px;
+    padding-bottom: 80px;
   }
   .ptb-70 {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
   .pt-70 {
-    padding-top: 30px;
+    padding-top: 50px;
   }
   .pb-70 {
-    padding-bottom: 30px;
+    padding-bottom: 50px;
   }
   .default-btn {
     padding: 12px 20px;
@@ -434,10 +434,10 @@
   }
 
   .academic-item {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
   .academic-item:last-child{
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
 
   .video-area {
@@ -509,8 +509,14 @@
     display: none;
   }
   .features-content-2 .academic-content {
-    margin-top: 30px;
+    margin-top: 50px;
   }
+  
+  /* Separación específica entre el botón y el título en móvil */
+  .features-content-2 .content .default-btn {
+    margin-bottom: 40px;
+  }
+  
   .faculty-area-2 .heading h2 {
     font-size: 30px;
     margin-bottom: 30px;
@@ -666,6 +672,7 @@
   }
   .quick-search {
     background-position: left top;
+    margin-bottom: 40px;
   }
   .quick-search .course-search-box {
     padding: 30px 20px;
@@ -938,8 +945,8 @@
 
 
   .subscribe-area-2 {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 
   .academics-section .academics-left .ac-category ul li a {
@@ -2141,7 +2148,7 @@
     font-size: 16px;
 }
   .features-content-2 .academic-content {
-    margin-top: 30px;
+    margin-top: 50px;
   }
   .features-content .content .item .item-content h3, .features-content-2 .content .item .item-content h3 {
     font-size: 20px;
