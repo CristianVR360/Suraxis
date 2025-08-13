@@ -1,0 +1,52 @@
+/* Clickable Cards Styles */
+.academic-item[onclick] {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.academic-item[onclick]:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.academic-item[onclick]:active {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure the button inside doesn't interfere with card click */
+.academic-item[onclick] .btn {
+    pointer-events: auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* Add a subtle overlay effect on hover */
+.academic-item[onclick]::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 107, 53, 0.05);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.academic-item[onclick]:hover::before {
+    opacity: 1;
+}
+
+/* Ensure content stays above the overlay */
+.academic-item[onclick] .content {
+    position: relative;
+    z-index: 2;
+}
+
+.academic-item[onclick] .image {
+    position: relative;
+    z-index: 2;
+}

@@ -1,0 +1,64 @@
+/* Fixes for footer social media links */
+.copy-right-area .cpr-right .social-list li a {
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    display: inline-block !important;
+    text-decoration: none !important;
+    position: relative !important;
+    z-index: 10 !important;
+}
+
+.copy-right-area .cpr-right .social-list li a:hover {
+    cursor: pointer !important;
+    color: var(--mainColor) !important;
+    transform: scale(1.1) !important;
+    transition: all 0.3s ease !important;
+}
+
+.copy-right-area .cpr-right .social-list li {
+    cursor: pointer !important;
+    pointer-events: auto !important;
+}
+
+.copy-right-area .cpr-right .social-list {
+    pointer-events: auto !important;
+}
+
+/* Ensure the entire social list area is clickable */
+.copy-right-area .cpr-right {
+    pointer-events: auto !important;
+}
+
+/* Additional hover effects for better UX */
+.copy-right-area .cpr-right .social-list li a i {
+    transition: all 0.3s ease !important;
+}
+
+.copy-right-area .cpr-right .social-list li a:hover i {
+    transform: scale(1.2) !important;
+}
+
+/* Override AOS pointer-events for footer */
+.copy-right-area,
+.copy-right-area *,
+.copy-right-area .social-list,
+.copy-right-area .social-list *,
+.copy-right-area .cpr-right,
+.copy-right-area .cpr-right * {
+    pointer-events: auto !important;
+}
+
+/* Specific override for AOS elements that might affect footer */
+[data-aos] .copy-right-area,
+[data-aos] .copy-right-area *,
+.copy-right-area[data-aos],
+.copy-right-area[data-aos] * {
+    pointer-events: auto !important;
+}
+
+/* Force all footer links to be clickable */
+.copy-right-area a,
+.copy-right-area a * {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+}

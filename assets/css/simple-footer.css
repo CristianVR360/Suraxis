@@ -1,0 +1,116 @@
+/* Simple Footer Styles */
+.footer-simple {
+    background-color: #ff6b35;
+    padding: 20px 0;
+    color: white;
+    position: relative;
+    z-index: 10;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-left {
+    flex: 1;
+    min-width: 300px;
+}
+
+.footer-left p {
+    margin: 0;
+    font-size: 14px;
+    color: white;
+}
+
+.footer-left a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-left a:hover {
+    color: #333;
+}
+
+.footer-right {
+    flex: 0 0 auto;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.social-link {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+}
+
+.social-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+    color: white;
+    text-decoration: none;
+}
+
+.social-link i {
+    font-size: 18px;
+    line-height: inherit;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .footer-left {
+        min-width: auto;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
+
+/* Ensure links are always clickable */
+.footer-simple * {
+    pointer-events: auto !important;
+}
+
+.social-link {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+}
+
+.social-link:hover {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+}
+
+/* Ensure WhatsApp button stays above footer */
+.whatsapp-button-container {
+    z-index: 99999 !important;
+    position: fixed !important;
+}
+
+.floating-button {
+    z-index: 99999 !important;
+}

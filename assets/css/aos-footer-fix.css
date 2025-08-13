@@ -1,0 +1,62 @@
+/* Completely disable AOS for footer elements */
+.copy-right-area,
+.copy-right-area *,
+.copy-right-area .social-list,
+.copy-right-area .social-list *,
+.copy-right-area .cpr-right,
+.copy-right-area .cpr-right *,
+.copy-right-area .cpr-left,
+.copy-right-area .cpr-left * {
+    pointer-events: auto !important;
+    animation: none !important;
+    transition: none !important;
+}
+
+/* Override any AOS styles that might affect footer */
+[data-aos] .copy-right-area,
+[data-aos] .copy-right-area *,
+.copy-right-area[data-aos],
+.copy-right-area[data-aos] *,
+.aos-animate .copy-right-area,
+.aos-animate .copy-right-area *,
+.copy-right-area.aos-animate,
+.copy-right-area.aos-animate * {
+    pointer-events: auto !important;
+    animation: none !important;
+    transition: none !important;
+}
+
+/* Force all footer links to be clickable */
+.copy-right-area a,
+.copy-right-area a *,
+.copy-right-area .social-list a,
+.copy-right-area .social-list a * {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    animation: none !important;
+    transition: color 0.3s ease !important;
+}
+
+/* Remove any AOS attributes from footer elements */
+.copy-right-area,
+.copy-right-area * {
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
+    animation-iteration-count: 1 !important;
+    animation-fill-mode: none !important;
+}
+
+/* Ensure social media icons are always clickable */
+.copy-right-area .social-list li a i {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+}
+
+/* Force the entire footer to be interactive */
+.copy-right-area {
+    pointer-events: auto !important;
+    user-select: auto !important;
+    -webkit-user-select: auto !important;
+    -moz-user-select: auto !important;
+    -ms-user-select: auto !important;
+}

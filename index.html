@@ -20,6 +20,10 @@
         <link rel="stylesheet" href="assets/css/header.css">
         <link rel="stylesheet" href="assets/css/responsive.css">
         <link rel="stylesheet" href="whatsapp-button.css">
+        <link rel="stylesheet" href="assets/css/footer-fixes.css">
+        <link rel="stylesheet" href="assets/css/aos-footer-fix.css">
+        <link rel="stylesheet" href="assets/css/simple-footer.css">
+        <link rel="stylesheet" href="assets/css/clickable-cards.css">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
         <title>Sur Axis</title>
@@ -353,27 +357,27 @@
                                         <div class="projects-row" id="projectsRow">
                                             <!-- Desktop: Slide 1 con dos cards -->
                                             <div class="projects-slide desktop-slide" data-slide="0">
-                                                <!-- Proyecto 1: Laguna Bonita -->
-                                        <div class="academic-item" data-aos="fade-up" data-aos-delay="100">
+                                                <!-- Proyecto 1: Los Laureles -->
+                                        <div class="academic-item" data-aos="fade-up" data-aos-delay="100" onclick="openModal('losLaurelesModal'); return false;" style="cursor: pointer;">
                                             <div class="image">
-                                                        <img src="assets/img/all-img/academic-image-1.png" alt="Laguna Bonita">
+                                                        <img src="assets/img/all-img/Los-Laureles.jpg" alt="Los Laureles">
                                                 <div class="number">
                                                     <h3>01</h3>
                                                 </div>
                                             </div>
                                             <div class="content">
-                                                <h4>Laguna Bonita</h4>
+                                                <h4>Los Laureles</h4>
                                                         <p class="location-info">
-                                                            <i class='bx bx-map-pin'></i> Rupanco
+                                                            <i class='bx bx-map-pin'></i> Osorno
                                                         </p>
-                                                        <a class="btn" href="#" onclick="openModal('lagunaBonitaModal'); return false;">
+                                                        <a class="btn" href="#" onclick="openModal('losLaurelesModal'); return false;">
                                                             Próximamente <i class='bx bx-right-arrow-alt'></i>
                                                         </a>
                                                     </div>
                                                 </div>
 
                                                 <!-- Proyecto 2: Estero Molgue -->
-                                                <div class="academic-item" data-aos="fade-up" data-aos-delay="200">
+                                                <div class="academic-item" data-aos="fade-up" data-aos-delay="200" onclick="openModal('esteroMolgueModal'); return false;" style="cursor: pointer;">
                                                     <div class="image">
                                                         <img src="assets/img/all-img/academic-image-2.png" alt="Estero Molgue">
                                                         <div class="number">
@@ -394,27 +398,27 @@
 
                                             <!-- Desktop: Slide 2 con dos cards -->
                                             <div class="projects-slide desktop-slide" data-slide="1">
-                                                <!-- Proyecto 3: Los Laureles -->
-                                                <div class="academic-item" data-aos="fade-up" data-aos-delay="300">
+                                                <!-- Proyecto 3: Laguna Bonita -->
+                                                <div class="academic-item" data-aos="fade-up" data-aos-delay="300" onclick="openModal('lagunaBonitaModal'); return false;" style="cursor: pointer;">
                                                     <div class="image">
-                                                        <img src="assets/img/all-img/Los-Laureles.jpg" alt="Los Laureles">
+                                                        <img src="assets/img/all-img/academic-image-1.png" alt="Laguna Bonita">
                                                         <div class="number">
                                                             <h3>03</h3>
                                                         </div>
                                                     </div>
                                                     <div class="content">
-                                                        <h4>Los Laureles</h4>
+                                                        <h4>Laguna Bonita</h4>
                                                         <p class="location-info">
-                                                            <i class='bx bx-map-pin'></i> Osorno
+                                                            <i class='bx bx-map-pin'></i> Rupanco
                                                         </p>
-                                                        <a class="btn" href="#" onclick="openModal('losLaurelesModal'); return false;">
+                                                        <a class="btn" href="#" onclick="openModal('lagunaBonitaModal'); return false;">
                                                             Próximamente <i class='bx bx-right-arrow-alt'></i>
                                                         </a>
                                                     </div>
                                                 </div>
 
                                                 <!-- Proyecto 4: Tacamó -->
-                                                <div class="academic-item" data-aos="fade-up" data-aos-delay="400">
+                                                <div class="academic-item" data-aos="fade-up" data-aos-delay="400" onclick="openModal('tacamoModal'); return false;" style="cursor: pointer;">
                                                     <div class="image">
                                                         <img src="assets/img/all-img/Tacamó.jpg" alt="Tacamó">
                                                         <div class="number">
@@ -436,7 +440,7 @@
                                             <!-- Desktop: Slide 3 con un card -->
                                             <div class="projects-slide desktop-slide" data-slide="2">
                                                 <!-- Proyecto 5: Trafún -->
-                                                <div class="academic-item" data-aos="fade-up" data-aos-delay="500">
+                                                <div class="academic-item" data-aos="fade-up" data-aos-delay="500" onclick="openModal('trafunModal'); return false;" style="cursor: pointer;">
                                                     <div class="image">
                                                         <img src="assets/img/all-img/Trafún.jpg" alt="Trafún">
                                                         <div class="number">
@@ -456,21 +460,21 @@
                                             </div>
 
                                             <!-- Móvil: Slides individuales -->
-                                            <!-- Móvil Slide 1: Laguna Bonita -->
+                                            <!-- Móvil Slide 1: Los Laureles -->
                                             <div class="projects-slide mobile-slide" data-slide="0">
-                                                <div class="academic-item" data-aos="fade-up" data-aos-delay="100">
+                                                <div class="academic-item" data-aos="fade-up" data-aos-delay="100" onclick="openModal('losLaurelesModal'); return false;" style="cursor: pointer;">
                                                     <div class="image">
-                                                        <img src="assets/img/all-img/academic-image-1.png" alt="Laguna Bonita">
+                                                        <img src="assets/img/all-img/Los-Laureles.jpg" alt="Los Laureles">
                                                         <div class="number">
                                                             <h3>01</h3>
                                                         </div>
                                                     </div>
                                                     <div class="content">
-                                                        <h4>Laguna Bonita</h4>
+                                                        <h4>Los Laureles</h4>
                                                         <p class="location-info">
-                                                            <i class='bx bx-map-pin'></i> Río Bueno
+                                                            <i class='bx bx-map-pin'></i> Osorno
                                                         </p>
-                                                        <a class="btn" href="#" onclick="openModal('lagunaBonitaModal'); return false;">
+                                                        <a class="btn" href="#" onclick="openModal('losLaurelesModal'); return false;">
                                                             Próximamente <i class='bx bx-right-arrow-alt'></i>
                                                         </a>
                                                     </div>
@@ -479,7 +483,7 @@
 
                                             <!-- Móvil Slide 2: Estero Molgue -->
                                             <div class="projects-slide mobile-slide" data-slide="1">
-                                        <div class="academic-item" data-aos="fade-up" data-aos-delay="200">
+                                        <div class="academic-item" data-aos="fade-up" data-aos-delay="200" onclick="openModal('esteroMolgueModal'); return false;" style="cursor: pointer;">
                                             <div class="image">
                                                         <img src="assets/img/all-img/academic-image-2.png" alt="Estero Molgue">
                                                 <div class="number">
@@ -498,21 +502,21 @@
                                                 </div>
                                             </div>
 
-                                            <!-- Móvil Slide 3: Los Laureles -->
+                                            <!-- Móvil Slide 3: Laguna Bonita -->
                                             <div class="projects-slide mobile-slide" data-slide="2">
-                                                <div class="academic-item" data-aos="fade-up" data-aos-delay="300">
+                                                <div class="academic-item" data-aos="fade-up" data-aos-delay="300" onclick="openModal('lagunaBonitaModal'); return false;" style="cursor: pointer;">
                                                     <div class="image">
-                                                        <img src="assets/img/all-img/Los-Laureles.jpg" alt="Los Laureles">
+                                                        <img src="assets/img/all-img/academic-image-1.png" alt="Laguna Bonita">
                                                         <div class="number">
                                                             <h3>03</h3>
                                                         </div>
                                                     </div>
                                                     <div class="content">
-                                                        <h4>Los Laureles</h4>
+                                                        <h4>Laguna Bonita</h4>
                                                         <p class="location-info">
-                                                            <i class='bx bx-map-pin'></i> Osorno
+                                                            <i class='bx bx-map-pin'></i> Río Bueno
                                                         </p>
-                                                        <a class="btn" href="#" onclick="openModal('losLaurelesModal'); return false;">
+                                                        <a class="btn" href="#" onclick="openModal('lagunaBonitaModal'); return false;">
                                                             Próximamente <i class='bx bx-right-arrow-alt'></i>
                                                         </a>
                                                     </div>
@@ -521,7 +525,7 @@
 
                                             <!-- Móvil Slide 4: Tacamó -->
                                             <div class="projects-slide mobile-slide" data-slide="3">
-                                                <div class="academic-item" data-aos="fade-up" data-aos-delay="400">
+                                                <div class="academic-item" data-aos="fade-up" data-aos-delay="400" onclick="openModal('tacamoModal'); return false;" style="cursor: pointer;">
                                                     <div class="image">
                                                         <img src="assets/img/all-img/Tacamó.jpg" alt="Tacamó">
                                                         <div class="number">
@@ -542,7 +546,7 @@
 
                                             <!-- Móvil Slide 5: Trafún -->
                                             <div class="projects-slide mobile-slide" data-slide="4">
-                                                <div class="academic-item" data-aos="fade-up" data-aos-delay="500">
+                                                <div class="academic-item" data-aos="fade-up" data-aos-delay="500" onclick="openModal('trafunModal'); return false;" style="cursor: pointer;">
                                                     <div class="image">
                                                         <img src="assets/img/all-img/Trafún.jpg" alt="Trafún">
                                                         <div class="number">
@@ -617,7 +621,10 @@
                         <img src="assets/img/all-img/Los-Laureles.jpg" alt="" class="rounded img-fluid mb-3" style="max-height: 200px;">
                         <h5 class="text-dark mb-2">Próximamente</h5>
                         <h6 class="fw-semibold text-dark mb-4">Los Laureles</h6>
-                        <button class="btn btn-primary" onclick="closeModal('losLaurelesModal')">Entiendo</button>
+                        <div class="modal-buttons-container" style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+                            <button class="btn btn-primary" onclick="closeModal('losLaurelesModal'); document.getElementById('form-section').scrollIntoView({behavior: 'smooth'});">Más información</button>
+                            <button class="btn btn-outline-primary" onclick="window.open('https://www.youtube.com/watch?v=K0Oa2vI_SZs', '_blank');">Ver video</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -672,25 +679,25 @@
         </div>
 
         <!-- Footer Area -->
-        <div class="copy-right-area style-2">
+        <footer class="footer-simple">
             <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-4">
-                        <div class="cpr-left">
+                <div class="footer-content">
+                    <div class="footer-left">
                             <p>©Copyright 2025. Desarrollado por <a href="https://api.whatsapp.com/send?phone=56931354518&text=Hola%2C+me+gustar%C3%ADa+tener+m%C3%A1s+informaci%C3%B3n" target="_blank">astra360</a></p>
-                        </div>
                     </div>
-                    <div class="col-lg-8">
-                        <div class="cpr-right">
-                            <ul class="social-list">
-                                <li><a href="https://www.facebook.com/profile.php?id=61574983996323&_rdc=1&_rdr"><i class='bx bxl-facebook'></i></a></li>
-                                <li><a href="https://www.instagram.com/suraxis.cl"><i class='bx bxl-instagram-alt'></i></a></li>
-                            </ul>
+                    <div class="footer-right">
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/profile.php?id=61574983996323&locale=es_LA" target="_blank" class="social-link facebook">
+                                <i class='bx bxl-facebook'></i>
+                            </a>
+                            <a href="https://www.instagram.com/suraxis.cl" target="_blank" class="social-link instagram">
+                                <i class='bx bxl-instagram-alt'></i>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </footer>
         <!-- End Footer Area -->
 
         <div class="go-top active">
@@ -704,5 +711,29 @@
         <script src="assets/js/magnific-popup.min.js"></script>
         <script src="assets/js/owl.carousel.min.js"></script>
         <script src="assets/js/main.js"></script>
+        
+        <!-- Script to ensure social media links work -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Simple function to ensure social links work
+                function ensureSocialLinksWork() {
+                    const socialLinks = document.querySelectorAll('.social-link');
+                    socialLinks.forEach(function(link) {
+                        // Ensure the link is clickable
+                        link.style.cursor = 'pointer';
+                        link.style.pointerEvents = 'auto';
+                        
+                        // Add click event as backup
+                        link.addEventListener('click', function(e) {
+                            // Allow the default behavior, just ensure it works
+                            console.log('Social link clicked:', this.href);
+                        });
+                    });
+                }
+                
+                // Run the function
+                ensureSocialLinksWork();
+            });
+        </script>
     </body>
 </html>
