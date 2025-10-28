@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Laguna Bonita | Suraxis | Proyectos</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free Website Template" name="keywords">
+    <meta content="Free Website Template" name="description">
+
+    <link rel="icon" type="image/png" href="assets/img/all-img/favicon.png">
+
+    <!-- Links of CSS files -->
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/boxicons.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="whatsapp-button.css">
+    <link rel="stylesheet" href="assets/css/footer-fixes.css">
+    <link rel="stylesheet" href="assets/css/aos-footer-fix.css">
+    <link rel="stylesheet" href="assets/css/simple-footer.css">
+    <link rel="stylesheet" href="assets/css/clickable-cards.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!-- Hero Section Styles for Projects -->
+    <link rel="stylesheet" href="assets/css proyectos/hero-styles.css">
+    
+    <!-- Masterplan Section Styles -->
+    <style>
+        .masterplan-section {
+            width: 100%;
+            overflow-x: hidden;
+        }
+        
+        .masterplan-container {
+            position: relative;
+        }
+        
+        .masterplan-section iframe {
+            width: 100%;
+            height: 800px;
+            border: none;
+            display: block;
+        }
+        
+        .masterplan-overlay-top {
+            position: absolute;
+            top: -2px;
+            left: 0;
+            width: 100%;
+            height: 200px;
+            background-image: url('assets/img/overlay-top.png');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: top center;
+            z-index: 10;
+            pointer-events: none;
+        }
+        
+        @media (max-width: 768px) {
+            .masterplan-section iframe {
+                height: 600px;
+            }
+            
+            .masterplan-overlay-top {
+                height: 150px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .masterplan-section iframe {
+                height: 500px;
+            }
+            
+            .masterplan-overlay-top {
+                height: 120px;
+            }
+        }
+        
+        /* Management Image Container Styles */
+        .management-image-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .responsive-management-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .responsive-management-image:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255,255,255,0.3);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            overflow: hidden;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .modal-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        
+        .modal-content {
+            max-width: 95vw;
+            max-height: 95vh;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            animation: zoom 0.3s ease-out;
+            border-radius: 8px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.8);
+            background-color: transparent;
+        }
+        
+        .close-modal {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10000;
+            background-color: rgba(0,0,0,0.7);
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+        
+        .close-modal:hover {
+            color: #fff;
+            background-color: rgba(0,0,0,0.9);
+            transform: scale(1.1);
+            border-color: rgba(255,255,255,0.6);
+        }
+        
+        @keyframes zoom {
+            from {
+                transform: scale(0.8); 
+                opacity: 0;
+            }
+            to {
+                transform: scale(1); 
+                opacity: 1;
+            }
+        }
+        
+        /* Responsive Modal Styles */
+        @media (max-width: 768px) {
+            .modal-content {
+                max-width: 95vw;
+                max-height: 95vh;
+            }
+            
+            .close-modal {
+                top: 15px;
+                right: 15px;
+                font-size: 35px;
+                width: 55px;
+                height: 55px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .modal-content {
+                max-width: 100vw;
+                max-height: 100vh;
+                border-radius: 4px;
+            }
+            
+            .close-modal {
+                top: 10px;
+                right: 10px;
+                font-size: 25px;
+                width: 45px;
+                height: 45px;
+            }
+        }
+        
+        /* Gallery Section Styles */
+        .gallery-section {
+            padding: 80px 0;
+            background-color: #ff5206;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            aspect-ratio: 1;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.05);
+            z-index: 10;
+        }
+        
+        .gallery-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-image {
+            transform: scale(1.1);
+        }
+        
+        /* Gallery Modal Styles */
+        .gallery-modal {
+            display: none;
+            position: fixed;
+            z-index: 10000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
+        
+        .gallery-modal-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        
+        .gallery-modal-content {
+            max-width: 90vw;
+            max-height: 90vh;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            animation: galleryZoom 0.3s ease-out;
+        }
+        
+        .gallery-close-modal {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            color: white;
+            font-size: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10001;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .gallery-close-modal:hover {
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.9);
+            transform: scale(1.1);
+            border-color: rgba(255, 255, 255, 0.6);
+        }
+        
+        @keyframes galleryZoom {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        
+        /* Responsive Gallery Styles */
+        @media (max-width: 1200px) {
+            .gallery-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .gallery-section {
+                padding: 60px 0;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .gallery-modal-content {
+                max-width: 95vw;
+                max-height: 95vh;
+            }
+            
+            .gallery-close-modal {
+                top: 20px;
+                right: 20px;
+                font-size: 40px;
+                width: 60px;
+                height: 60px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .gallery-modal-content {
+                max-width: 98vw;
+                max-height: 98vh;
+                border-radius: 4px;
+            }
+            
+            .gallery-close-modal {
+                top: 15px;
+                right: 15px;
+                font-size: 35px;
+                width: 55px;
+                height: 55px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+        <!-- Botón flotante WhatsApp -->
+        <a href="https://api.whatsapp.com/send?phone=56935634527&text=Hola%2C+me+gustar%C3%ADa+tener+m%C3%A1s+informaci%C3%B3n"
+           class="whatsapp-float" target="_blank" id="whatsappBtn">
+            <i class='bx bxl-whatsapp'></i> Contáctanos
+        </a>
+
+        <!-- Start Navbar Area Start -->
+        <div class="navbar-area style-2" id="navbar">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg">
+                    <a class="navbar-brand" href="index.html">
+                        <img class="logo-light" src="assets/img/logo/white-logo.png" alt="logo">
+                        <img class="logo-dark" src="assets/img/logo/logo.png" alt="logo">
+                    </a>
+                    <div class="other-option d-lg-none">
+                        <div class="option-item">
+                            <button type="button" class="search-btn" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop">
+                                <i class='bx bx-id-card'></i>
+                            </button>
+                        </div>
+                    </div>
+                    <a class="navbar-toggler" data-bs-toggle="offcanvas" href="#navbarOffcanvas" role="button" aria-controls="navbarOffcanvas">
+                        <i class='bx bx-menu'></i>
+                    </a>
+                    <div class="collapse navbar-collapse justify-content-between">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+                            </li>
+                            <li class="nav-item">
+                                <li class="nav-item"><a href="about-us.html" class="nav-link">Sobre nosotros</a></li>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a href="about-us.html" class="nav-link">Sobre nosotros</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- End Navbar Area Start -->
+
+        <!-- Start Responsive Navbar Area -->
+        <div class="responsive-navbar offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="navbarOffcanvas">
+            <div class="offcanvas-header">
+                <a href="index.html" class="logo d-inline-block">
+                    <img class="logo-light" src="assets/img/logo/logo.png" alt="logo">
+                </a>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="accordion" id="navbarAccordion">
+                    <div class="accordion-item">
+                        <a href="index.html" class="accordion-link">
+                            Inicio
+                        </a>
+                        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#navbarAccordion">
+                            <div class="accordion-body">
+                                <div class="accordion" id="navbarAccordion7">
+                                    <div class="accordion-item">
+                                        <a href="index.html" class="accordion-link">
+                                            Inicio
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="about-us.html" class="accordion-link active">
+                        Sobre nosotros
+                    </a>
+                </div>
+                
+                <div class="offcanvas-contact-info">
+                    <h4>Información de contacto</h4>
+                    <ul class="contact-info list-style">
+                        <li>
+                            <i class="bx bxs-envelope"></i>
+                            <a href="contacto@suraxis.cl">contacto@suraxis.cl</a>
+                        </li>
+                    </ul>
+                    <ul class="social-profile list-style">
+                        <li><a href="https://www.facebook.com/profile.php?id=61574983996323&_rdc=1&_rdr" target="_blank"><i class='bx bxl-facebook'></i></a></li>
+                        <li><a href="https://www.instagram.com/suraxis.cl" target="_blank"><i class='bx bxl-instagram'></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- End Responsive Navbar Area -->
+
+        <!-- Start Clgun Searchbar Area -->
+        <div class="clgun offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop">
+            <div class="offcanvas-header">
+                <a href="index.html" class="logo">
+                    <img src="assets/img/logo/logo.png" alt="image">
+                </a>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="offcanvas-contact-info">
+                    <h4>Información de contacto</h4>
+                    <ul class="contact-info list-style">
+                        <li>
+                            <i class="bx bxs-time"></i>
+                            <p>Lun - Vie: 9:00 - 18:00</p>
+                        </li>
+                        <li><i class="bx bxs-phone-call"></i> Telefono de contacto - <p>+56 9 3563 4527</p></li>
+                        <li>
+                            <i class="bx bxs-envelope"></i>
+                            <p>contacto@suraxis.cl</p>
+                        </li>
+                        <li>
+                            <i class="bx bxs-map"></i>
+                            <p>Osorno, Región de los lagos</p>
+                        </li>
+                    </ul>
+                    <ul class="social-profile list-style">
+                        <li><a href="https://www.facebook.com/profile.php?id=61574983996323&_rdc=1&_rdr" target="_blank"><i class='bx bxl-facebook'></i></a></li>
+                        <li><a href="https://www.instagram.com/suraxis.cl" target="_blank"><i class='bx bxl-instagram'></i></a></li>
+                    </ul>
+                </div>
+                
+                <div class="offcanvas-other-options">
+                    <div class="option-item">
+                        <a href="https://api.whatsapp.com/send/?phone=%2B56935634527&text=Necesito+más+información+sobre+el+proyecto&type=phone_number&app_absent=0" 
+                           class="whatsapp-btn" target="_blank">
+                            <i class='bx bxl-whatsapp'></i> Escríbenos por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Clgun Searchbar Area -->
+
+    <!-- Hero Section Start -->
+    <div class="hero-section">
+        <div id="blog-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100 hero-image" src="assets/img/proyectos/lagunabonita/hero.jpg" alt="Laguna Bonita Hero">
+                    <div class="hero-overlay"></div>
+                    <div class="hero-overlay-bottom"></div>
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <h2 class="font-weight-medium m-0" style="color: #ffffff;">Rupanco</h2> <!-- ubicacion del proyecto -->
+                        <h1 class="display-1 text-white m-0">Laguna Bonita</h1> <!-- nombre del proyecto -->
+                        <h2 class="text-white m-0">Proyecto de alta plusvalía</h2> <!-- descripcion breve del proyecto -->
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100 hero-image" src="assets/img/proyectos/lagunabonita/hero-2.jpg" alt="Laguna Bonita Hero 2">
+                    <div class="hero-overlay"></div>
+                    <div class="hero-overlay-bottom"></div>
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <h2 class="font-weight-medium m-0" style="color: #ffffff;">Rupanco</h2> <!-- ubicacion del proyecto -->
+                        <h1 class="display-1 text-white m-0">Laguna Bonita</h1> <!-- nombre del proyecto -->    
+                        <h2 class="text-white m-0">Proyecto de alta plusvalía</h2> <!-- descripcion breve del proyecto -->
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#blog-carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#blog-carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <!-- Hero Section End -->
+
+
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="section-title">
+                <h4 class="text-uppercase" style="letter-spacing: 5px; color: #fb5607;">Sobre el proyecto</h4> <!-- no modificar -->
+                <h1 class="display-4">En el corazón del sur de chile - Rupanco, Pto. Octay <!-- subtitulo del proyecto -->
+                    </h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 py-0 py-lg-5">
+                    <h1 class="mb-3">Resumen</h1> <!-- no modificar -->
+                    <h5 class="mb-3">En el corazón del sur de Chile, donde la magia de Rupanco y Puerto Octa, Ruta Interlagos</h5> <!-- descripcion del proyecto -->
+                    <p>Lago Ranco al norte, al sur lago llanquihue, volcán osorno, petrohué, lago todos los santos. se encuentran próximamente nuestra parcelas.</p> <!-- descripcion del proyecto -->
+                    <a href="#masterplan-section" class="btn btn-secondary font-weight-bold py-2 px-4 mt-2">Ver vista 360</a>
+                </div>
+                <div class="col-lg-4 py-5 py-lg-0" style="min-height: 500px;">
+                    <div class="position-relative h-100">
+                        <iframe 
+                            class="position-absolute w-100 h-100" 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3100.123456789!2d-72.57637505266972!3d-40.883354158635385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDUzJzAwLjEiUyA3MsKwMzQnMzQuOSJX!5e0!3m2!1ses!2scl!4v1234567890123!5m2!1ses!2scl" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+                <div class="col-lg-4 py-0 py-lg-5"> <!-- atractivos del proyecto -->
+                    <h1 class="mb-3">Atractivos de la zona</h1>
+                    <p>Naturaleza, aventura y turismo activo.    </p>
+                    <h5 class="mb-3"><i class="fa fa-check text-primary mr-3"></i>Marina Rupanco</h5>
+                    <h5 class="mb-3"><i class="fa fa-check text-primary mr-3"></i>Islote Rupanco</h5>
+                    <h5 class="mb-3"><i class="fa fa-check text-primary mr-3"></i>Pesca deportiva</h5>
+                    <h5 class="mb-3"><i class="fa fa-check text-primary mr-3"></i>Saltos de Lago Rupanco (Sector Las Gaviotas)</h5>
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Masterplan Section -->
+    <div class="masterplan-section" id="masterplan-section">
+        <h2 class="text-center mb-4" style="padding-top:30px;">Vista 360</h2>
+        <div class="masterplan-container"> <!-- cambiar link de masterplan -->
+            <iframe 
+                src="https://lagunabonita-production.up.railway.app/masterplan.html" 
+                width="100%"
+                height="800px"
+                style="border: none; display: block;"
+                allowfullscreen
+                loading="lazy">
+            </iframe>
+            <div class="masterplan-overlay-top"></div>
+        </div>
+    </div>
+    <!-- Masterplan Section End -->
+    
+    <!-- Gallery Section -->
+    <div class="gallery-section">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h4 class="text-uppercase" style="letter-spacing: 5px; color: #ffffff;">Galería</h4>
+                <h1 class="display-4" style="color: #ffffff;">Laguna Bonita</h1>
+                <p style="color: #ffffff;">Descubre la belleza natural de nuestro proyecto</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/img/proyectos/lagunabonita/1.jpg" alt="Laguna Bonita 1" class="gallery-image">
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/img/proyectos/lagunabonita/2.jpg" alt="Laguna Bonita 2" class="gallery-image">
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
+                    <img src="assets/img/proyectos/lagunabonita/3.jpg" alt="Laguna Bonita 3" class="gallery-image">
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="400">
+                    <img src="assets/img/proyectos/lagunabonita/4.jpg" alt="Laguna Bonita 4" class="gallery-image">
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="500">
+                    <img src="assets/img/proyectos/lagunabonita/5.jpg" alt="Laguna Bonita 5" class="gallery-image">
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="600">
+                    <img src="assets/img/proyectos/lagunabonita/6.jpg" alt="Laguna Bonita 6" class="gallery-image">
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="700">
+                    <img src="assets/img/proyectos/lagunabonita/7.jpg" alt="Laguna Bonita 7" class="gallery-image">
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="800">
+                    <img src="assets/img/proyectos/lagunabonita/8.jpg" alt="Laguna Bonita 8" class="gallery-image">
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="900">
+                    <img src="assets/img/proyectos/lagunabonita/9.jpg" alt="Laguna Bonita 9" class="gallery-image">
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="1000">
+                    <img src="assets/img/proyectos/lagunabonita/10.jpg" alt="Laguna Bonita 10" class="gallery-image">
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="1100">
+                    <img src="assets/img/proyectos/lagunabonita/11.jpg" alt="Laguna Bonita 11" class="gallery-image">
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="1200">
+                    <img src="assets/img/proyectos/lagunabonita/12.jpg" alt="Laguna Bonita 12" class="gallery-image">
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="1300">
+                    <img src="assets/img/proyectos/lagunabonita/13.jpg" alt="Laguna Bonita 13" class="gallery-image">
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="1400">
+                    <img src="assets/img/proyectos/lagunabonita/14.jpg" alt="Laguna Bonita 14" class="gallery-image">
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="1500">
+                    <img src="assets/img/proyectos/lagunabonita/15.jpg" alt="Laguna Bonita 15" class="gallery-image">
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="1600">
+                    <img src="assets/img/proyectos/lagunabonita/16.jpg" alt="Laguna Bonita 16" class="gallery-image">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Gallery Section End -->
+    
+    <!-- Gallery Modal -->
+    <div id="galleryModal" class="gallery-modal">
+        <span class="gallery-close-modal">&times;</span>
+        <div class="gallery-modal-container">
+            <img class="gallery-modal-content" id="galleryModalImage" src="" alt="">
+        </div>
+    </div>
+    <!-- Gallery Modal End -->
+
+
+    <!-- Service Start -->
+    <div class="service-section">
+        <div class="service-overlay-top"></div>
+        <div class="container-fluid pt-5">
+            <div class="container">
+                <div class="section-title">
+                    <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Lorem Ipsum</h4>
+                    <h1 class="display-4">Lorem Ipsum</h1>
+                </div>
+            <div class="row">
+                <div class="col-lg-6 mb-5">
+                    <div class="row align-items-center">
+                        <div class="col-sm-5">
+                            <img class="img-fluid mb-3 mb-sm-0" src="assets/img/service-1.jpg" alt="">
+                        </div>
+                        <div class="col-sm-7">
+                            <h4><i class="fa fa-truck service-icon"></i>Lorem Ipsum</h4>
+                            <p class="m-0">Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit
+                                invidunt, dolore tempor diam ipsum takima erat tempor</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-5">
+                    <div class="row align-items-center">
+                        <div class="col-sm-5">
+                            <img class="img-fluid mb-3 mb-sm-0" src="assets/img/service-2.jpg" alt="">
+                        </div>
+                        <div class="col-sm-7">
+                            <h4><i class="fa fa-coffee service-icon"></i>Lorem Ipsum</h4>
+                            <p class="m-0">Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit
+                                invidunt, dolore tempor diam ipsum takima erat tempor</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-5">
+                    <div class="row align-items-center">
+                        <div class="col-sm-5">
+                            <img class="img-fluid mb-3 mb-sm-0" src="assets/img/service-3.jpg" alt="">
+                        </div>
+                        <div class="col-sm-7">
+                            <h4><i class="fa fa-award service-icon"></i>Lorem Ipsum</h4>
+                            <p class="m-0">Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit
+                                invidunt, dolore tempor diam ipsum takima erat tempor</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-5">
+                    <div class="row align-items-center">
+                        <div class="col-sm-5">
+                            <img class="img-fluid mb-3 mb-sm-0" src="assets/img/service-4.jpg" alt="">
+                        </div>
+                        <div class="col-sm-7">
+                            <h4><i class="fa fa-table service-icon"></i>Lorem Ipsum</h4>
+                            <p class="m-0">Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit
+                                invidunt, dolore tempor diam ipsum takima erat tempor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- Start Quick Search Area -->
+    <div class="quick-search style-2 ptb-100" id="form-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="course-search-box" data-aos="fade-right">
+                        <div class="right wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".2s">
+                            <div class="fields">
+                                <form id="contact_form">
+                                    <h4>¡Quiero más información de como invertir!</h4>
+                                    <div class="returnmessage" data-success="Tu mensaje ha sido enviado. Te contactaremos pronto."></div>
+                                    
+                                    <div class="form-group">
+                                        <input class="form-control styled-input" placeholder="Nombre" type="text" id="searchKey1" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input class="form-control styled-input" placeholder="Teléfono" type="text" id="searchKey2" required>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <input class="form-control styled-input" placeholder="Email" type="email" id="searchKey3" required>
+                                    </div>
+                                    
+                                    <div class="grax_tm_button">
+                                        <button class="default-btn submit-btn" type="submit" id="send_message">Enviar mis datos</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="quick-content" data-aos="fade-up" data-aos-delay="200">
+                        <div class="sub-title">
+                            <p>Desarrollo de proyectos de parcelación.</p>
+                        </div>
+                        <h2>Oportunidades con Alto Potencial de Retorno</h2>
+                        <p>Nos especializamos en transformar terrenos en oportunidades de inversión para las personas, mediante un modelo 360. Desde el concepto y diseño hasta la correcta entrega a los nuevos propietarios</p>
+                        
+                        <!-- Contenedor de imágenes superpuestas -->
+                        <div class="management-image-container">
+                            <a href="javascript:void(0)" class="image-modal-trigger">
+                                <img src="assets/img/all-img/gestiondeproyectos.png" alt="Gestión de Proyectos" class="responsive-management-image">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Quick Search Area -->
+
+    <!-- Modal mejorado para mantener proporciones -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <div class="modal-image-container">
+            <img class="modal-content" id="expandedImage" src="" alt="">
+        </div>
+    </div>
+
+
+    <!-- Menu Start 
+    <div class="container-fluid pt-5">
+        <div class="container">
+            <div class="section-title">
+                <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Menu & Pricing</h4>
+                <h1 class="display-4">Competitive Pricing</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 class="mb-5">Hot Coffee</h1>
+                    <div class="row align-items-center mb-5">
+                        <div class="col-4 col-sm-3">
+                            <img class="w-100 rounded-circle mb-3 mb-sm-0" src="img/menu-1.jpg" alt="">
+                            <h5 class="menu-price">$5</h5>
+                        </div>
+                        <div class="col-8 col-sm-9">
+                            <h4>Black Coffee</h4>
+                            <p class="m-0">Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor</p>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mb-5">
+                        <div class="col-4 col-sm-3">
+                            <img class="w-100 rounded-circle mb-3 mb-sm-0" src="img/menu-2.jpg" alt="">
+                            <h5 class="menu-price">$7</h5>
+                        </div>
+                        <div class="col-8 col-sm-9">
+                            <h4>Chocolete Coffee</h4>
+                            <p class="m-0">Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor</p>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mb-5">
+                        <div class="col-4 col-sm-3">
+                            <img class="w-100 rounded-circle mb-3 mb-sm-0" src="img/menu-3.jpg" alt="">
+                            <h5 class="menu-price">$9</h5>
+                        </div>
+                        <div class="col-8 col-sm-9">
+                            <h4>Coffee With Milk</h4>
+                            <p class="m-0">Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h1 class="mb-5">Cold Coffee</h1>
+                    <div class="row align-items-center mb-5">
+                        <div class="col-4 col-sm-3">
+                            <img class="w-100 rounded-circle mb-3 mb-sm-0" src="img/menu-1.jpg" alt="">
+                            <h5 class="menu-price">$5</h5>
+                        </div>
+                        <div class="col-8 col-sm-9">
+                            <h4>Black Coffee</h4>
+                            <p class="m-0">Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor</p>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mb-5">
+                        <div class="col-4 col-sm-3">
+                            <img class="w-100 rounded-circle mb-3 mb-sm-0" src="img/menu-2.jpg" alt="">
+                            <h5 class="menu-price">$7</h5>
+                        </div>
+                        <div class="col-8 col-sm-9">
+                            <h4>Chocolete Coffee</h4>
+                            <p class="m-0">Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor</p>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mb-5">
+                        <div class="col-4 col-sm-3">
+                            <img class="w-100 rounded-circle mb-3 mb-sm-0" src="img/menu-3.jpg" alt="">
+                            <h5 class="menu-price">$9</h5>
+                        </div>
+                        <div class="col-8 col-sm-9">
+                            <h4>Coffee With Milk</h4>
+                            <p class="m-0">Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     Menu End -->
+
+
+    
+
+
+    <!-- Testimonial Start -->
+    
+
+
+        <!-- Footer Area -->
+        <footer class="footer-simple">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-left">
+                            <p>©Copyright 2025. Desarrollado por <a href="https://api.whatsapp.com/send?phone=56931354518&text=Hola%2C+me+gustar%C3%ADa+tener+m%C3%A1s+informaci%C3%B3n" target="_blank">astra360</a></p>
+                    </div>
+                    <div class="footer-right">
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/profile.php?id=61574983996323&locale=es_LA" target="_blank" class="social-link facebook">
+                                <i class='bx bxl-facebook'></i>
+                            </a>
+                            <a href="https://www.instagram.com/suraxis.cl" target="_blank" class="social-link instagram">
+                                <i class='bx bxl-instagram-alt'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer Area -->
+
+        <div class="go-top active">
+            <i class="bx bx-up-arrow-alt"></i>
+        </div>
+
+        <!-- Links of JS files -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/aos.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/magnific-popup.min.js"></script>
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/main.js"></script>
+        
+        <!-- Script to ensure social media links work -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Simple function to ensure social links work
+                function ensureSocialLinksWork() {
+                    const socialLinks = document.querySelectorAll('.social-link');
+                    socialLinks.forEach(function(link) {
+                        // Ensure the link is clickable
+                        link.style.cursor = 'pointer';
+                        link.style.pointerEvents = 'auto';
+                        
+                        // Add click event as backup
+                        link.addEventListener('click', function(e) {
+                            // Allow the default behavior, just ensure it works
+                            console.log('Social link clicked:', this.href);
+                        });
+                    });
+                }
+                
+                // Run the function
+                ensureSocialLinksWork();
+                
+                // Modal para imágenes
+                const modal = document.getElementById('imageModal');
+                const modalImg = document.getElementById('expandedImage');
+                const triggers = document.querySelectorAll('.image-modal-trigger');
+                
+                triggers.forEach(trigger => {
+                    trigger.onclick = function() {
+                        modal.style.display = "block";
+                        modalImg.src = this.querySelector('img').src;
+                        modalImg.alt = this.querySelector('img').alt;
+                        
+                        // Prevenir scroll del body en móviles cuando el modal está abierto
+                        if (window.innerWidth <= 768) {
+                            document.body.style.overflow = 'hidden';
+                        }
+                    }
+                });
+                
+                document.querySelector('.close-modal').onclick = function() {
+                    modal.style.display = "none";
+                    // Restaurar scroll del body
+                    document.body.style.overflow = '';
+                }
+                
+                // Cerrar modal al hacer click fuera de la imagen
+                modal.onclick = function(event) {
+                    if (event.target === modal) {
+                        modal.style.display = "none";
+                        document.body.style.overflow = '';
+                    }
+                }
+                
+                // Gallery Modal functionality
+                const galleryModal = document.getElementById('galleryModal');
+                const galleryModalImg = document.getElementById('galleryModalImage');
+                const galleryItems = document.querySelectorAll('.gallery-item');
+                
+                galleryItems.forEach(item => {
+                    item.onclick = function() {
+                        galleryModal.style.display = "block";
+                        galleryModalImg.src = this.querySelector('img').src;
+                        galleryModalImg.alt = this.querySelector('img').alt;
+                        
+                        // Prevenir scroll del body cuando el modal está abierto
+                        document.body.style.overflow = 'hidden';
+                    }
+                });
+                
+                // Cerrar modal de galería
+                document.querySelector('.gallery-close-modal').onclick = function() {
+                    galleryModal.style.display = "none";
+                    document.body.style.overflow = '';
+                }
+                
+                // Cerrar modal de galería al hacer click fuera de la imagen
+                galleryModal.onclick = function(event) {
+                    if (event.target === galleryModal) {
+                        galleryModal.style.display = "none";
+                        document.body.style.overflow = '';
+                    }
+                }
+                
+                // Cerrar modal con tecla ESC
+                document.addEventListener('keydown', function(event) {
+                    if (event.key === 'Escape') {
+                        if (modal.style.display === 'block') {
+                            modal.style.display = 'none';
+                            document.body.style.overflow = '';
+                        }
+                        if (galleryModal.style.display === 'block') {
+                            galleryModal.style.display = 'none';
+                            document.body.style.overflow = '';
+                        }
+                    }
+                });
+                
+                // Inicializar carrusel del hero
+                const heroCarousel = document.getElementById('blog-carousel');
+                if (heroCarousel) {
+                    // Inicializar carrusel de Bootstrap con configuración específica
+                    const carousel = new bootstrap.Carousel(heroCarousel, {
+                        interval: 5000,        // 5 segundos
+                        wrap: true,           // Loop infinito
+                        pause: 'hover',       // Pausa en hover
+                        keyboard: true,       // Navegación con teclado
+                        touch: true           // Soporte táctil
+                    });
+                    
+                    // Función para aplicar zoom a la imagen activa
+                    function applyZoomToActiveImage() {
+                        const activeImage = heroCarousel.querySelector('.carousel-item.active .hero-image');
+                        if (activeImage) {
+                            activeImage.style.transform = 'scale(1.1)';
+                        }
+                    }
+                    
+                    // Aplicar zoom inicial después de que se cargue la página
+                    setTimeout(() => {
+                        applyZoomToActiveImage();
+                    }, 500);
+                    
+                    // Eventos del carrusel
+                    heroCarousel.addEventListener('slide.bs.carousel', function (event) {
+                        // Resetear zoom de todas las imágenes
+                        const allImages = heroCarousel.querySelectorAll('.hero-image');
+                        allImages.forEach(img => {
+                            img.style.transform = 'scale(1)';
+                        });
+                    });
+                    
+                    heroCarousel.addEventListener('slid.bs.carousel', function (event) {
+                        // Aplicar zoom a la nueva imagen activa después de la transición
+                        setTimeout(() => {
+                            applyZoomToActiveImage();
+                        }, 200);
+                    });
+                    
+                    // Asegurar que el carrusel continúe automáticamente
+                    heroCarousel.addEventListener('mouseleave', function() {
+                        carousel.cycle(); // Reiniciar ciclo automático
+                    });
+                    
+                    // Iniciar el ciclo automático
+                    carousel.cycle();
+                }
+            });
+        </script>
+</body>
+
+</html>
