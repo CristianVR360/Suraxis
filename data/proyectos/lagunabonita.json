@@ -1,0 +1,45 @@
+{
+  "id": "lagunabonita",
+  "name": "Laguna Bonita",
+  "location": "Rupanco",
+  "tagline": "Proyecto de alta plusvalía",
+  "hero": [
+    "assets/img/proyectos/lagunabonita/hero.jpg",
+    "assets/img/proyectos/lagunabonita/hero-2.jpg"
+  ],
+  "about": {
+    "subtitle": "En el corazón del sur de chile - Rupanco, Pto. Octay",
+    "summary_title": "Resumen",
+    "summary_top": "En el corazón del sur de Chile, donde la magia de Rupanco y Puerto Octa, Ruta Interlagos",
+    "summary_text": "Lago Ranco al norte, al sur lago llanquihue, volcán osorno, petrohué, lago todos los santos. se encuentran próximamente nuestra parcelas.",
+    "attractives_title": "Atractivos de la zona",
+    "attractives_description": "Naturaleza, aventura y turismo activo.",
+    "attractives_items": [
+      "Marina Rupanco",
+      "Islote Rupanco",
+      "Pesca deportiva",
+      "Saltos de Lago Rupanco (Sector Las Gaviotas)"
+    ],
+    "map_iframe": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3100.123456789!2d-72.57637505266972!3d-40.883354158635385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDUzJzAwLjEiUyA3MsKwMzQnMzQuOSJX!5e0!3m2!1ses!2scl!4v1234567890123!5m2!1ses!2scl",
+    "masterplan_url": "https://lagunabonita-production.up.railway.app/masterplan.html"
+  },
+  "gallery": [
+    "assets/img/proyectos/lagunabonita/1.jpg",
+    "assets/img/proyectos/lagunabonita/2.jpg",
+    "assets/img/proyectos/lagunabonita/3.jpg",
+    "assets/img/proyectos/lagunabonita/4.jpg",
+    "assets/img/proyectos/lagunabonita/5.jpg",
+    "assets/img/proyectos/lagunabonita/6.jpg",
+    "assets/img/proyectos/lagunabonita/7.jpg",
+    "assets/img/proyectos/lagunabonita/8.jpg",
+    "assets/img/proyectos/lagunabonita/9.jpg",
+    "assets/img/proyectos/lagunabonita/10.jpg",
+    "assets/img/proyectos/lagunabonita/11.jpg",
+    "assets/img/proyectos/lagunabonita/12.jpg",
+    "assets/img/proyectos/lagunabonita/13.jpg",
+    "assets/img/proyectos/lagunabonita/14.jpg",
+    "assets/img/proyectos/lagunabonita/15.jpg",
+    "assets/img/proyectos/lagunabonita/16.jpg"
+  ]
+}
+

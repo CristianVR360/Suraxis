@@ -1,0 +1,38 @@
+{
+  "id": "nombre-del-proyecto",
+  "name": "Nombre del Proyecto",
+  "location": "Ciudad, Región",
+  "tagline": "Descripción breve del proyecto",
+  
+  "hero": [
+    "assets/img/proyectos/nombre-del-proyecto/hero.jpg",
+    "assets/img/proyectos/nombre-del-proyecto/hero-2.jpg"
+  ],
+  
+  "about": {
+    "subtitle": "Subtítulo descriptivo del proyecto - Ubicación específica",
+    "summary_title": "Resumen",
+    "summary_top": "Primera línea del resumen que describe el proyecto",
+    "summary_text": "Texto completo que describe el proyecto en detalle. Aquí puedes incluir información sobre la ubicación, características principales, beneficios, y cualquier otro detalle relevante que quieras compartir con los visitantes.",
+    "attractives_title": "Atractivos de la zona",
+    "attractives_description": "Descripción general de los atractivos y características de la zona",
+    "attractives_items": [
+      "Atractivo turístico o característica 1",
+      "Atractivo turístico o característica 2",
+      "Atractivo turístico o característica 3",
+      "Atractivo turístico o característica 4"
+    ],
+    "map_iframe": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1dXXXXX!2d-XX.XXXXX!3d-XX.XXXXX!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zXXXXX!5e0!3m2!1ses!2scl!4v1234567890123!5m2!1ses!2scl",
+    "masterplan_url": "https://ejemplo.com/masterplan.html"
+  },
+  
+  "gallery": [
+    "assets/img/proyectos/nombre-del-proyecto/1.jpg",
+    "assets/img/proyectos/nombre-del-proyecto/2.jpg",
+    "assets/img/proyectos/nombre-del-proyecto/3.jpg",
+    "assets/img/proyectos/nombre-del-proyecto/4.jpg",
+    "assets/img/proyectos/nombre-del-proyecto/5.jpg",
+    "assets/img/proyectos/nombre-del-proyecto/6.jpg"
+  ]
+}
+

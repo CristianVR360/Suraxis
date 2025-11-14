@@ -513,27 +513,8 @@
     <!-- Hero Section Start -->
     <div class="hero-section">
         <div id="blog-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="w-100 hero-image" src="assets/img/proyectos/lagunabonita/hero.jpg" alt="Laguna Bonita Hero">
-                    <div class="hero-overlay"></div>
-                    <div class="hero-overlay-bottom"></div>
-                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <h2 class="font-weight-medium m-0" style="color: #ffffff;">Rupanco</h2> <!-- ubicacion del proyecto -->
-                        <h1 class="display-1 text-white m-0">Laguna Bonita</h1> <!-- nombre del proyecto -->
-                        <h2 class="text-white m-0">Proyecto de alta plusvalía</h2> <!-- descripcion breve del proyecto -->
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="w-100 hero-image" src="assets/img/proyectos/lagunabonita/hero-2.jpg" alt="Laguna Bonita Hero 2">
-                    <div class="hero-overlay"></div>
-                    <div class="hero-overlay-bottom"></div>
-                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <h2 class="font-weight-medium m-0" style="color: #ffffff;">Rupanco</h2> <!-- ubicacion del proyecto -->
-                        <h1 class="display-1 text-white m-0">Laguna Bonita</h1> <!-- nombre del proyecto -->    
-                        <h2 class="text-white m-0">Proyecto de alta plusvalía</h2> <!-- descripcion breve del proyecto -->
-                    </div>
-                </div>
+            <div class="carousel-inner" id="hero-carousel">
+                <!-- Contenido dinámico cargado desde JSON -->
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#blog-carousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -553,21 +534,27 @@
         <div class="container">
             <div class="section-title">
                 <h4 class="text-uppercase" style="letter-spacing: 5px; color: #fb5607;">Sobre el proyecto</h4> <!-- no modificar -->
-                <h1 class="display-4">En el corazón del sur de chile - Rupanco, Pto. Octay <!-- subtitulo del proyecto -->
-                    </h1>
+                <h1 class="display-4" id="about-subtitle">
+                    <!-- Subtítulo cargado dinámicamente -->
+                </h1>
             </div>
             <div class="row">
                 <div class="col-lg-4 py-0 py-lg-5">
-                    <h1 class="mb-3">Resumen</h1> <!-- no modificar -->
-                    <h5 class="mb-3">En el corazón del sur de Chile, donde la magia de Rupanco y Puerto Octa, Ruta Interlagos</h5> <!-- descripcion del proyecto -->
-                    <p>Lago Ranco al norte, al sur lago llanquihue, volcán osorno, petrohué, lago todos los santos. se encuentran próximamente nuestra parcelas.</p> <!-- descripcion del proyecto -->
+                    <h1 class="mb-3" id="summary-title">Resumen</h1> <!-- no modificar -->
+                    <h5 class="mb-3" id="about-summary-top">
+                        <!-- Descripción superior cargada dinámicamente -->
+                    </h5>
+                    <p id="about-summary-text">
+                        <!-- Texto del resumen cargado dinámicamente -->
+                    </p>
                     <a href="#masterplan-section" class="btn btn-secondary font-weight-bold py-2 px-4 mt-2">Ver vista 360</a>
                 </div>
                 <div class="col-lg-4 py-5 py-lg-0" style="min-height: 500px;">
                     <div class="position-relative h-100">
                         <iframe 
+                            id="map-frame"
                             class="position-absolute w-100 h-100" 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3100.123456789!2d-72.57637505266972!3d-40.883354158635385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDUzJzAwLjEiUyA3MsKwMzQnMzQuOSJX!5e0!3m2!1ses!2scl!4v1234567890123!5m2!1ses!2scl" 
+                            src=""
                             style="border:0;" 
                             allowfullscreen="" 
                             loading="lazy" 
@@ -575,15 +562,16 @@
                         </iframe>
                     </div>
                 </div>
-                <div class="col-lg-4 py-0 py-lg-5"> <!-- atractivos del proyecto -->
-                    <h1 class="mb-3">Atractivos de la zona</h1>
-                    <p>Naturaleza, aventura y turismo activo.    </p>
-                    <h5 class="mb-3"><i class="fa fa-check text-primary mr-3"></i>Marina Rupanco</h5>
-                    <h5 class="mb-3"><i class="fa fa-check text-primary mr-3"></i>Islote Rupanco</h5>
-                    <h5 class="mb-3"><i class="fa fa-check text-primary mr-3"></i>Pesca deportiva</h5>
-                    <h5 class="mb-3"><i class="fa fa-check text-primary mr-3"></i>Saltos de Lago Rupanco (Sector Las Gaviotas)</h5>
-
-                    
+                <div class="col-lg-4 py-0 py-lg-5">
+                    <h1 class="mb-3" id="attractives-title">
+                        <!-- Título de atractivos cargado dinámicamente -->
+                    </h1>
+                    <p id="attractives-description">
+                        <!-- Descripción de atractivos cargada dinámicamente -->
+                    </p>
+                    <div id="attractives-list">
+                        <!-- Lista de atractivos cargada dinámicamente -->
+                    </div>
                 </div>
             </div>
         </div>
@@ -593,9 +581,10 @@
     <!-- Masterplan Section -->
     <div class="masterplan-section" id="masterplan-section">
         <h2 class="text-center mb-4" style="padding-top:30px;">Vista 360</h2>
-        <div class="masterplan-container"> <!-- cambiar link de masterplan -->
+        <div class="masterplan-container">
             <iframe 
-                src="https://lagunabonita-production.up.railway.app/masterplan.html" 
+                id="masterplan-iframe"
+                src=""
                 width="100%"
                 height="800px"
                 style="border: none; display: block;"
@@ -612,59 +601,14 @@
         <div class="container">
             <div class="section-title text-center mb-5">
                 <h4 class="text-uppercase" style="letter-spacing: 5px; color: #ffffff;">Galería</h4>
-                <h1 class="display-4" style="color: #ffffff;">Laguna Bonita</h1>
+                <h1 class="display-4" style="color: #ffffff;" id="gallery-title">
+                    <!-- Título de la galería cargado dinámicamente -->
+                </h1>
                 <p style="color: #ffffff;">Descubre la belleza natural de nuestro proyecto</p>
             </div>
             
-            <div class="gallery-grid">
-                <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
-                    <img src="assets/img/proyectos/lagunabonita/1.jpg" alt="Laguna Bonita 1" class="gallery-image">
-                </div>
-                <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
-                    <img src="assets/img/proyectos/lagunabonita/2.jpg" alt="Laguna Bonita 2" class="gallery-image">
-                </div>
-                <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
-                    <img src="assets/img/proyectos/lagunabonita/3.jpg" alt="Laguna Bonita 3" class="gallery-image">
-                </div>
-                <div class="gallery-item" data-aos="fade-up" data-aos-delay="400">
-                    <img src="assets/img/proyectos/lagunabonita/4.jpg" alt="Laguna Bonita 4" class="gallery-image">
-                </div>
-                <div class="gallery-item" data-aos="fade-up" data-aos-delay="500">
-                    <img src="assets/img/proyectos/lagunabonita/5.jpg" alt="Laguna Bonita 5" class="gallery-image">
-                </div>
-                <div class="gallery-item" data-aos="fade-up" data-aos-delay="600">
-                    <img src="assets/img/proyectos/lagunabonita/6.jpg" alt="Laguna Bonita 6" class="gallery-image">
-                </div>
-                <div class="gallery-item" data-aos="fade-up" data-aos-delay="700">
-                    <img src="assets/img/proyectos/lagunabonita/7.jpg" alt="Laguna Bonita 7" class="gallery-image">
-                </div>
-                <div class="gallery-item" data-aos="fade-up" data-aos-delay="800">
-                    <img src="assets/img/proyectos/lagunabonita/8.jpg" alt="Laguna Bonita 8" class="gallery-image">
-                </div>
-                <div class="gallery-item" data-aos="fade-up" data-aos-delay="900">
-                    <img src="assets/img/proyectos/lagunabonita/9.jpg" alt="Laguna Bonita 9" class="gallery-image">
-                </div>
-                <div class="gallery-item" data-aos="fade-up" data-aos-delay="1000">
-                    <img src="assets/img/proyectos/lagunabonita/10.jpg" alt="Laguna Bonita 10" class="gallery-image">
-                </div>
-                <div class="gallery-item" data-aos="fade-up" data-aos-delay="1100">
-                    <img src="assets/img/proyectos/lagunabonita/11.jpg" alt="Laguna Bonita 11" class="gallery-image">
-                </div>
-                <div class="gallery-item" data-aos="fade-up" data-aos-delay="1200">
-                    <img src="assets/img/proyectos/lagunabonita/12.jpg" alt="Laguna Bonita 12" class="gallery-image">
-                </div>
-                <div class="gallery-item" data-aos="fade-up" data-aos-delay="1300">
-                    <img src="assets/img/proyectos/lagunabonita/13.jpg" alt="Laguna Bonita 13" class="gallery-image">
-                </div>
-                <div class="gallery-item" data-aos="fade-up" data-aos-delay="1400">
-                    <img src="assets/img/proyectos/lagunabonita/14.jpg" alt="Laguna Bonita 14" class="gallery-image">
-                </div>
-                <div class="gallery-item" data-aos="fade-up" data-aos-delay="1500">
-                    <img src="assets/img/proyectos/lagunabonita/15.jpg" alt="Laguna Bonita 15" class="gallery-image">
-                </div>
-                <div class="gallery-item" data-aos="fade-up" data-aos-delay="1600">
-                    <img src="assets/img/proyectos/lagunabonita/16.jpg" alt="Laguna Bonita 16" class="gallery-image">
-                </div>
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Galería cargada dinámicamente desde JSON -->
             </div>
         </div>
     </div>
@@ -928,6 +872,9 @@
         <script src="assets/js/owl.carousel.min.js"></script>
         <script src="assets/js/main.js"></script>
         
+        <!-- Script para cargar proyecto dinámicamente -->
+        <script src="js/proyectos.js"></script>
+        
         <!-- Script to ensure social media links work -->
         <script>
             document.addEventListener('DOMContentLoaded', function() {
@@ -1026,55 +973,7 @@
                     }
                 });
                 
-                // Inicializar carrusel del hero
-                const heroCarousel = document.getElementById('blog-carousel');
-                if (heroCarousel) {
-                    // Inicializar carrusel de Bootstrap con configuración específica
-                    const carousel = new bootstrap.Carousel(heroCarousel, {
-                        interval: 5000,        // 5 segundos
-                        wrap: true,           // Loop infinito
-                        pause: 'hover',       // Pausa en hover
-                        keyboard: true,       // Navegación con teclado
-                        touch: true           // Soporte táctil
-                    });
-                    
-                    // Función para aplicar zoom a la imagen activa
-                    function applyZoomToActiveImage() {
-                        const activeImage = heroCarousel.querySelector('.carousel-item.active .hero-image');
-                        if (activeImage) {
-                            activeImage.style.transform = 'scale(1.1)';
-                        }
-                    }
-                    
-                    // Aplicar zoom inicial después de que se cargue la página
-                    setTimeout(() => {
-                        applyZoomToActiveImage();
-                    }, 500);
-                    
-                    // Eventos del carrusel
-                    heroCarousel.addEventListener('slide.bs.carousel', function (event) {
-                        // Resetear zoom de todas las imágenes
-                        const allImages = heroCarousel.querySelectorAll('.hero-image');
-                        allImages.forEach(img => {
-                            img.style.transform = 'scale(1)';
-                        });
-                    });
-                    
-                    heroCarousel.addEventListener('slid.bs.carousel', function (event) {
-                        // Aplicar zoom a la nueva imagen activa después de la transición
-                        setTimeout(() => {
-                            applyZoomToActiveImage();
-                        }, 200);
-                    });
-                    
-                    // Asegurar que el carrusel continúe automáticamente
-                    heroCarousel.addEventListener('mouseleave', function() {
-                        carousel.cycle(); // Reiniciar ciclo automático
-                    });
-                    
-                    // Iniciar el ciclo automático
-                    carousel.cycle();
-                }
+                // El carrusel del hero se inicializa en proyectos.js después de cargar los datos
             });
         </script>
 </body>
