@@ -501,8 +501,7 @@ video::-webkit-media-controls {
     bottom: 0;
     top: 0;
     right: 0;
-    background:#141313;
-	opacity:0.4;
+    background: rgba(0, 0, 0, 1.1);
 }
 .nav-style-2.navbar-area {
   top: 0px;

@@ -26,28 +26,34 @@
     <link rel="stylesheet" href="assets/css/simple-footer.css">
     <link rel="stylesheet" href="assets/css/clickable-cards.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    
+
     <!-- Hero Section Styles for Projects -->
     <link rel="stylesheet" href="assets/css proyectos/hero-styles.css">
-    
+
     <!-- Masterplan Section Styles -->
     <style>
         .masterplan-section {
             width: 100%;
             overflow-x: hidden;
         }
-        
+
         .masterplan-container {
             position: relative;
         }
-        
+
         .masterplan-section iframe {
             width: 100%;
-            height: 800px;
+            height: 400px;
             border: none;
             display: block;
         }
-        
+
+        .masterplan-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
         .masterplan-overlay-top {
             position: absolute;
             top: -2px;
@@ -61,47 +67,47 @@
             z-index: 10;
             pointer-events: none;
         }
-        
+
         @media (max-width: 768px) {
             .masterplan-section iframe {
-                height: 600px;
+                height: 300px;
             }
-            
+
             .masterplan-overlay-top {
                 height: 150px;
             }
         }
-        
+
         @media (max-width: 480px) {
             .masterplan-section iframe {
-                height: 500px;
+                height: 250px;
             }
-            
+
             .masterplan-overlay-top {
                 height: 120px;
             }
         }
-        
+
         /* Management Image Container Styles */
         .management-image-container {
             margin-top: 20px;
             text-align: center;
         }
-        
+
         .responsive-management-image {
             max-width: 100%;
             height: auto;
             border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
         }
-        
+
         .responsive-management-image:hover {
             transform: scale(1.02);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
         }
-        
+
         /* Modal Styles */
         .modal {
             display: none;
@@ -111,14 +117,14 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(255,255,255,0.3);
+            background-color: rgba(255, 255, 255, 0.3);
             backdrop-filter: blur(8px);
             -webkit-backdrop-filter: blur(8px);
             overflow: hidden;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         .modal-image-container {
             display: flex;
             justify-content: center;
@@ -128,7 +134,7 @@
             padding: 20px;
             box-sizing: border-box;
         }
-        
+
         .modal-content {
             max-width: 95vw;
             max-height: 95vh;
@@ -137,10 +143,10 @@
             object-fit: contain;
             animation: zoom 0.3s ease-out;
             border-radius: 8px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.8);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
             background-color: transparent;
         }
-        
+
         .close-modal {
             position: fixed;
             top: 20px;
@@ -151,41 +157,42 @@
             cursor: pointer;
             transition: all 0.3s ease;
             z-index: 10000;
-            background-color: rgba(0,0,0,0.7);
+            background-color: rgba(0, 0, 0, 0.7);
             border-radius: 50%;
             width: 60px;
             height: 60px;
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 2px solid rgba(255,255,255,0.3);
+            border: 2px solid rgba(255, 255, 255, 0.3);
         }
-        
+
         .close-modal:hover {
             color: #fff;
-            background-color: rgba(0,0,0,0.9);
+            background-color: rgba(0, 0, 0, 0.9);
             transform: scale(1.1);
-            border-color: rgba(255,255,255,0.6);
+            border-color: rgba(255, 255, 255, 0.6);
         }
-        
+
         @keyframes zoom {
             from {
-                transform: scale(0.8); 
+                transform: scale(0.8);
                 opacity: 0;
             }
+
             to {
-                transform: scale(1); 
+                transform: scale(1);
                 opacity: 1;
             }
         }
-        
+
         /* Responsive Modal Styles */
         @media (max-width: 768px) {
             .modal-content {
                 max-width: 95vw;
                 max-height: 95vh;
             }
-            
+
             .close-modal {
                 top: 15px;
                 right: 15px;
@@ -194,14 +201,14 @@
                 height: 55px;
             }
         }
-        
+
         @media (max-width: 480px) {
             .modal-content {
                 max-width: 100vw;
                 max-height: 100vh;
                 border-radius: 4px;
             }
-            
+
             .close-modal {
                 top: 10px;
                 right: 10px;
@@ -210,13 +217,13 @@
                 height: 45px;
             }
         }
-        
+
         /* Gallery Section Styles */
         .gallery-section {
             padding: 80px 0;
             background-color: #ff5206;
         }
-        
+
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -224,7 +231,7 @@
             margin: 0;
             padding: 0;
         }
-        
+
         .gallery-item {
             position: relative;
             overflow: hidden;
@@ -232,12 +239,12 @@
             aspect-ratio: 1;
             transition: transform 0.3s ease;
         }
-        
+
         .gallery-item:hover {
             transform: scale(1.05);
             z-index: 10;
         }
-        
+
         .gallery-image {
             width: 100%;
             height: 100%;
@@ -245,11 +252,11 @@
             display: block;
             transition: transform 0.3s ease;
         }
-        
+
         .gallery-item:hover .gallery-image {
             transform: scale(1.1);
         }
-        
+
         /* Gallery Modal Styles */
         .gallery-modal {
             display: none;
@@ -263,7 +270,7 @@
             backdrop-filter: blur(5px);
             -webkit-backdrop-filter: blur(5px);
         }
-        
+
         .gallery-modal-container {
             display: flex;
             justify-content: center;
@@ -273,7 +280,7 @@
             padding: 20px;
             box-sizing: border-box;
         }
-        
+
         .gallery-modal-content {
             max-width: 90vw;
             max-height: 90vh;
@@ -284,7 +291,7 @@
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
             animation: galleryZoom 0.3s ease-out;
         }
-        
+
         .gallery-close-modal {
             position: fixed;
             top: 30px;
@@ -304,46 +311,83 @@
             justify-content: center;
             border: 2px solid rgba(255, 255, 255, 0.3);
         }
-        
+
         .gallery-close-modal:hover {
             color: #fff;
             background-color: rgba(0, 0, 0, 0.9);
             transform: scale(1.1);
             border-color: rgba(255, 255, 255, 0.6);
         }
-        
+
         @keyframes galleryZoom {
             from {
                 transform: scale(0.8);
                 opacity: 0;
             }
+
             to {
                 transform: scale(1);
                 opacity: 1;
             }
         }
-        
+
+        /* Gallery Navigation Buttons */
+        .gallery-prev,
+        .gallery-next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -50px;
+            color: white;
+            font-weight: bold;
+            font-size: 40px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            -webkit-user-select: none;
+            z-index: 10002;
+            text-decoration: none;
+        }
+
+        .gallery-next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .gallery-prev {
+            left: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .gallery-prev:hover,
+        .gallery-next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+        }
+
         /* Responsive Gallery Styles */
         @media (max-width: 1200px) {
             .gallery-grid {
                 grid-template-columns: repeat(3, 1fr);
             }
         }
-        
+
         @media (max-width: 768px) {
             .gallery-section {
                 padding: 60px 0;
             }
-            
+
             .gallery-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
-            
+
             .gallery-modal-content {
                 max-width: 95vw;
                 max-height: 95vh;
             }
-            
+
             .gallery-close-modal {
                 top: 20px;
                 right: 20px;
@@ -351,19 +395,25 @@
                 width: 60px;
                 height: 60px;
             }
+
+            .gallery-prev,
+            .gallery-next {
+                padding: 10px;
+                font-size: 30px;
+            }
         }
-        
+
         @media (max-width: 480px) {
             .gallery-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
-            
+
             .gallery-modal-content {
                 max-width: 98vw;
                 max-height: 98vh;
                 border-radius: 4px;
             }
-            
+
             .gallery-close-modal {
                 top: 15px;
                 right: 15px;
@@ -376,139 +426,146 @@
 </head>
 
 <body>
-        <!-- Botón flotante WhatsApp -->
-        <a href="https://api.whatsapp.com/send?phone=56935634527&text=Hola%2C+me+gustar%C3%ADa+tener+m%C3%A1s+informaci%C3%B3n"
-           class="whatsapp-float" target="_blank" id="whatsappBtn">
-            <i class='bx bxl-whatsapp'></i> Contáctanos
-        </a>
+    <!-- Botón flotante WhatsApp -->
+    <a href="https://api.whatsapp.com/send?phone=56935634527&text=Hola%2C+me+gustar%C3%ADa+tener+m%C3%A1s+informaci%C3%B3n"
+        class="whatsapp-float" target="_blank" id="whatsappBtn">
+        <i class='bx bxl-whatsapp'></i> Contáctanos
+    </a>
 
-        <!-- Start Navbar Area Start -->
-        <div class="navbar-area style-2" id="navbar">
-            <div class="container-fluid">
-                <nav class="navbar navbar-expand-lg">
-                    <a class="navbar-brand" href="index.html">
-                        <img class="logo-light" src="assets/img/logo/white-logo.png" alt="logo">
-                        <img class="logo-dark" src="assets/img/logo/logo.png" alt="logo">
-                    </a>
-                    <div class="other-option d-lg-none">
-                        <div class="option-item">
-                            <button type="button" class="search-btn" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop">
-                                <i class='bx bx-id-card'></i>
-                            </button>
-                        </div>
-                    </div>
-                    <a class="navbar-toggler" data-bs-toggle="offcanvas" href="#navbarOffcanvas" role="button" aria-controls="navbarOffcanvas">
-                        <i class='bx bx-menu'></i>
-                    </a>
-                    <div class="collapse navbar-collapse justify-content-between">
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item">
-                                <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
-                            </li>
-                            <li class="nav-item">
-                                <li class="nav-item"><a href="about-us.html" class="nav-link">Sobre nosotros</a></li>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item"><a href="about-us.html" class="nav-link">Sobre nosotros</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-        </div>
-        <!-- End Navbar Area Start -->
-
-        <!-- Start Responsive Navbar Area -->
-        <div class="responsive-navbar offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="navbarOffcanvas">
-            <div class="offcanvas-header">
-                <a href="index.html" class="logo d-inline-block">
-                    <img class="logo-light" src="assets/img/logo/logo.png" alt="logo">
+    <!-- Start Navbar Area Start -->
+    <div class="navbar-area style-2" id="navbar">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="index.html">
+                    <img class="logo-light" src="assets/img/logo/white-logo.png" alt="logo">
+                    <img class="logo-dark" src="assets/img/logo/logo.png" alt="logo">
                 </a>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-                <div class="accordion" id="navbarAccordion">
-                    <div class="accordion-item">
-                        <a href="index.html" class="accordion-link">
-                            Inicio
-                        </a>
-                        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#navbarAccordion">
-                            <div class="accordion-body">
-                                <div class="accordion" id="navbarAccordion7">
-                                    <div class="accordion-item">
-                                        <a href="index.html" class="accordion-link">
-                                            Inicio
-                                        </a>
-                                    </div>
+                <div class="other-option d-lg-none">
+                    <div class="option-item">
+                        <button type="button" class="search-btn" data-bs-toggle="offcanvas"
+                            data-bs-target="#staticBackdrop">
+                            <i class='bx bx-id-card'></i>
+                        </button>
+                    </div>
+                </div>
+                <a class="navbar-toggler" data-bs-toggle="offcanvas" href="#navbarOffcanvas" role="button"
+                    aria-controls="navbarOffcanvas">
+                    <i class='bx bx-menu'></i>
+                </a>
+                <div class="collapse navbar-collapse justify-content-between">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+                        </li>
+                        <li class="nav-item">
+                        <li class="nav-item"><a href="about-us.html" class="nav-link">Sobre nosotros</a></li>
+                        <ul class="dropdown-menu">
+                            <li class="nav-item"><a href="about-us.html" class="nav-link">Sobre nosotros</a></li>
+                        </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- End Navbar Area Start -->
+
+    <!-- Start Responsive Navbar Area -->
+    <div class="responsive-navbar offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="navbarOffcanvas">
+        <div class="offcanvas-header">
+            <a href="index.html" class="logo d-inline-block">
+                <img class="logo-light" src="assets/img/logo/logo.png" alt="logo">
+            </a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="accordion" id="navbarAccordion">
+                <div class="accordion-item">
+                    <a href="index.html" class="accordion-link">
+                        Inicio
+                    </a>
+                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#navbarAccordion">
+                        <div class="accordion-body">
+                            <div class="accordion" id="navbarAccordion7">
+                                <div class="accordion-item">
+                                    <a href="index.html" class="accordion-link">
+                                        Inicio
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <a href="about-us.html" class="accordion-link active">
-                        Sobre nosotros
+                </div>
+                <a href="about-us.html" class="accordion-link active">
+                    Sobre nosotros
+                </a>
+            </div>
+
+            <div class="offcanvas-contact-info">
+                <h4>Información de contacto</h4>
+                <ul class="contact-info list-style">
+                    <li>
+                        <i class="bx bxs-envelope"></i>
+                        <a href="contacto@suraxis.cl">contacto@suraxis.cl</a>
+                    </li>
+                </ul>
+                <ul class="social-profile list-style">
+                    <li><a href="https://www.facebook.com/profile.php?id=61574983996323&_rdc=1&_rdr" target="_blank"><i
+                                class='bx bxl-facebook'></i></a></li>
+                    <li><a href="https://www.instagram.com/suraxis.cl" target="_blank"><i
+                                class='bx bxl-instagram'></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End Responsive Navbar Area -->
+
+    <!-- Start Clgun Searchbar Area -->
+    <div class="clgun offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop">
+        <div class="offcanvas-header">
+            <a href="index.html" class="logo">
+                <img src="assets/img/logo/logo.png" alt="image">
+            </a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="offcanvas-contact-info">
+                <h4>Información de contacto</h4>
+                <ul class="contact-info list-style">
+                    <li>
+                        <i class="bx bxs-time"></i>
+                        <p>Lun - Vie: 9:00 - 18:00</p>
+                    </li>
+                    <li><i class="bx bxs-phone-call"></i> Telefono de contacto - <p>+56 9 3563 4527</p>
+                    </li>
+                    <li>
+                        <i class="bx bxs-envelope"></i>
+                        <p>contacto@suraxis.cl</p>
+                    </li>
+                    <li>
+                        <i class="bx bxs-map"></i>
+                        <p>Osorno, Región de los lagos</p>
+                    </li>
+                </ul>
+                <ul class="social-profile list-style">
+                    <li><a href="https://www.facebook.com/profile.php?id=61574983996323&_rdc=1&_rdr" target="_blank"><i
+                                class='bx bxl-facebook'></i></a></li>
+                    <li><a href="https://www.instagram.com/suraxis.cl" target="_blank"><i
+                                class='bx bxl-instagram'></i></a></li>
+                </ul>
+            </div>
+
+            <div class="offcanvas-other-options">
+                <div class="option-item">
+                    <a href="https://api.whatsapp.com/send/?phone=%2B56935634527&text=Necesito+más+información+sobre+el+proyecto&type=phone_number&app_absent=0"
+                        class="whatsapp-btn" target="_blank">
+                        <i class='bx bxl-whatsapp'></i> Escríbenos por WhatsApp
                     </a>
                 </div>
-                
-                <div class="offcanvas-contact-info">
-                    <h4>Información de contacto</h4>
-                    <ul class="contact-info list-style">
-                        <li>
-                            <i class="bx bxs-envelope"></i>
-                            <a href="contacto@suraxis.cl">contacto@suraxis.cl</a>
-                        </li>
-                    </ul>
-                    <ul class="social-profile list-style">
-                        <li><a href="https://www.facebook.com/profile.php?id=61574983996323&_rdc=1&_rdr" target="_blank"><i class='bx bxl-facebook'></i></a></li>
-                        <li><a href="https://www.instagram.com/suraxis.cl" target="_blank"><i class='bx bxl-instagram'></i></a></li>
-                    </ul>
-                </div>
             </div>
         </div>
-        <!-- End Responsive Navbar Area -->
-
-        <!-- Start Clgun Searchbar Area -->
-        <div class="clgun offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop">
-            <div class="offcanvas-header">
-                <a href="index.html" class="logo">
-                    <img src="assets/img/logo/logo.png" alt="image">
-                </a>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-                <div class="offcanvas-contact-info">
-                    <h4>Información de contacto</h4>
-                    <ul class="contact-info list-style">
-                        <li>
-                            <i class="bx bxs-time"></i>
-                            <p>Lun - Vie: 9:00 - 18:00</p>
-                        </li>
-                        <li><i class="bx bxs-phone-call"></i> Telefono de contacto - <p>+56 9 3563 4527</p></li>
-                        <li>
-                            <i class="bx bxs-envelope"></i>
-                            <p>contacto@suraxis.cl</p>
-                        </li>
-                        <li>
-                            <i class="bx bxs-map"></i>
-                            <p>Osorno, Región de los lagos</p>
-                        </li>
-                    </ul>
-                    <ul class="social-profile list-style">
-                        <li><a href="https://www.facebook.com/profile.php?id=61574983996323&_rdc=1&_rdr" target="_blank"><i class='bx bxl-facebook'></i></a></li>
-                        <li><a href="https://www.instagram.com/suraxis.cl" target="_blank"><i class='bx bxl-instagram'></i></a></li>
-                    </ul>
-                </div>
-                
-                <div class="offcanvas-other-options">
-                    <div class="option-item">
-                        <a href="https://api.whatsapp.com/send/?phone=%2B56935634527&text=Necesito+más+información+sobre+el+proyecto&type=phone_number&app_absent=0" 
-                           class="whatsapp-btn" target="_blank">
-                            <i class='bx bxl-whatsapp'></i> Escríbenos por WhatsApp
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Clgun Searchbar Area -->
+    </div>
+    <!-- End Clgun Searchbar Area -->
 
     <!-- Hero Section Start -->
     <div class="hero-section">
@@ -533,7 +590,8 @@
     <div class="container-fluid py-5">
         <div class="container">
             <div class="section-title">
-                <h4 class="text-uppercase" style="letter-spacing: 5px; color: #fb5607;">Sobre el proyecto</h4> <!-- no modificar -->
+                <h4 class="text-uppercase" style="letter-spacing: 5px; color: #fb5607;">Sobre el proyecto</h4>
+                <!-- no modificar -->
                 <h1 class="display-4" id="about-subtitle">
                     <!-- Subtítulo cargado dinámicamente -->
                 </h1>
@@ -547,18 +605,13 @@
                     <p id="about-summary-text">
                         <!-- Texto del resumen cargado dinámicamente -->
                     </p>
-                    <a href="#masterplan-section" class="btn btn-secondary font-weight-bold py-2 px-4 mt-2">Ver vista 360</a>
+                    <a href="#masterplan-section" class="btn btn-secondary font-weight-bold py-2 px-4 mt-2">Ver vista
+                        360</a>
                 </div>
                 <div class="col-lg-4 py-5 py-lg-0" style="min-height: 500px;">
                     <div class="position-relative h-100">
-                        <iframe 
-                            id="map-frame"
-                            class="position-absolute w-100 h-100" 
-                            src=""
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade">
+                        <iframe id="map-frame" class="position-absolute w-100 h-100" src="" style="border:0;"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
                     </div>
                 </div>
@@ -582,20 +635,14 @@
     <div class="masterplan-section" id="masterplan-section">
         <h2 class="text-center mb-4" style="padding-top:30px;">Vista 360</h2>
         <div class="masterplan-container">
-            <iframe 
-                id="masterplan-iframe"
-                src=""
-                width="100%"
-                height="800px"
-                style="border: none; display: block;"
-                allowfullscreen
-                loading="lazy">
+            <iframe id="masterplan-iframe" src="" width="100%" height="400px" style="border: none; display: block;"
+                allowfullscreen loading="lazy">
             </iframe>
             <div class="masterplan-overlay-top"></div>
         </div>
     </div>
     <!-- Masterplan Section End -->
-    
+
     <!-- Gallery Section -->
     <div class="gallery-section">
         <div class="container">
@@ -606,17 +653,19 @@
                 </h1>
                 <p style="color: #ffffff;">Descubre la belleza natural de nuestro proyecto</p>
             </div>
-            
+
             <div class="gallery-grid" id="gallery-grid">
                 <!-- Galería cargada dinámicamente desde JSON -->
             </div>
         </div>
     </div>
     <!-- Gallery Section End -->
-    
+
     <!-- Gallery Modal -->
     <div id="galleryModal" class="gallery-modal">
         <span class="gallery-close-modal">&times;</span>
+        <a class="gallery-prev">&#10094;</a>
+        <a class="gallery-next">&#10095;</a>
         <div class="gallery-modal-container">
             <img class="gallery-modal-content" id="galleryModalImage" src="" alt="">
         </div>
@@ -630,60 +679,60 @@
         <div class="container-fluid pt-5">
             <div class="container">
                 <div class="section-title">
-                    <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Lorem Ipsum</h4>
-                    <h1 class="display-4">Lorem Ipsum</h1>
+                    <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Características</h4>
+                    <h1 class="display-4">de este proyecto</h1>
                 </div>
-            <div class="row">
-                <div class="col-lg-6 mb-5">
-                    <div class="row align-items-center">
-                        <div class="col-sm-5">
-                            <img class="img-fluid mb-3 mb-sm-0" src="assets/img/service-1.jpg" alt="">
-                        </div>
-                        <div class="col-sm-7">
-                            <h4><i class="fa fa-truck service-icon"></i>Lorem Ipsum</h4>
-                            <p class="m-0">Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit
-                                invidunt, dolore tempor diam ipsum takima erat tempor</p>
+                <div class="row">
+                    <div class="col-lg-6 mb-5">
+                        <div class="row align-items-center">
+                            <div class="col-sm-5">
+                                <img class="img-fluid mb-3 mb-sm-0" src="assets/img/service-1.jpg" alt="">
+                            </div>
+                            <div class="col-sm-7">
+                                <h4><i class="fa fa-truck service-icon"></i>Luz Eléctrica</h4>
+                                <p class="m-0">Contamos con una conexión de luz eléctrica a cada parcela, para que
+                                    puedas disfrutar de la comodidad de tener luz en tu hogar.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-6 mb-5">
-                    <div class="row align-items-center">
-                        <div class="col-sm-5">
-                            <img class="img-fluid mb-3 mb-sm-0" src="assets/img/service-2.jpg" alt="">
-                        </div>
-                        <div class="col-sm-7">
-                            <h4><i class="fa fa-coffee service-icon"></i>Lorem Ipsum</h4>
-                            <p class="m-0">Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit
-                                invidunt, dolore tempor diam ipsum takima erat tempor</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-5">
-                    <div class="row align-items-center">
-                        <div class="col-sm-5">
-                            <img class="img-fluid mb-3 mb-sm-0" src="assets/img/service-3.jpg" alt="">
-                        </div>
-                        <div class="col-sm-7">
-                            <h4><i class="fa fa-award service-icon"></i>Lorem Ipsum</h4>
-                            <p class="m-0">Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit
-                                invidunt, dolore tempor diam ipsum takima erat tempor</p>
+                    <div class="col-lg-6 mb-5">
+                        <div class="row align-items-center">
+                            <div class="col-sm-5">
+                                <img class="img-fluid mb-3 mb-sm-0" src="assets/img/service-2.jpg" alt="">
+                            </div>
+                            <div class="col-sm-7">
+                                <h4><i class="fa fa-coffee service-icon"></i>Coneccion de agua</h4>
+                                <p class="m-0">Contamos con una conexión de agua a cada parcela, para que puedas
+                                    disfrutar de la comodidad de tener agua en tu hogar.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-6 mb-5">
-                    <div class="row align-items-center">
-                        <div class="col-sm-5">
-                            <img class="img-fluid mb-3 mb-sm-0" src="assets/img/service-4.jpg" alt="">
+                    <div class="col-lg-6 mb-5">
+                        <div class="row align-items-center">
+                            <div class="col-sm-5">
+                                <img class="img-fluid mb-3 mb-sm-0" src="assets/img/service-3.jpg" alt="">
+                            </div>
+                            <div class="col-sm-7">
+                                <h4><i class="fa fa-award service-icon"></i>Caminos Ripiados</h4>
+                                <p class="m-0">Contamos con caminos ripiados a cada parcela, para que puedas disfrutar
+                                    de la comodidad de tener caminos ripiados en tu hogar.</p>
+                            </div>
                         </div>
-                        <div class="col-sm-7">
-                            <h4><i class="fa fa-table service-icon"></i>Lorem Ipsum</h4>
-                            <p class="m-0">Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit
-                                invidunt, dolore tempor diam ipsum takima erat tempor</p>
+                    </div>
+                    <div class="col-lg-6 mb-5">
+                        <div class="row align-items-center">
+                            <div class="col-sm-5">
+                                <img class="img-fluid mb-3 mb-sm-0" src="assets/img/service-4.jpg" alt="">
+                            </div>
+                            <div class="col-sm-7">
+                                <h4><i class="fa fa-table service-icon"></i>Acceso controlado</h4>
+                                <p class="m-0">Contamos con un acceso controlado a cada parcela, para que puedas
+                                    disfrutar de la seguridad de tener un acceso controlado en tu hogar.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
     </div>
     <!-- Service End -->
@@ -699,22 +748,27 @@
                             <div class="fields">
                                 <form id="contact_form">
                                     <h4>¡Quiero más información de como invertir!</h4>
-                                    <div class="returnmessage" data-success="Tu mensaje ha sido enviado. Te contactaremos pronto."></div>
-                                    
+                                    <div class="returnmessage"
+                                        data-success="Tu mensaje ha sido enviado. Te contactaremos pronto."></div>
+
                                     <div class="form-group">
-                                        <input class="form-control styled-input" placeholder="Nombre" type="text" id="searchKey1" required>
+                                        <input class="form-control styled-input" placeholder="Nombre" type="text"
+                                            id="searchKey1" required>
                                     </div>
 
                                     <div class="form-group">
-                                        <input class="form-control styled-input" placeholder="Teléfono" type="text" id="searchKey2" required>
+                                        <input class="form-control styled-input" placeholder="Teléfono" type="text"
+                                            id="searchKey2" required>
                                     </div>
-                                    
+
                                     <div class="form-group">
-                                        <input class="form-control styled-input" placeholder="Email" type="email" id="searchKey3" required>
+                                        <input class="form-control styled-input" placeholder="Email" type="email"
+                                            id="searchKey3" required>
                                     </div>
-                                    
+
                                     <div class="grax_tm_button">
-                                        <button class="default-btn submit-btn" type="submit" id="send_message">Enviar mis datos</button>
+                                        <button class="default-btn submit-btn" type="submit" id="send_message">Enviar
+                                            mis datos</button>
                                     </div>
                                 </form>
                             </div>
@@ -727,12 +781,15 @@
                             <p>Desarrollo de proyectos de parcelación.</p>
                         </div>
                         <h2>Oportunidades con Alto Potencial de Retorno</h2>
-                        <p>Nos especializamos en transformar terrenos en oportunidades de inversión para las personas, mediante un modelo 360. Desde el concepto y diseño hasta la correcta entrega a los nuevos propietarios</p>
-                        
+                        <p>Nos especializamos en transformar terrenos en oportunidades de inversión para las personas,
+                            mediante un modelo 360. Desde el concepto y diseño hasta la correcta entrega a los nuevos
+                            propietarios</p>
+
                         <!-- Contenedor de imágenes superpuestas -->
                         <div class="management-image-container">
                             <a href="javascript:void(0)" class="image-modal-trigger">
-                                <img src="assets/img/all-img/gestiondeproyectos.png" alt="Gestión de Proyectos" class="responsive-management-image">
+                                <img src="assets/img/all-img/gestiondeproyectos.png" alt="Gestión de Proyectos"
+                                    class="responsive-management-image">
                             </a>
                         </div>
                     </div>
@@ -831,151 +888,154 @@
      Menu End -->
 
 
-    
+
 
 
     <!-- Testimonial Start -->
-    
 
 
-        <!-- Footer Area -->
-        <footer class="footer-simple">
-            <div class="container">
-                <div class="footer-content">
-                    <div class="footer-left">
-                            <p>©Copyright 2025. Desarrollado por <a href="https://api.whatsapp.com/send?phone=56931354518&text=Hola%2C+me+gustar%C3%ADa+tener+m%C3%A1s+informaci%C3%B3n" target="_blank">astra360</a></p>
-                    </div>
-                    <div class="footer-right">
-                        <div class="social-links">
-                            <a href="https://www.facebook.com/profile.php?id=61574983996323&locale=es_LA" target="_blank" class="social-link facebook">
-                                <i class='bx bxl-facebook'></i>
-                            </a>
-                            <a href="https://www.instagram.com/suraxis.cl" target="_blank" class="social-link instagram">
-                                <i class='bx bxl-instagram-alt'></i>
-                            </a>
-                        </div>
+
+    <!-- Footer Area -->
+    <footer class="footer-simple">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>©Copyright 2025. Desarrollado por <a
+                            href="https://api.whatsapp.com/send?phone=56931354518&text=Hola%2C+me+gustar%C3%ADa+tener+m%C3%A1s+informaci%C3%B3n"
+                            target="_blank">astra360</a></p>
+                </div>
+                <div class="footer-right">
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61574983996323&locale=es_LA" target="_blank"
+                            class="social-link facebook">
+                            <i class='bx bxl-facebook'></i>
+                        </a>
+                        <a href="https://www.instagram.com/suraxis.cl" target="_blank" class="social-link instagram">
+                            <i class='bx bxl-instagram-alt'></i>
+                        </a>
                     </div>
                 </div>
             </div>
-        </footer>
-        <!-- End Footer Area -->
-
-        <div class="go-top active">
-            <i class="bx bx-up-arrow-alt"></i>
         </div>
+    </footer>
+    <!-- End Footer Area -->
 
-        <!-- Links of JS files -->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/aos.js"></script>
-        <script src="assets/js/bootstrap.min.js"></script>
-        <script src="assets/js/magnific-popup.min.js"></script>
-        <script src="assets/js/owl.carousel.min.js"></script>
-        <script src="assets/js/main.js"></script>
-        
-        <!-- Script para cargar proyecto dinámicamente -->
-        <script src="js/proyectos.js"></script>
-        
-        <!-- Script to ensure social media links work -->
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                // Simple function to ensure social links work
-                function ensureSocialLinksWork() {
-                    const socialLinks = document.querySelectorAll('.social-link');
-                    socialLinks.forEach(function(link) {
-                        // Ensure the link is clickable
-                        link.style.cursor = 'pointer';
-                        link.style.pointerEvents = 'auto';
-                        
-                        // Add click event as backup
-                        link.addEventListener('click', function(e) {
-                            // Allow the default behavior, just ensure it works
-                            console.log('Social link clicked:', this.href);
-                        });
+    <div class="go-top active">
+        <i class="bx bx-up-arrow-alt"></i>
+    </div>
+
+    <!-- Links of JS files -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/magnific-popup.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- Script para cargar proyecto dinámicamente -->
+    <script src="js/proyectos.js"></script>
+
+    <!-- Script to ensure social media links work -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Simple function to ensure social links work
+            function ensureSocialLinksWork() {
+                const socialLinks = document.querySelectorAll('.social-link');
+                socialLinks.forEach(function (link) {
+                    // Ensure the link is clickable
+                    link.style.cursor = 'pointer';
+                    link.style.pointerEvents = 'auto';
+
+                    // Add click event as backup
+                    link.addEventListener('click', function (e) {
+                        // Allow the default behavior, just ensure it works
+                        console.log('Social link clicked:', this.href);
                     });
-                }
-                
-                // Run the function
-                ensureSocialLinksWork();
-                
-                // Modal para imágenes
-                const modal = document.getElementById('imageModal');
-                const modalImg = document.getElementById('expandedImage');
-                const triggers = document.querySelectorAll('.image-modal-trigger');
-                
-                triggers.forEach(trigger => {
-                    trigger.onclick = function() {
-                        modal.style.display = "block";
-                        modalImg.src = this.querySelector('img').src;
-                        modalImg.alt = this.querySelector('img').alt;
-                        
-                        // Prevenir scroll del body en móviles cuando el modal está abierto
-                        if (window.innerWidth <= 768) {
-                            document.body.style.overflow = 'hidden';
-                        }
-                    }
                 });
-                
-                document.querySelector('.close-modal').onclick = function() {
-                    modal.style.display = "none";
-                    // Restaurar scroll del body
-                    document.body.style.overflow = '';
-                }
-                
-                // Cerrar modal al hacer click fuera de la imagen
-                modal.onclick = function(event) {
-                    if (event.target === modal) {
-                        modal.style.display = "none";
-                        document.body.style.overflow = '';
-                    }
-                }
-                
-                // Gallery Modal functionality
-                const galleryModal = document.getElementById('galleryModal');
-                const galleryModalImg = document.getElementById('galleryModalImage');
-                const galleryItems = document.querySelectorAll('.gallery-item');
-                
-                galleryItems.forEach(item => {
-                    item.onclick = function() {
-                        galleryModal.style.display = "block";
-                        galleryModalImg.src = this.querySelector('img').src;
-                        galleryModalImg.alt = this.querySelector('img').alt;
-                        
-                        // Prevenir scroll del body cuando el modal está abierto
+            }
+
+            // Run the function
+            ensureSocialLinksWork();
+
+            // Modal para imágenes
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('expandedImage');
+            const triggers = document.querySelectorAll('.image-modal-trigger');
+
+            triggers.forEach(trigger => {
+                trigger.onclick = function () {
+                    modal.style.display = "block";
+                    modalImg.src = this.querySelector('img').src;
+                    modalImg.alt = this.querySelector('img').alt;
+
+                    // Prevenir scroll del body en móviles cuando el modal está abierto
+                    if (window.innerWidth <= 768) {
                         document.body.style.overflow = 'hidden';
                     }
-                });
-                
-                // Cerrar modal de galería
-                document.querySelector('.gallery-close-modal').onclick = function() {
+                }
+            });
+
+            document.querySelector('.close-modal').onclick = function () {
+                modal.style.display = "none";
+                // Restaurar scroll del body
+                document.body.style.overflow = '';
+            }
+
+            // Cerrar modal al hacer click fuera de la imagen
+            modal.onclick = function (event) {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                    document.body.style.overflow = '';
+                }
+            }
+
+            // Gallery Modal functionality
+            const galleryModal = document.getElementById('galleryModal');
+            const galleryModalImg = document.getElementById('galleryModalImage');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+
+            galleryItems.forEach(item => {
+                item.onclick = function () {
+                    galleryModal.style.display = "block";
+                    galleryModalImg.src = this.querySelector('img').src;
+                    galleryModalImg.alt = this.querySelector('img').alt;
+
+                    // Prevenir scroll del body cuando el modal está abierto
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+
+            // Cerrar modal de galería
+            document.querySelector('.gallery-close-modal').onclick = function () {
+                galleryModal.style.display = "none";
+                document.body.style.overflow = '';
+            }
+
+            // Cerrar modal de galería al hacer click fuera de la imagen
+            galleryModal.onclick = function (event) {
+                if (event.target === galleryModal) {
                     galleryModal.style.display = "none";
                     document.body.style.overflow = '';
                 }
-                
-                // Cerrar modal de galería al hacer click fuera de la imagen
-                galleryModal.onclick = function(event) {
-                    if (event.target === galleryModal) {
-                        galleryModal.style.display = "none";
+            }
+
+            // Cerrar modal con tecla ESC
+            document.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape') {
+                    if (modal.style.display === 'block') {
+                        modal.style.display = 'none';
+                        document.body.style.overflow = '';
+                    }
+                    if (galleryModal.style.display === 'block') {
+                        galleryModal.style.display = 'none';
                         document.body.style.overflow = '';
                     }
                 }
-                
-                // Cerrar modal con tecla ESC
-                document.addEventListener('keydown', function(event) {
-                    if (event.key === 'Escape') {
-                        if (modal.style.display === 'block') {
-                            modal.style.display = 'none';
-                            document.body.style.overflow = '';
-                        }
-                        if (galleryModal.style.display === 'block') {
-                            galleryModal.style.display = 'none';
-                            document.body.style.overflow = '';
-                        }
-                    }
-                });
-                
-                // El carrusel del hero se inicializa en proyectos.js después de cargar los datos
             });
-        </script>
+
+            // El carrusel del hero se inicializa en proyectos.js después de cargar los datos
+        });
+    </script>
 </body>
 
 </html>

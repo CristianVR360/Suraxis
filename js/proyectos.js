@@ -153,8 +153,35 @@ function renderMap(data) {
 // Función para renderizar el masterplan
 function renderMasterplan(data) {
     const masterplanIframe = document.querySelector('#masterplan-iframe');
-    if (masterplanIframe) {
-        masterplanIframe.src = data.about.masterplan_url;
+    const masterplanContainer = document.querySelector('.masterplan-container');
+    if (!masterplanIframe || !masterplanContainer) {
+        return;
+    }
+
+    const masterplanUrl = data.about.masterplan_url;
+    const isImage = /\.(jpe?g|png|gif|webp)$/i.test(masterplanUrl);
+    let masterplanImage = masterplanContainer.querySelector('.masterplan-image');
+
+    if (isImage) {
+        masterplanIframe.style.display = 'none';
+        masterplanIframe.removeAttribute('src');
+
+        if (!masterplanImage) {
+            masterplanImage = document.createElement('img');
+            masterplanImage.className = 'masterplan-image';
+            masterplanContainer.insertBefore(masterplanImage, masterplanIframe);
+        }
+
+        masterplanImage.src = masterplanUrl;
+        masterplanImage.alt = `${data.name} masterplan`;
+        masterplanImage.style.display = 'block';
+    } else {
+        masterplanIframe.style.display = 'block';
+        masterplanIframe.src = masterplanUrl;
+
+        if (masterplanImage) {
+            masterplanImage.remove();
+        }
     }
 }
 
@@ -178,23 +205,74 @@ function renderGallery(data) {
     initializeGalleryModal();
 }
 
+// Variable global para el índice de la galería
+let currentGalleryIndex = 0;
+
 // Función para inicializar el modal de galería
 function initializeGalleryModal() {
     const galleryModal = document.getElementById('galleryModal');
     const galleryModalImg = document.getElementById('galleryModalImage');
     const galleryItems = document.querySelectorAll('.gallery-item');
+    const prevBtn = document.querySelector('.gallery-prev');
+    const nextBtn = document.querySelector('.gallery-next');
     
     if (!galleryModal || !galleryModalImg) return;
     
+    // Función para mostrar imagen por índice
+    function showGalleryImage(index) {
+        if (galleryItems.length === 0) return;
+        
+        // Manejo circular
+        if (index < 0) index = galleryItems.length - 1;
+        if (index >= galleryItems.length) index = 0;
+        
+        currentGalleryIndex = index;
+        const item = galleryItems[currentGalleryIndex];
+        const img = item.querySelector('img');
+        
+        if (img) {
+            galleryModalImg.src = img.src;
+            galleryModalImg.alt = img.alt;
+        }
+    }
+
     // Agregar listeners a cada item de la galería
-    galleryItems.forEach(item => {
+    galleryItems.forEach((item, index) => {
         item.onclick = function() {
             galleryModal.style.display = "block";
-            galleryModalImg.src = this.querySelector('img').src;
-            galleryModalImg.alt = this.querySelector('img').alt;
+            showGalleryImage(index);
             document.body.style.overflow = 'hidden';
         };
     });
+    
+    // Listeners para botones de navegación
+    if (prevBtn) {
+        prevBtn.onclick = function(e) {
+            e.stopPropagation();
+            showGalleryImage(currentGalleryIndex - 1);
+        };
+    }
+
+    if (nextBtn) {
+        nextBtn.onclick = function(e) {
+            e.stopPropagation();
+            showGalleryImage(currentGalleryIndex + 1);
+        };
+    }
+    
+    // Navegación con teclado
+    if (!galleryModal.hasAttribute('data-keyboard-init')) {
+        galleryModal.setAttribute('data-keyboard-init', 'true');
+        document.addEventListener('keydown', function(e) {
+            if (galleryModal.style.display === "block") {
+                if (e.key === "ArrowLeft") {
+                    showGalleryImage(currentGalleryIndex - 1);
+                } else if (e.key === "ArrowRight") {
+                    showGalleryImage(currentGalleryIndex + 1);
+                }
+            }
+        });
+    }
     
     // Cerrar modal de galería (solo si no está ya configurado)
     const closeBtn = document.querySelector('.gallery-close-modal');

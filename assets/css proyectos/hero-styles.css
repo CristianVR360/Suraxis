@@ -17,7 +17,9 @@
 }
 
 .hero-section .carousel-item {
+    position: relative;
     height: 100%;
+    overflow: hidden;
 }
 
 .hero-section .carousel-item img {
@@ -27,6 +29,8 @@
 }
 
 .hero-image {
+    position: relative;
+    z-index: 1;
     height: 100%;
     object-fit: cover;
     width: 100%;
@@ -56,9 +60,9 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #3c3d38;
-    opacity: 0.15;
-    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 5;
+    pointer-events: none;
 }
 
 .hero-section .carousel-caption {
@@ -66,7 +70,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 5;
+    z-index: 10;
     text-align: center;
 }
 
@@ -85,7 +89,7 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: bottom center;
-    z-index: 4;
+    z-index: 6;
     pointer-events: none;
 }
 
@@ -94,7 +98,7 @@
     .hero-section {
         height: 80vh;
     }
-    
+
     .hero-overlay-bottom {
         height: 150px;
     }
@@ -104,7 +108,7 @@
     .hero-section {
         height: 70vh;
     }
-    
+
     .hero-overlay-bottom {
         height: 120px;
     }
@@ -216,6 +220,7 @@
         transform: scale(0.8);
         opacity: 0;
     }
+
     to {
         transform: scale(1);
         opacity: 1;
@@ -233,16 +238,16 @@
     .gallery-section {
         padding: 60px 0;
     }
-    
+
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .gallery-modal-content {
         max-width: 95vw;
         max-height: 95vh;
     }
-    
+
     .gallery-close-modal {
         top: 20px;
         right: 20px;
@@ -256,13 +261,13 @@
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .gallery-modal-content {
         max-width: 98vw;
         max-height: 98vh;
         border-radius: 4px;
     }
-    
+
     .gallery-close-modal {
         top: 15px;
         right: 15px;
@@ -282,14 +287,14 @@
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
 }
 
 .responsive-management-image:hover {
     transform: scale(1.02);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 /* Modal Styles */
@@ -301,7 +306,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     overflow: hidden;
@@ -327,7 +332,7 @@
     object-fit: contain;
     animation: zoom 0.3s ease-out;
     border-radius: 8px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.8);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
     background-color: transparent;
 }
 
@@ -341,30 +346,31 @@
     cursor: pointer;
     transition: all 0.3s ease;
     z-index: 10000;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0, 0, 0, 0.7);
     border-radius: 50%;
     width: 60px;
     height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid rgba(255,255,255,0.3);
+    border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .close-modal:hover {
     color: #fff;
-    background-color: rgba(0,0,0,0.9);
+    background-color: rgba(0, 0, 0, 0.9);
     transform: scale(1.1);
-    border-color: rgba(255,255,255,0.6);
+    border-color: rgba(255, 255, 255, 0.6);
 }
 
 @keyframes zoom {
     from {
-        transform: scale(0.8); 
+        transform: scale(0.8);
         opacity: 0;
     }
+
     to {
-        transform: scale(1); 
+        transform: scale(1);
         opacity: 1;
     }
 }
@@ -375,7 +381,7 @@
         max-width: 95vw;
         max-height: 95vh;
     }
-    
+
     .close-modal {
         top: 15px;
         right: 15px;
@@ -391,7 +397,7 @@
         max-height: 100vh;
         border-radius: 4px;
     }
-    
+
     .close-modal {
         top: 10px;
         right: 10px;
