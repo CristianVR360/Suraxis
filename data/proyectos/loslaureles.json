@@ -3,12 +3,10 @@
   "name": "Los Laureles",
   "location": "Osorno",
   "tagline": "Proyecto de alta plusvalía",
-  
   "hero": [
-    "assets/proyectos/loslaureles/hero.jpg",
-    "assets/proyectos/loslaureles/hero2.jpg"
+    "assets/proyectos/loslaureles/hero.JPG",
+    "assets/proyectos/loslaureles/hero2.JPG"
   ],
-  
   "about": {
     "subtitle": "Subtítulo descriptivo del proyecto - Ubicación específica",
     "summary_title": "Resumen",
@@ -23,27 +21,25 @@
       "Atractivo turístico o característica 4"
     ],
     "map_iframe": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1dXXXXX!2d-XX.XXXXX!3d-XX.XXXXX!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zXXXXX!5e0!3m2!1ses!2scl!4v1234567890123!5m2!1ses!2scl",
-    "masterplan_url": "assets/proyectos/loslaureles/1.jpg"
+    "masterplan_url": "assets/proyectos/loslaureles/1.JPG"
   },
-  
   "gallery": [
-    "assets/proyectos/loslaureles/1.jpg",
-    "assets/proyectos/loslaureles/2.jpg",
-    "assets/proyectos/loslaureles/3.jpg",
-    "assets/proyectos/loslaureles/4.jpg",
-    "assets/proyectos/loslaureles/5.jpg",
-    "assets/proyectos/loslaureles/6.jpg",
-    "assets/proyectos/loslaureles/7.jpg",
-    "assets/proyectos/loslaureles/8.jpg",
-    "assets/proyectos/loslaureles/9.jpg",
-    "assets/proyectos/loslaureles/10.jpg",
-    "assets/proyectos/loslaureles/11.jpg",
-    "assets/proyectos/loslaureles/12.jpg",
-    "assets/proyectos/loslaureles/13.jpg",
-    "assets/proyectos/loslaureles/14.jpg",
-    "assets/proyectos/loslaureles/15.jpg",
-    "assets/proyectos/loslaureles/16.jpg",
-    "assets/proyectos/loslaureles/17.jpg"
+    "assets/proyectos/loslaureles/1.JPG",
+    "assets/proyectos/loslaureles/2.JPG",
+    "assets/proyectos/loslaureles/3.JPG",
+    "assets/proyectos/loslaureles/4.JPG",
+    "assets/proyectos/loslaureles/5.JPG",
+    "assets/proyectos/loslaureles/6.JPG",
+    "assets/proyectos/loslaureles/7.JPG",
+    "assets/proyectos/loslaureles/8.JPG",
+    "assets/proyectos/loslaureles/9.JPG",
+    "assets/proyectos/loslaureles/10.JPG",
+    "assets/proyectos/loslaureles/11.JPG",
+    "assets/proyectos/loslaureles/12.JPG",
+    "assets/proyectos/loslaureles/13.JPG",
+    "assets/proyectos/loslaureles/14.JPG",
+    "assets/proyectos/loslaureles/15.JPG",
+    "assets/proyectos/loslaureles/16.JPG",
+    "assets/proyectos/loslaureles/17.JPG"
   ]
 }
-
