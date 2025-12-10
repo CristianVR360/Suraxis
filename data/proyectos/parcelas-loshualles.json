@@ -1,0 +1,103 @@
+{
+  "id": "parcelas-loshualles",
+  "name": "Parcelas Los Hualles",
+  "location": "Osorno",
+  "tagline": "Tu oportunidad de invertir es hoy",
+  "whatsapp_button_text": "¡Hola! Quiero más información del Proyecto de parcelas “Los Hualles”.",
+  "whatsapp_message": "Hola, me gustaría tener más información sobre este proyecto",
+  "logo": "assets/proyectos/loshualles/logo.svg",
+  "hero": [
+    "assets/proyectos/loshualles/hero.jpeg",
+    "assets/proyectos/loshualles/hero2.jpeg"
+  ],
+  "about": {
+    "subtitle": "Proyecto de parcelas a solo 15 km de Osorno",
+    "summary_title": "Los Hualles",
+    "summary_top": "Un proyecto hecho para los amantes de la vida de campo.",
+    "summary_text": "El proyecto \"Los Hualles\", es una parcelación que se encuentra ubicada a solo 15 km de Osorno, la cual genera un equilibrio perfecto entre tranquilidad, el campo y cercanía con la ciudad.\n\nSu diseño permite que cada parcela se integre de forma orgánica al entorno, protegiendo la belleza natural que lo hace único.\n\nParcelas \"Los Hualles\" no es tan sólo un lugar para vivir cerca de la ciudad: es un lugar de descanso, un rincón de calma donde cada espacio invita a respirar profundo, reconectar con lo esencial y construir un futuro en armonía con el campo.",
+    "attractives_title": "Conectado con lo esencial",
+    "attractives_description": "El proyecto se encuentra perfectamente ubicado",
+    "attractives_items": [
+      "9 minutos de San Pablo",
+      "10 minutos de Osorno",
+      "15 minutos del Aeropuerto Cañal Bajo - Osorno",
+      "48 minutos de Lago Ranco"
+    ],
+    "map_iframe": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29364.524048242056!2d-73.00469821615546!3d-40.48766309041!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96164f0016bf2cf7%3A0x257239a63cb6de44!2sParcelaci%C3%B3n%20Los%20Hualles!5e1!3m2!1ses-419!2scl!4v1765374411595!5m2!1ses-419!2scl",
+    "masterplan_url": "assets/proyectos/loshualles/02.jpeg"
+  },
+  "features_section": {
+    "subtitle": "Equipamiento",
+    "title": "del proyecto"
+  },
+  "features": [
+    {
+      "icon": "fa fa-bolt",
+      "title": "Red Eléctrica",
+      "description": "Cada parcela cuando con su respectivo arranque electrico de tipo aéreo, con el fin de que puedas disfrutar de la comodidad de tener luz en tu hogar.",
+      "image": "assets/img/service-1.jpg"
+    },
+    {
+      "icon": "fa fa-tint",
+      "title": "Red de Agua",
+      "description": "Cada parcela cuenta con su respectivo arranque de agua, el cual se genera de un pozo profundo del mismo proyecto.",
+      "image": "assets/img/service-2.jpg"
+    },
+    {
+      "icon": "fa fa-road",
+      "title": "Caminos Ripiados",
+      "description": "Contamos con caminos ripiados y compactados, para que puedas disfrutar de tener el mejor acceso a tu parcela.",
+      "image": "assets/img/service-3.jpg"
+    },
+    {
+      "icon": "fa fa-lock",
+      "title": "Acceso controlado",
+      "description": "El proyecto contempla un acceso controlado con el fin de tener la máxima seguridad para tu hogar.",
+      "image": "assets/img/service-4.jpg"
+    }
+  ],
+  "gallery": [
+    "assets/proyectos/loshualles/01.jpeg",
+    "assets/proyectos/loshualles/02.jpeg",
+    "assets/proyectos/loshualles/03.jpeg",
+    "assets/proyectos/loshualles/04.jpeg"
+  ],
+  "form_questions": [
+    {
+      "name": "forma_pago",
+      "label": "¿Formas de pago?",
+      "required": true,
+      "margin_bottom": "25px",
+      "options": [
+        {
+          "value": "Contado",
+          "label": "Contado",
+          "icon": "💰"
+        },
+        {
+          "value": "Crédito Hipotecario",
+          "label": "Crédito Hipotecario",
+          "icon": "🏦"
+        }
+      ]
+    },
+    {
+      "name": "rango_inversion",
+      "label": "¿Rango de inversión?",
+      "required": true,
+      "margin_bottom": "30px",
+      "options": [
+        {
+          "value": "$19.990.000 - $24.990.000",
+          "label": "$19.990.000 - $24.990.000",
+          "icon": "💵"
+        },
+        {
+          "value": "$24.990.000 - $29.990.000",
+          "label": "$24.990.000 - $29.990.000",
+          "icon": "💰"
+        }
+      ]
+    }
+  ]
+}

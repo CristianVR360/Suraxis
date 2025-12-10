@@ -1,0 +1,102 @@
+{
+  "id": "Parcelas sector Trafún",
+  "name": "Parcelas sector Trafún",
+  "location": "Osorno",
+  "tagline": "Proyecto con alta plusvalía",
+  "whatsapp_button_text": "Consulta por este proyecto",
+  "whatsapp_message": "Hola, me gustaría tener más información sobre este proyecto",
+  "hero": [
+    "assets/proyectos/trafun/hero.jpg"
+  ],
+  "about": {
+    "subtitle": "Proyecto de parcelas a solo 15 km de Osorno",
+    "summary_title": "Trafún",
+    "summary_top": "Vida tranquila a solo 15 minutos de Osorno",
+    "summary_text": "Parcelas Trafún es un proyecto que nace del respeto por la tierra y la búsqueda de un equilibrio perfecto entre la tranquilidad del campo y la cercanía con la ciudad. Su diseño permite que cada parcela se integre de forma orgánica al entorno, preservando la belleza natural que caracteriza esta zona del sur de Chile. Con un número limitado de parcelas, este proyecto ofrece un espacio ideal para quienes buscan un lugar de descanso, una vida en armonía con el entorno y la posibilidad de construir un futuro conectado con lo esencial. Además, su ubicación estratégica y su diseño sustentable lo convierten en una oportunidad atractiva de inversión y plusvalía.",
+    "attractives_title": "Conectado con lo esencial",
+    "attractives_description": "Descripción general de los atractivos y características de la zona",
+    "attractives_items": [
+      "15 minutos del radio urbano de Osorno",
+      "Entorno natural con paisajes verdes, arboledas y amplias praderas",
+      "Parcelación de estándar sustentable y preservación del entorno natural",
+      "Impulsada por la ubicación estratégica y el diseño del proyecto."
+    ],
+    "map_iframe": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1dXXXXX!2d-XX.XXXXX!3d-XX.XXXXX!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zXXXXX!5e0!3m2!1ses!2scl!4v1234567890123!5m2!1ses!2scl",
+    "masterplan_url": "assets/proyectos/trafun/1.jpeg"
+  },
+  "features_section": {
+    "subtitle": "Características",
+    "title": "de este proyecto"
+  },
+  "features": [
+    {
+      "icon": "fa fa-bolt",
+      "title": "Red Eléctrica",
+      "description": "Cada parcela cuando con su respectivo arranque electrico de tipo aéreo, con el fin de que puedas disfrutar de la comodidad de tener luz en tu hogar.",
+      "image": "assets/img/service-1.jpg"
+    },
+    {
+      "icon": "fa fa-tint",
+      "title": "Red de Agua",
+      "description": "Cada parcela cuenta con su respectivo arranque de agua, el cual se genera de un pozo profundo del mismo proyecto.",
+      "image": "assets/img/service-2.jpg"
+    },
+    {
+      "icon": "fa fa-road",
+      "title": "Caminos Ripiados",
+      "description": "Contamos con caminos ripiados y compactados, para que puedas disfrutar de tener el mejor acceso a tu parcela.",
+      "image": "assets/img/service-3.jpg"
+    },
+    {
+      "icon": "fa fa-lock",
+      "title": "Acceso controlado",
+      "description": "El proyecto contempla un acceso controlado con el fin de tener la máxima seguridad para tu hogar.",
+      "image": "assets/img/service-4.jpg"
+    }
+  ],
+  "gallery": [
+    "assets/proyectos/trafun/1.jpg",
+    "assets/proyectos/trafun/2.jpg",
+    "assets/proyectos/trafun/3.jpg",
+    "assets/proyectos/trafun/4.jpg",
+    "assets/proyectos/trafun/5.jpg"
+  ],
+  "form_questions": [
+    {
+      "name": "forma_pago",
+      "label": "¿Formas de pago?",
+      "required": true,
+      "margin_bottom": "25px",
+      "options": [
+        {
+          "value": "Contado",
+          "label": "Contado",
+          "icon": "💰"
+        },
+        {
+          "value": "Crédito Hipotecario",
+          "label": "Crédito Hipotecario",
+          "icon": "🏦"
+        }
+      ]
+    },
+    {
+      "name": "rango_inversion",
+      "label": "¿Rango de inversión?",
+      "required": true,
+      "margin_bottom": "30px",
+      "options": [
+        {
+          "value": "$19.990.000 - $24.990.000",
+          "label": "$19.990.000 - $24.990.000",
+          "icon": "💵"
+        },
+        {
+          "value": "$24.990.000 - $29.990.000",
+          "label": "$24.990.000 - $29.990.000",
+          "icon": "💰"
+        }
+      ]
+    }
+  ]
+}

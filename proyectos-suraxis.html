@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Nuestros Proyectos | Suraxis</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Proyectos de parcelación Suraxis" name="description">
+    <meta content="proyectos, parcelación, inversión, osorno" name="keywords">
+
+    <link rel="icon" type="image/png" href="assets/img/all-img/favicon.png">
+
+    <!-- Links of CSS files -->
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/boxicons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="whatsapp-button.css">
+    <link rel="stylesheet" href="assets/css/footer-fixes.css">
+    <link rel="stylesheet" href="assets/css/simple-footer.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <style>
+        /* Hero Section for Projects Gallery */
+        .projects-hero {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2c3e50 100%);
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .projects-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('assets/img/overlay-pattern.png');
+            opacity: 0.05;
+            pointer-events: none;
+        }
+
+        .projects-hero h1 {
+            color: #fff;
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .projects-hero p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 20px;
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Projects Grid */
+        .projects-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        /* Project Card */
+        .project-card {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(251, 86, 7, 0.15);
+        }
+
+        .project-card-image {
+            position: relative;
+            height: 280px;
+            overflow: hidden;
+        }
+
+        .project-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .project-card:hover .project-card-image img {
+            transform: scale(1.1);
+        }
+
+        .project-card-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #fb5607 0%, #ff6b35 100%);
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            z-index: 2;
+        }
+
+        .project-card-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+            z-index: 1;
+        }
+
+        .project-card-content {
+            padding: 30px;
+        }
+
+        .project-card-location {
+            color: #fb5607;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .project-card-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .project-card-tagline {
+            color: #666;
+            font-size: 15px;
+            font-weight: 500;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .project-card-description {
+            color: #555;
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 25px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .project-card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .project-card-features {
+            display: flex;
+            gap: 15px;
+            color: #888;
+            font-size: 13px;
+        }
+
+        .project-card-feature {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .project-card-btn {
+            background: linear-gradient(135deg, #fb5607 0%, #ff6b35 100%);
+            color: #fff;
+            padding: 14px 32px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(251, 86, 7, 0.3);
+        }
+
+        .project-card-btn:hover {
+            transform: translateX(5px);
+            box-shadow: 0 6px 20px rgba(251, 86, 7, 0.4);
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .project-card-btn i {
+            transition: transform 0.3s ease;
+        }
+
+        .project-card-btn:hover i {
+            transform: translateX(3px);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .projects-hero h1 {
+                font-size: 36px;
+            }
+
+            .projects-hero p {
+                font-size: 16px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .project-card-title {
+                font-size: 24px;
+            }
+
+            .project-card-footer {
+                flex-direction: column;
+                gap: 15px;
+                align-items: flex-start;
+            }
+        }
+
+        /* Loading Animation */
+        .loading {
+            text-align: center;
+            padding: 60px;
+        }
+
+        .loading-spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #fb5607;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Botón flotante WhatsApp -->
+    <a href="https://api.whatsapp.com/send?phone=56935634527&text=Hola%2C+me+gustar%C3%ADa+tener+m%C3%A1s+informaci%C3%B3n"
+        class="whatsapp-float" target="_blank">
+        <i class='bx bxl-whatsapp'></i> <span>Contáctanos</span>
+    </a>
+
+    <!-- Start Navbar Area Start -->
+    <div class="navbar-area style-2" id="navbar">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="index.html">
+                    <img class="logo-light" src="assets/img/logo/white-logo.png" alt="logo">
+                    <img class="logo-dark" src="assets/img/logo/logo.png" alt="logo">
+                </a>
+                <div class="other-option d-lg-none">
+                    <div class="option-item">
+                        <button type="button" class="search-btn" data-bs-toggle="offcanvas"
+                            data-bs-target="#staticBackdrop">
+                            <i class='bx bx-id-card'></i>
+                        </button>
+                    </div>
+                </div>
+                <a class="navbar-toggler" data-bs-toggle="offcanvas" href="#navbarOffcanvas" role="button"
+                    aria-controls="navbarOffcanvas">
+                    <i class='bx bx-menu'></i>
+                </a>
+                <div class="collapse navbar-collapse justify-content-between">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+                        </li>
+                        <li class="nav-item">
+                        <li class="nav-item"><a href="proyectos-suraxis.html" class="nav-link active">Proyectos</a></li>
+                        </li>
+                        <li class="nav-item">
+                        <li class="nav-item"><a href="about-us.html" class="nav-link">Sobre nosotros</a></li>
+                        <ul class="dropdown-menu">
+                            <li class="nav-item"><a href="about-us.html" class="nav-link">Sobre nosotros</a></li>
+                        </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- End Navbar Area Start -->
+
+    <!-- Start Responsive Navbar Area -->
+    <div class="responsive-navbar offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="navbarOffcanvas">
+        <div class="offcanvas-header">
+            <a href="index.html" class="logo d-inline-block">
+                <img class="logo-light" src="assets/img/logo/logo.png" alt="logo">
+            </a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="accordion" id="navbarAccordion">
+                <div class="accordion-item">
+                    <a href="index.html" class="accordion-link">
+                        Inicio
+                    </a>
+                </div>
+                <div class="accordion-item">
+                    <a href="proyectos-suraxis.html" class="accordion-link active">
+                        Proyectos
+                    </a>
+                </div>
+                <a href="about-us.html" class="accordion-link">
+                    Sobre nosotros
+                </a>
+            </div>
+
+            <div class="offcanvas-contact-info">
+                <h4>Información de contacto</h4>
+                <ul class="contact-info list-style">
+                    <li>
+                        <i class="bx bxs-envelope"></i>
+                        <a href="contacto@suraxis.cl">contacto@suraxis.cl</a>
+                    </li>
+                </ul>
+                <ul class="social-profile list-style">
+                    <li><a href="https://www.facebook.com/profile.php?id=61574983996323&_rdc=1&_rdr" target="_blank"><i
+                                class='bx bxl-facebook'></i></a></li>
+                    <li><a href="https://www.instagram.com/suraxis.cl" target="_blank"><i
+                                class='bx bxl-instagram'></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End Responsive Navbar Area -->
+
+    <!-- Start Clgun Searchbar Area -->
+    <div class="clgun offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop">
+        <div class="offcanvas-header">
+            <a href="index.html" class="logo">
+                <img src="assets/img/logo/logo.png" alt="image">
+            </a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="offcanvas-contact-info">
+                <h4>Información de contacto</h4>
+                <ul class="contact-info list-style">
+                    <li>
+                        <i class="bx bxs-time"></i>
+                        <p>Lun - Vie: 9:00 - 18:00</p>
+                    </li>
+                    <li><i class="bx bxs-phone-call"></i> Telefono de contacto - <p>+56 9 3563 4527</p>
+                    </li>
+                    <li>
+                        <i class="bx bxs-envelope"></i>
+                        <p>contacto@suraxis.cl</p>
+                    </li>
+                    <li>
+                        <i class="bx bxs-map"></i>
+                        <p>Osorno, Región de los lagos</p>
+                    </li>
+                </ul>
+                <ul class="social-profile list-style">
+                    <li><a href="https://www.facebook.com/profile.php?id=61574983996323&_rdc=1&_rdr" target="_blank"><i
+                                class='bx bxl-facebook'></i></a></li>
+                    <li><a href="https://www.instagram.com/suraxis.cl" target="_blank"><i
+                                class='bx bxl-instagram'></i></a></li>
+                </ul>
+            </div>
+
+            <div class="offcanvas-other-options">
+                <div class="option-item">
+                    <a href="https://api.whatsapp.com/send/?phone=%2B56935634527&text=Necesito+más+información+sobre+el+proyecto&type=phone_number&app_absent=0"
+                        class="whatsapp-btn" target="_blank">
+                        <i class='bx bxl-whatsapp'></i> Escríbenos por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Clgun Searchbar Area -->
+
+    <!-- Hero Section -->
+    <section class="projects-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12" data-aos="fade-up">
+                    <h1>Nuestros Proyectos</h1>
+                    <p>Descubre oportunidades únicas de inversión en parcelación. Cada proyecto está diseñado para
+                        ofrecer calidad de vida y alta plusvalía.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section">
+        <div class="container">
+            <div class="loading" id="loading">
+                <div class="loading-spinner"></div>
+                <p>Cargando proyectos...</p>
+            </div>
+
+            <div class="projects-grid" id="projects-grid">
+                <!-- Projects will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Area -->
+    <footer class="footer-simple">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>©Copyright 2025. Desarrollado por <a
+                            href="https://api.whatsapp.com/send?phone=56931354518&text=Hola%2C+me+gustar%C3%ADa+tener+m%C3%A1s+informaci%C3%B3n"
+                            target="_blank">astra360</a></p>
+                </div>
+                <div class="footer-right">
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61574983996323&locale=es_LA" target="_blank"
+                            class="social-link facebook">
+                            <i class='bx bxl-facebook'></i>
+                        </a>
+                        <a href="https://www.instagram.com/suraxis.cl" target="_blank" class="social-link instagram">
+                            <i class='bx bxl-instagram-alt'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer Area -->
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/common.js"></script>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Projects data
+        const projects = [
+            {
+                id: 'parcelas-loshualles',
+                name: 'Parcelas Los Hualles',
+                location: 'Osorno',
+                tagline: 'Tu oportunidad de invertir es hoy',
+                description: 'Proyecto ubicado a solo 1 km de Osorno, que ofrece un equilibrio perfecto entre tranquilidad, naturaleza y cercanía con la ciudad.',
+                image: 'assets/proyectos/loshualles/hero.jpeg',
+                badge: 'Disponible'
+            },
+            {
+                id: 'loslaureles',
+                name: 'Refugio Los Laureles',
+                location: 'Osorno',
+                tagline: 'Proyecto de alta plusvalía',
+                description: 'Un proyecto hecho para los amantes de la naturaleza, ubicado a solo 1.3 km de Osorno, ofreciendo tranquilidad y conexión con lo esencial.',
+                image: 'assets/proyectos/loslaureles/hero.JPG',
+                badge: 'Disponible'
+            },
+            {
+                id: 'trafun',
+                name: 'Parcelas Sector Trafún',
+                location: 'Osorno',
+                tagline: 'Vida tranquila a solo 15 minutos de Osorno',
+                description: 'Proyecto que nace del respeto por la tierra y la búsqueda de equilibrio perfecto entre tranquilidad del campo y cercanía con la ciudad.',
+                image: 'assets/proyectos/trafun/hero.jpg',
+                badge: 'Nuevo'
+            }
+        ];
+
+        // Render projects
+        function renderProjects() {
+            const grid = document.getElementById('projects-grid');
+            const loading = document.getElementById('loading');
+
+            // Hide loading
+            loading.style.display = 'none';
+
+            // Render each project
+            grid.innerHTML = projects.map((project, index) => `
+                <div class="project-card" data-aos="fade-up" data-aos-delay="${index * 100}">
+                    <div class="project-card-image">
+                        <img src="${project.image}" alt="${project.name}">
+                        <div class="project-card-overlay"></div>
+                        <div class="project-card-badge">${project.badge}</div>
+                    </div>
+                    <div class="project-card-content">
+                        <div class="project-card-location">
+                            <i class='bx bx-map'></i>
+                            ${project.location}
+                        </div>
+                        <h3 class="project-card-title">${project.name}</h3>
+                        <p class="project-card-tagline">${project.tagline}</p>
+                        <p class="project-card-description">${project.description}</p>
+                        <div class="project-card-footer">
+                            <a href="proyectos.html?id=${project.id}" class="project-card-btn">
+                                Ver proyecto
+                                <i class='bx bx-right-arrow-alt'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+
+            // Refresh AOS
+            AOS.refresh();
+        }
+
+        // Load projects on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            setTimeout(renderProjects, 500); // Small delay for smooth loading effect
+        });
+    </script>
+</body>
+
+</html>

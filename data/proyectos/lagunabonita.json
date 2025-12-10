@@ -23,6 +23,36 @@
     "map_iframe": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3100.123456789!2d-72.57637505266972!3d-40.883354158635385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDUzJzAwLjEiUyA3MsKwMzQnMzQuOSJX!5e0!3m2!1ses!2scl!4v1234567890123!5m2!1ses!2scl",
     "masterplan_url": "https://lagunabonita-production.up.railway.app/masterplan.html"
   },
+  "features_section": {
+    "subtitle": "Características",
+    "title": "de este proyecto"
+  },
+  "features": [
+    {
+      "icon": "fa fa-bolt",
+      "title": "Luz Eléctrica",
+      "description": "Contamos con una conexión de luz eléctrica a cada parcela, para que puedas disfrutar de la comodidad de tener luz en tu hogar.",
+      "image": "assets/img/service-1.jpg"
+    },
+    {
+      "icon": "fa fa-tint",
+      "title": "Conexión de agua",
+      "description": "Contamos con una conexión de agua a cada parcela, para que puedas disfrutar de la comodidad de tener agua en tu hogar.",
+      "image": "assets/img/service-2.jpg"
+    },
+    {
+      "icon": "fa fa-road",
+      "title": "Caminos Ripiados",
+      "description": "Contamos con caminos ripiados a cada parcela, para que puedas disfrutar de la comodidad de tener caminos ripiados en tu hogar.",
+      "image": "assets/img/service-3.jpg"
+    },
+    {
+      "icon": "fa fa-lock",
+      "title": "Acceso controlado",
+      "description": "Contamos con un acceso controlado a cada parcela, para que puedas disfrutar de la seguridad de tener un acceso controlado en tu hogar.",
+      "image": "assets/img/service-4.jpg"
+    }
+  ],
   "gallery": [
     "assets/img/proyectos/lagunabonita/1.jpg",
     "assets/img/proyectos/lagunabonita/2.jpg",
@@ -40,6 +70,43 @@
     "assets/img/proyectos/lagunabonita/14.jpg",
     "assets/img/proyectos/lagunabonita/15.jpg",
     "assets/img/proyectos/lagunabonita/16.jpg"
+  ],
+  "form_questions": [
+    {
+      "name": "forma_pago",
+      "label": "¿Formas de pago?",
+      "required": true,
+      "margin_bottom": "25px",
+      "options": [
+        {
+          "value": "Contado",
+          "label": "Contado",
+          "icon": "💰"
+        },
+        {
+          "value": "Crédito Hipotecario",
+          "label": "Crédito Hipotecario",
+          "icon": "🏦"
+        }
+      ]
+    },
+    {
+      "name": "rango_inversion",
+      "label": "¿Rango de inversión?",
+      "required": true,
+      "margin_bottom": "30px",
+      "options": [
+        {
+          "value": "$19.990.000 - $24.990.000",
+          "label": "$19.990.000 - $24.990.000",
+          "icon": "💵"
+        },
+        {
+          "value": "$24.990.000 - $29.990.000",
+          "label": "$24.990.000 - $29.990.000",
+          "icon": "💰"
+        }
+      ]
+    }
   ]
 }
-

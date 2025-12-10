@@ -2,27 +2,60 @@
   "id": "loslaureles",
   "name": "Los Laureles",
   "location": "Osorno",
-  "tagline": "Proyecto de alta plusvalía",
+  "tagline": "Entorno privilegiado con una conexión única",
+  "whatsapp_button_text": "¡Hola! Quiero más información del Proyecto de parcelas “Refugio los Laureles”.",
+  "whatsapp_message": "Hola, me gustaría tener más información sobre este proyecto",
+  "logo": "assets/proyectos/loslaureles/logo.png",
   "hero": [
     "assets/proyectos/loslaureles/hero.JPG",
     "assets/proyectos/loslaureles/hero2.JPG"
   ],
   "about": {
-    "subtitle": "Subtítulo descriptivo del proyecto - Ubicación específica",
-    "summary_title": "Resumen",
-    "summary_top": "Primera línea del resumen que describe el proyecto",
-    "summary_text": "Texto completo que describe el proyecto en detalle. Aquí puedes incluir información sobre la ubicación, características principales, beneficios, y cualquier otro detalle relevante que quieras compartir con los visitantes.",
-    "attractives_title": "Atractivos de la zona",
-    "attractives_description": "Descripción general de los atractivos y características de la zona",
+    "subtitle": "Proyecto de parcelas a solo 1.3 Km de Osorno",
+    "summary_title": "Refugio los Laureles",
+    "summary_top": "Un proyecto hecho para los amantes de la naturaleza.",
+    "summary_text": "El proyecto “Los Hualles”, es una parcelación que se encuentra ubicada a solo 1.3 km de Osorno, la cual genera un equilibrio perfecto entre tranquilidad, la anturaleza y cercanía con la ciudad. Su diseño permite que cada parcela se integre de forma orgánica al entorno, protegiendo la belleza natural que lo hace único. Parcelas “Refugio los Laureles” no es tan sólo un lugar para vivir cerca de la ciudad: es un lugar de descanso, un rincón de calma donde cada espacio invita a respirar profundo, reconectar con lo esencial y construir un futuro en armonía con la naturaleza.",
+    "attractives_title": "Conectado con lo esencial",
+    "attractives_description": "El proyecto se encuentra perfectamente ubicado",
     "attractives_items": [
-      "Atractivo turístico o característica 1",
-      "Atractivo turístico o característica 2",
-      "Atractivo turístico o característica 3",
-      "Atractivo turístico o característica 4"
+      "12 minutos de la plaza de Osorno",
+      "23 minutos del Aeropuerto Cañal Bajo - Osorno",
+      "1 hora y 10 minutos de Lago Ranco",
+      "1 hora 50 minutos de Valdivia"
     ],
-    "map_iframe": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1dXXXXX!2d-XX.XXXXX!3d-XX.XXXXX!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zXXXXX!5e0!3m2!1ses!2scl!4v1234567890123!5m2!1ses!2scl",
+    "map_iframe": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7336.544028155406!2d-73.1514008!3d-40.5295802!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x961637000c525855%3A0x5a924540ed768a77!2sRefugio%20Los%20Laureles!5e1!3m2!1ses-419!2scl!4v1765381798477!5m2!1ses-419!2scl",
     "masterplan_url": "assets/proyectos/loslaureles/1.JPG"
   },
+  "features_section": {
+    "subtitle": "Equipamiento ",
+    "title": "del proyecto"
+  },
+  "features": [
+    {
+      "icon": "fa fa-bolt",
+      "title": "Red Eléctrica",
+      "description": "Cada parcela cuando con su respectivo arranque eléctrico de tipo mixto, con el fin de que puedas disfrutar de la comodidad de tener luz en tu hogar.",
+      "image": "assets/img/service-1.jpg"
+    },
+    {
+      "icon": "fa fa-tint",
+      "title": "Red de agua",
+      "description": "Cada parcela cuenta con su respectivo arranque de agua, el cual se genera de un pozo profundo del mismo proyecto.",
+      "image": "assets/img/service-2.jpg"
+    },
+    {
+      "icon": "fa fa-road",
+      "title": "Caminos Ripiados",
+      "description": "Contamos con caminos ripiados y compactados, para que puedas disfrutar de tener el mejor acceso a tu parcela",
+      "image": "assets/img/service-3.jpg"
+    },
+    {
+      "icon": "fa fa-lock",
+      "title": "Acceso controlado",
+      "description": "El proyecto contempla un acceso controlado con el fin de tener la máxima seguridad para tu hogar.",
+      "image": "assets/img/service-4.jpg"
+    }
+  ],
   "gallery": [
     "assets/proyectos/loslaureles/1.JPG",
     "assets/proyectos/loslaureles/2.JPG",
@@ -39,7 +72,44 @@
     "assets/proyectos/loslaureles/13.JPG",
     "assets/proyectos/loslaureles/14.JPG",
     "assets/proyectos/loslaureles/15.JPG",
-    "assets/proyectos/loslaureles/16.JPG",
     "assets/proyectos/loslaureles/17.JPG"
+  ],
+  "form_questions": [
+    {
+      "name": "forma_pago",
+      "label": "¿Formas de pago?",
+      "required": true,
+      "margin_bottom": "25px",
+      "options": [
+        {
+          "value": "Contado",
+          "label": "Contado",
+          "icon": "💰"
+        },
+        {
+          "value": "Crédito Hipotecario",
+          "label": "Crédito Hipotecario",
+          "icon": "🏦"
+        }
+      ]
+    },
+    {
+      "name": "rango_inversion",
+      "label": "¿Rango de inversión?",
+      "required": true,
+      "margin_bottom": "30px",
+      "options": [
+        {
+          "value": "$39.990.000 - $44.990.000",
+          "label": "$39.990.000 - $44.990.000",
+          "icon": "💵"
+        },
+        {
+          "value": "$44.990.000 - $49.990.000",
+          "label": "$44.990.000 - $49.990.000",
+          "icon": "💰"
+        }
+      ]
+    }
   ]
 }

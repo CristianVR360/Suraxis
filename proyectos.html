@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Laguna Bonita | Suraxis | Proyectos</title>
+    <title>PRoyectos | Suraxis</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free Website Template" name="keywords">
     <meta content="Free Website Template" name="description">
@@ -85,6 +85,36 @@
 
             .masterplan-overlay-top {
                 height: 120px;
+            }
+        }
+
+        /* Hero Logo Responsive Styles */
+        .hero-logo {
+            max-height: 300px;
+            max-width: 95%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+        }
+
+        @media (max-width: 768px) {
+            .hero-logo {
+                max-width: 95% !important;
+                max-height: 280px !important;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-logo {
+                max-width: 98% !important;
+                max-height: 250px !important;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .hero-logo {
+                max-width: 100% !important;
+                max-height: 200px !important;
             }
         }
 
@@ -429,7 +459,7 @@
     <!-- Botón flotante WhatsApp -->
     <a href="https://api.whatsapp.com/send?phone=56935634527&text=Hola%2C+me+gustar%C3%ADa+tener+m%C3%A1s+informaci%C3%B3n"
         class="whatsapp-float" target="_blank" id="whatsappBtn">
-        <i class='bx bxl-whatsapp'></i> Contáctanos
+        <i class='bx bxl-whatsapp'></i> <span id="whatsapp-text"></span></span>
     </a>
 
     <!-- Start Navbar Area Start -->
@@ -679,58 +709,15 @@
         <div class="container-fluid pt-5">
             <div class="container">
                 <div class="section-title">
-                    <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Características</h4>
-                    <h1 class="display-4">de este proyecto</h1>
+                    <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;" id="features-subtitle">
+                        <!-- Subtítulo de características cargado dinámicamente -->
+                    </h4>
+                    <h1 class="display-4" id="features-title">
+                        <!-- Título de características cargado dinámicamente -->
+                    </h1>
                 </div>
-                <div class="row">
-                    <div class="col-lg-6 mb-5">
-                        <div class="row align-items-center">
-                            <div class="col-sm-5">
-                                <img class="img-fluid mb-3 mb-sm-0" src="assets/img/service-1.jpg" alt="">
-                            </div>
-                            <div class="col-sm-7">
-                                <h4><i class="fa fa-truck service-icon"></i>Luz Eléctrica</h4>
-                                <p class="m-0">Contamos con una conexión de luz eléctrica a cada parcela, para que
-                                    puedas disfrutar de la comodidad de tener luz en tu hogar.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 mb-5">
-                        <div class="row align-items-center">
-                            <div class="col-sm-5">
-                                <img class="img-fluid mb-3 mb-sm-0" src="assets/img/service-2.jpg" alt="">
-                            </div>
-                            <div class="col-sm-7">
-                                <h4><i class="fa fa-coffee service-icon"></i>Conexión de agua</h4>
-                                <p class="m-0">Contamos con una conexión de agua a cada parcela, para que puedas
-                                    disfrutar de la comodidad de tener agua en tu hogar.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 mb-5">
-                        <div class="row align-items-center">
-                            <div class="col-sm-5">
-                                <img class="img-fluid mb-3 mb-sm-0" src="assets/img/service-3.jpg" alt="">
-                            </div>
-                            <div class="col-sm-7">
-                                <h4><i class="fa fa-award service-icon"></i>Caminos Ripiados</h4>
-                                <p class="m-0">Contamos con caminos ripiados a cada parcela, para que puedas disfrutar
-                                    de la comodidad de tener caminos ripiados en tu hogar.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 mb-5">
-                        <div class="row align-items-center">
-                            <div class="col-sm-5">
-                                <img class="img-fluid mb-3 mb-sm-0" src="assets/img/service-4.jpg" alt="">
-                            </div>
-                            <div class="col-sm-7">
-                                <h4><i class="fa fa-table service-icon"></i>Acceso controlado</h4>
-                                <p class="m-0">Contamos con un acceso controlado a cada parcela, para que puedas
-                                    disfrutar de la seguridad de tener un acceso controlado en tu hogar.</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="row" id="features-container">
+                    <!-- Características cargadas dinámicamente desde JSON -->
                 </div>
             </div>
         </div>
@@ -750,6 +737,35 @@
                                     <h4>¡Quiero más información de como invertir!</h4>
                                     <div class="returnmessage"
                                         data-success="Tu mensaje ha sido enviado. Te contactaremos pronto."></div>
+
+
+                                    <!-- Preguntas dinámicas del formulario -->
+                                    <div id="form-questions-container">
+                                        <!-- Las preguntas se cargarán dinámicamente desde el JSON -->
+                                    </div>
+
+                                    <style>
+                                        /* Estilos para las tarjetas de radio */
+                                        input[type="radio"]:checked+.radio-card {
+                                            border-color: #fb5607 !important;
+                                            background: linear-gradient(135deg, #fb5607 0%, #ff6b35 100%) !important;
+                                            color: #fff !important;
+                                            box-shadow: 0 4px 12px rgba(251, 86, 7, 0.3) !important;
+                                            transform: translateY(-2px);
+                                        }
+
+                                        .radio-card:hover {
+                                            border-color: #fb5607;
+                                            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                                            transform: translateY(-1px);
+                                        }
+
+                                        @media (max-width: 576px) {
+                                            div[style*="grid-template-columns: 1fr 1fr"] {
+                                                grid-template-columns: 1fr !important;
+                                            }
+                                        }
+                                    </style>
 
                                     <div class="form-group">
                                         <input class="form-control styled-input" placeholder="Nombre" type="text"
@@ -777,26 +793,46 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="quick-content" data-aos="fade-up" data-aos-delay="200">
-                        <div class="sub-title">
-                            <p>Desarrollo de proyectos de parcelación.</p>
-                        </div>
-                        <h2>Oportunidades con Alto Potencial de Retorno</h2>
-                        <p>Nos especializamos en transformar terrenos en oportunidades de inversión para las personas,
-                            mediante un modelo 360. Desde el concepto y diseño hasta la correcta entrega a los nuevos
-                            propietarios</p>
-
-                        <!-- Contenedor de imágenes superpuestas -->
-                        <div class="management-image-container">
-                            <a href="javascript:void(0)" class="image-modal-trigger">
-                                <img src="assets/img/all-img/gestiondeproyectos.png" alt="Gestión de Proyectos"
-                                    class="responsive-management-image">
-                            </a>
+                        <!-- Slideshow de imágenes decorativas -->
+                        <div class="form-image-slideshow"
+                            style="position: relative; width: 100%; height: auto; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                            <img src="assets/img/form.jpg" alt="Formulario de contacto 1" class="slideshow-image active"
+                                style="width: 100%; height: auto; display: block; position: absolute; top: 0; left: 0; opacity: 1; transition: opacity 1s ease-in-out;">
+                            <img src="assets/img/form2.jpg" alt="Formulario de contacto 2" class="slideshow-image"
+                                style="width: 100%; height: auto; display: block; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 1s ease-in-out;">
+                            <img src="assets/img/form3.jpg" alt="Formulario de contacto 3" class="slideshow-image"
+                                style="width: 100%; height: auto; display: block; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 1s ease-in-out;">
+                            <!-- Imagen invisible para mantener el aspect ratio -->
+                            <img src="assets/img/form.jpg" alt=""
+                                style="width: 100%; height: auto; display: block; visibility: hidden;">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        // Slideshow automático de imágenes del formulario
+        (function () {
+            const images = document.querySelectorAll('.slideshow-image');
+            let currentIndex = 0;
+
+            function showNextImage() {
+                // Ocultar imagen actual
+                images[currentIndex].style.opacity = '0';
+
+                // Calcular siguiente índice
+                currentIndex = (currentIndex + 1) % images.length;
+
+                // Mostrar siguiente imagen
+                images[currentIndex].style.opacity = '1';
+            }
+
+            // Cambiar imagen cada 3 segundos
+            setInterval(showNextImage, 3000);
+        })();
+    </script>
     <!-- End Quick Search Area -->
 
     <!-- Modal mejorado para mantener proporciones -->
