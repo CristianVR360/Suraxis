@@ -1,0 +1,504 @@
+/* ================================================
+   Modern Project Cards - Estilos Responsivos
+   Sobrescribe estilos antiguos con !important
+   ================================================ */
+
+/* Contenedor principal de proyectos */
+.projects-container-wrapper {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 60px !important;
+}
+
+.projects-container {
+    width: 100% !important;
+    overflow: hidden !important;
+    position: relative !important;
+}
+
+.projects-row {
+    display: flex !important;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    width: 100% !important;
+}
+
+/* Slides de proyectos */
+.projects-slide {
+    min-width: 100% !important;
+    display: flex !important;
+    gap: 24px !important;
+    padding: 20px 0 !important;
+    box-sizing: border-box !important;
+}
+
+.projects-slide.desktop-slide {
+    display: flex !important;
+}
+
+.projects-slide.mobile-slide {
+    display: none !important;
+}
+
+/* Cards de proyecto - Estilos modernos con !important */
+.features-content-2 .projects-slide .academic-item,
+.projects-slide .academic-item {
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    background: #ffffff !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    cursor: pointer !important;
+    position: relative !important;
+    min-height: 420px !important;
+    max-width: calc(50% - 12px) !important;
+    transform: scale(1) !important;
+    /* Sobrescribe el scale(0.8) del style.css */
+}
+
+.features-content-2 .projects-slide .academic-item:hover,
+.projects-slide .academic-item:hover {
+    transform: translateY(-8px) scale(1) !important;
+    box-shadow: 0 12px 40px rgba(255, 87, 34, 0.15) !important;
+}
+
+/* Contenedor de imagen con aspect ratio fijo */
+.features-content-2 .academic-item .image,
+.projects-slide .academic-item .image {
+    position: relative !important;
+    width: 100% !important;
+    aspect-ratio: 16 / 10 !important;
+    overflow: hidden !important;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+}
+
+.features-content-2 .academic-item .image img,
+.projects-slide .academic-item .image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.features-content-2 .academic-item:hover .image img,
+.projects-slide .academic-item:hover .image img {
+    transform: scale(1.08) !important;
+}
+
+/* Número del proyecto */
+.features-content-2 .academic-item .image .number,
+.projects-slide .academic-item .image .number {
+    position: absolute !important;
+    bottom: 16px !important;
+    right: 16px !important;
+    z-index: 2 !important;
+}
+
+.features-content-2 .academic-item .image .number h3,
+.projects-slide .academic-item .image .number h3 {
+    font-size: 72px !important;
+    font-weight: 800 !important;
+    color: rgba(255, 255, 255, 0.95) !important;
+    margin: 0 !important;
+    line-height: 1 !important;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+    font-family: 'Lexend', sans-serif !important;
+}
+
+/* Overlay de imagen con gradiente */
+.features-content-2 .academic-item .image::after,
+.projects-slide .academic-item .image::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 50% !important;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent) !important;
+    pointer-events: none !important;
+}
+
+/* Contenido del card */
+.features-content-2 .academic-item .content,
+.projects-slide .academic-item .content {
+    padding: 24px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    flex-grow: 1 !important;
+    background: #ffffff !important;
+}
+
+.features-content-2 .academic-item .content h4,
+.projects-slide .academic-item .content h4 {
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    color: #2d3748 !important;
+    margin: 0 0 12px 0 !important;
+    font-family: 'Lexend', sans-serif !important;
+    line-height: 1.3 !important;
+}
+
+/* Información de ubicación */
+.location-info {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    color: #718096 !important;
+    font-size: 15px !important;
+    margin: 0 0 20px 0 !important;
+    font-weight: 500 !important;
+}
+
+.location-info i {
+    font-size: 18px !important;
+    color: #FF5722 !important;
+}
+
+/* Botón del card */
+.features-content-2 .academic-item .content .btn,
+.projects-slide .academic-item .content .btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    font-weight: 600 !important;
+    color: #FF5722 !important;
+    font-size: 15px !important;
+    padding: 12px 24px !important;
+    border: 2px solid #FF5722 !important;
+    border-radius: 8px !important;
+    background: transparent !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+    margin-top: auto !important;
+    width: fit-content !important;
+    position: static !important;
+}
+
+.features-content-2 .academic-item .content .btn:hover,
+.projects-slide .academic-item .content .btn:hover {
+    background: #FF5722 !important;
+    color: #ffffff !important;
+    transform: translateX(4px) !important;
+}
+
+.features-content-2 .academic-item .content .btn i,
+.projects-slide .academic-item .content .btn i {
+    font-size: 20px !important;
+    transition: transform 0.3s ease !important;
+    position: static !important;
+    top: auto !important;
+    right: auto !important;
+}
+
+.features-content-2 .academic-item .content .btn:hover i,
+.projects-slide .academic-item .content .btn:hover i {
+    transform: translateX(4px) !important;
+}
+
+/* Navegación */
+.nav-arrow {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    background: rgba(255, 87, 34, 0.95) !important;
+    border: none !important;
+    border-radius: 50% !important;
+    width: 48px !important;
+    height: 48px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    z-index: 10 !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+.nav-arrow:hover {
+    background: #E64A19 !important;
+    transform: translateY(-50%) scale(1.1) !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25) !important;
+}
+
+.nav-arrow i {
+    color: #ffffff !important;
+    font-size: 24px !important;
+}
+
+.nav-arrow-left.desktop-nav {
+    left: 0 !important;
+}
+
+.nav-arrow-right.desktop-nav {
+    right: 0 !important;
+}
+
+.mobile-navigation {
+    display: none !important;
+}
+
+/* ================================================
+   RESPONSIVE DESIGN
+   ================================================ */
+
+/* Tablets grandes (hasta 1200px) */
+@media (max-width: 1200px) {
+    .projects-container-wrapper {
+        padding: 0 40px !important;
+    }
+
+    .features-content-2 .academic-item .image .number h3,
+    .projects-slide .academic-item .image .number h3 {
+        font-size: 64px !important;
+    }
+
+    .features-content-2 .academic-item .content h4,
+    .projects-slide .academic-item .content h4 {
+        font-size: 22px !important;
+    }
+
+    .features-content-2 .projects-slide .academic-item,
+    .projects-slide .academic-item {
+        min-height: 380px !important;
+    }
+}
+
+/* Tablets (hasta 992px) */
+@media (max-width: 992px) {
+    .projects-container-wrapper {
+        padding: 0 30px !important;
+    }
+
+    .projects-slide {
+        gap: 20px !important;
+    }
+
+    .features-content-2 .projects-slide .academic-item,
+    .projects-slide .academic-item {
+        min-height: 360px !important;
+        max-width: calc(50% - 10px) !important;
+        transform: scale(1) !important;
+    }
+
+    .features-content-2 .academic-item .image .number h3,
+    .projects-slide .academic-item .image .number h3 {
+        font-size: 56px !important;
+    }
+
+    .features-content-2 .academic-item .content h4,
+    .projects-slide .academic-item .content h4 {
+        font-size: 20px !important;
+    }
+
+    .features-content-2 .academic-item .content,
+    .projects-slide .academic-item .content {
+        padding: 20px !important;
+    }
+
+    .nav-arrow {
+        width: 42px !important;
+        height: 42px !important;
+    }
+
+    .nav-arrow i {
+        font-size: 22px !important;
+    }
+}
+
+/* Tablets pequeñas (hasta 768px) */
+@media (max-width: 768px) {
+    .projects-container-wrapper {
+        padding: 0 20px !important;
+    }
+
+    .projects-slide.desktop-slide {
+        display: none !important;
+    }
+
+    .projects-slide.mobile-slide {
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+    .features-content-2 .projects-slide .academic-item,
+    .projects-slide .academic-item {
+        max-width: 100% !important;
+        min-height: 420px !important;
+        transform: scale(1) !important;
+    }
+
+    .features-content-2 .academic-item .image,
+    .projects-slide .academic-item .image {
+        aspect-ratio: 16 / 9 !important;
+    }
+
+    .features-content-2 .academic-item .image .number h3,
+    .projects-slide .academic-item .image .number h3 {
+        font-size: 64px !important;
+    }
+
+    .features-content-2 .academic-item .content h4,
+    .projects-slide .academic-item .content h4 {
+        font-size: 22px !important;
+    }
+
+    .features-content-2 .academic-item .content,
+    .projects-slide .academic-item .content {
+        padding: 24px !important;
+    }
+
+    /* Navegación móvil */
+    .desktop-nav {
+        display: none !important;
+    }
+
+    .mobile-navigation {
+        display: flex !important;
+        justify-content: center !important;
+        gap: 20px !important;
+        margin-bottom: 20px !important;
+    }
+
+    .nav-arrow.mobile-nav {
+        position: static !important;
+        transform: none !important;
+    }
+
+    .nav-arrow.mobile-nav:hover {
+        transform: scale(1.1) !important;
+    }
+}
+
+/* Móviles (hasta 576px) */
+@media (max-width: 576px) {
+    .projects-container-wrapper {
+        padding: 0 15px !important;
+    }
+
+    .features-content-2 .projects-slide .academic-item,
+    .projects-slide .academic-item {
+        min-height: 380px !important;
+        transform: scale(1) !important;
+    }
+
+    .features-content-2 .academic-item .image .number h3,
+    .projects-slide .academic-item .image .number h3 {
+        font-size: 56px !important;
+    }
+
+    .features-content-2 .academic-item .content h4,
+    .projects-slide .academic-item .content h4 {
+        font-size: 20px !important;
+    }
+
+    .features-content-2 .academic-item .content,
+    .projects-slide .academic-item .content {
+        padding: 20px !important;
+    }
+
+    .location-info {
+        font-size: 14px !important;
+        margin-bottom: 16px !important;
+    }
+
+    .features-content-2 .academic-item .content .btn,
+    .projects-slide .academic-item .content .btn {
+        font-size: 14px !important;
+        padding: 10px 20px !important;
+        width: 100% !important;
+        justify-content: center !important;
+    }
+
+    .nav-arrow {
+        width: 40px !important;
+        height: 40px !important;
+    }
+
+    .nav-arrow i {
+        font-size: 20px !important;
+    }
+}
+
+/* Móviles pequeños (hasta 375px) */
+@media (max-width: 375px) {
+
+    .features-content-2 .academic-item .image .number h3,
+    .projects-slide .academic-item .image .number h3 {
+        font-size: 48px !important;
+    }
+
+    .features-content-2 .academic-item .content h4,
+    .projects-slide .academic-item .content h4 {
+        font-size: 18px !important;
+    }
+
+    .features-content-2 .academic-item .content,
+    .projects-slide .academic-item .content {
+        padding: 16px !important;
+    }
+
+    .features-content-2 .projects-slide .academic-item,
+    .projects-slide .academic-item {
+        transform: scale(1) !important;
+    }
+}
+
+/* ================================================
+   ANIMACIONES Y TRANSICIONES
+   ================================================ */
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(1);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.features-content-2 .projects-slide .academic-item,
+.projects-slide .academic-item {
+    animation: slideIn 0.6s ease-out !important;
+}
+
+/* Efecto de carga suave */
+.projects-slide {
+    opacity: 1 !important;
+    transition: opacity 0.3s ease !important;
+}
+
+.projects-slide.transitioning {
+    opacity: 0.7 !important;
+}
+
+/* Accesibilidad: Reducir movimiento si el usuario lo prefiere */
+@media (prefers-reduced-motion: reduce) {
+
+    .features-content-2 .projects-slide .academic-item,
+    .projects-slide .academic-item,
+    .features-content-2 .academic-item .image img,
+    .projects-slide .academic-item .image img,
+    .nav-arrow,
+    .projects-row {
+        transition: none !important;
+        animation: none !important;
+    }
+
+    .features-content-2 .projects-slide .academic-item:hover,
+    .projects-slide .academic-item:hover {
+        transform: scale(1) !important;
+    }
+
+    .features-content-2 .academic-item:hover .image img,
+    .projects-slide .academic-item:hover .image img {
+        transform: none !important;
+    }
+}

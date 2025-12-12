@@ -362,220 +362,366 @@
                         </div>
                     </div>
                     <div class="col-lg-8">
-                        <div class="academic-content" style="margin-top: -2rem;">
-                            <h1 class="text-center mb-4" style="font-size: 3rem; font-weight: 700; color: #333;">
-                                Próximos nuevos lanzamientos</h1>
+                        <!-- Estilos específicos para esta sección SOLAMENTE -->
+                        <style>
+                            /* Reset para evitar interferencias */
+                            .suraxis-projects-new * {
+                                box-sizing: border-box;
+                            }
 
-                            <!-- Contenedor de proyectos con navegación -->
-                            <div class="projects-container-wrapper">
-                                <!-- Navegación para desktop -->
-                                <button class="nav-arrow nav-arrow-left desktop-nav" onclick="navigateProjects('prev')">
-                                    <i class='bx bx-chevron-left'></i>
-                                </button>
+                            .suraxis-projects-new {
+                                position: relative;
+                                width: 100%;
+                                padding: 0 50px;
+                            }
 
-                                <!-- Navegación para móvil (arriba) -->
-                                <div class="mobile-navigation">
-                                    <button class="nav-arrow nav-arrow-left mobile-nav"
-                                        onclick="navigateProjects('prev')">
+                            .suraxis-projects-carousel {
+                                overflow: hidden;
+                                width: 100%;
+                            }
+
+                            .suraxis-slides-container {
+                                display: flex;
+                                transition: transform 0.5s ease;
+                            }
+
+                            .suraxis-slide {
+                                min-width: 100%;
+                                display: flex;
+                                gap: 20px;
+                                padding: 20px 0;
+                            }
+
+                            .suraxis-project-card {
+                                flex: 1;
+                                background: #fff;
+                                border-radius: 12px;
+                                overflow: hidden;
+                                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+                                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                                cursor: pointer;
+                                display: flex;
+                                flex-direction: column;
+                            }
+
+                            .suraxis-project-card:hover {
+                                transform: translateY(-5px);
+                                box-shadow: 0 8px 25px rgba(255, 87, 34, 0.2);
+                            }
+
+                            .suraxis-card-image {
+                                position: relative;
+                                width: 100%;
+                                padding-top: 62.5%;
+                                /* Ratio 16:10 */
+                                overflow: hidden;
+                            }
+
+                            .suraxis-card-image img {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                transition: transform 0.5s ease;
+                            }
+
+                            .suraxis-project-card:hover .suraxis-card-image img {
+                                transform: scale(1.05);
+                            }
+
+                            .suraxis-card-number {
+                                position: absolute;
+                                bottom: 10px;
+                                right: 15px;
+                                font-size: 60px;
+                                font-weight: 800;
+                                color: rgba(255, 255, 255, 0.95);
+                                text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+                                font-family: 'Lexend', sans-serif;
+                                line-height: 1;
+                                z-index: 2;
+                            }
+
+                            .suraxis-card-image::after {
+                                content: '';
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                right: 0;
+                                height: 50%;
+                                background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent);
+                            }
+
+                            .suraxis-card-content {
+                                padding: 20px;
+                                display: flex;
+                                flex-direction: column;
+                                flex-grow: 1;
+                            }
+
+                            .suraxis-card-title {
+                                font-size: 22px;
+                                font-weight: 700;
+                                color: #2d3748;
+                                margin: 0 0 10px 0;
+                                font-family: 'Lexend', sans-serif;
+                            }
+
+                            .suraxis-card-location {
+                                display: flex;
+                                align-items: center;
+                                gap: 6px;
+                                color: #718096;
+                                font-size: 14px;
+                                margin-bottom: 15px;
+                                font-weight: 500;
+                            }
+
+                            .suraxis-card-location i {
+                                color: #FF5722;
+                                font-size: 16px;
+                            }
+
+                            .suraxis-card-btn {
+                                display: inline-flex;
+                                align-items: center;
+                                gap: 8px;
+                                padding: 10px 20px;
+                                background: transparent;
+                                border: 2px solid #FF5722;
+                                border-radius: 8px;
+                                color: #FF5722;
+                                font-weight: 600;
+                                font-size: 14px;
+                                text-decoration: none;
+                                transition: all 0.3s ease;
+                                margin-top: auto;
+                                width: fit-content;
+                            }
+
+                            .suraxis-card-btn:hover {
+                                background: #FF5722;
+                                color: #fff;
+                                transform: translateX(3px);
+                            }
+
+                            .suraxis-card-btn i {
+                                font-size: 18px;
+                                transition: transform 0.3s ease;
+                            }
+
+                            .suraxis-card-btn:hover i {
+                                transform: translateX(3px);
+                            }
+
+                            .suraxis-nav-btn {
+                                position: absolute;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                width: 45px;
+                                height: 45px;
+                                border-radius: 50%;
+                                background: rgba(255, 87, 34, 0.95);
+                                border: none;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                cursor: pointer;
+                                z-index: 10;
+                                transition: all 0.3s ease;
+                                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+                            }
+
+                            .suraxis-nav-btn:hover {
+                                background: #E64A19;
+                                transform: translateY(-50%) scale(1.1);
+                            }
+
+                            .suraxis-nav-btn i {
+                                color: #fff;
+                                font-size: 22px;
+                            }
+
+                            .suraxis-nav-prev {
+                                left: 0;
+                            }
+
+                            .suraxis-nav-next {
+                                right: 0;
+                            }
+
+                            .suraxis-mobile-nav {
+                                display: none;
+                            }
+
+                            /* Responsive */
+                            @media (max-width: 768px) {
+                                .suraxis-projects-new {
+                                    padding: 0 15px;
+                                }
+
+                                .suraxis-project-card {
+                                    width: 100%;
+                                }
+
+                                .suraxis-card-number {
+                                    font-size: 50px;
+                                }
+
+                                .suraxis-nav-btn {
+                                    display: none;
+                                }
+
+                                .suraxis-mobile-nav {
+                                    display: flex;
+                                    justify-content: center;
+                                    gap: 15px;
+                                    margin-bottom: 15px;
+                                }
+
+                                .suraxis-mobile-nav .suraxis-nav-btn {
+                                    position: static;
+                                    transform: none;
+                                    display: flex;
+                                }
+
+                                .suraxis-mobile-nav .suraxis-nav-btn:hover {
+                                    transform: scale(1.1);
+                                }
+
+                                .suraxis-card-btn {
+                                    width: 100%;
+                                    justify-content: center;
+                                }
+                            }
+
+                            @media (max-width: 576px) {
+                                .suraxis-card-title {
+                                    font-size: 20px;
+                                }
+
+                                .suraxis-card-number {
+                                    font-size: 45px;
+                                }
+
+                                .suraxis-card-content {
+                                    padding: 16px;
+                                }
+                            }
+                        </style>
+
+                        <!-- HTML de  los projects cards -->
+                        <div style="margin-top: -2rem;">
+                            <h1
+                                style="text-align: center; font-size: 3rem; font-weight: 700; color: #333; margin-bottom: 2rem;">
+                                Próximos nuevos lanzamientos
+                            </h1>
+
+                            <div class="suraxis-projects-new">
+                                <!-- Navegación móvil -->
+                                <div class="suraxis-mobile-nav">
+                                    <button class="suraxis-nav-btn" onclick="suraxisNavigate(-1)">
                                         <i class='bx bx-chevron-left'></i>
                                     </button>
-                                    <button class="nav-arrow nav-arrow-right mobile-nav"
-                                        onclick="navigateProjects('next')">
+                                    <button class="suraxis-nav-btn" onclick="suraxisNavigate(1)">
                                         <i class='bx bx-chevron-right'></i>
                                     </button>
                                 </div>
 
-                                <div class="projects-container">
-                                    <div class="projects-row" id="projectsRow">
-                                        <!-- Desktop: Slide 1 con dos cards -->
-                                        <div class="projects-slide desktop-slide" data-slide="0">
-                                            <!-- Proyecto 1: Los Laureles -->
-                                            <div class="academic-item" data-aos="fade-up" data-aos-delay="100"
-                                                onclick="openModal('losLaurelesModal'); return false;"
-                                                style="cursor: pointer;">
-                                                <div class="image">
+                                <!-- Navegación desktop izquierda -->
+                                <button class="suraxis-nav-btn suraxis-nav-prev" onclick="suraxisNavigate(-1)">
+                                    <i class='bx bx-chevron-left'></i>
+                                </button>
+
+                                <!-- Carrusel -->
+                                <div class="suraxis-projects-carousel">
+                                    <div class="suraxis-slides-container" id="suraxisSlidesContainer">
+                                        <!-- Slide 1: Los Laureles + Los Hualles -->
+                                        <div class="suraxis-slide">
+                                            <!-- Los Laureles -->
+                                            <div class="suraxis-project-card"
+                                                onclick="window.location.href='proyectos.html?id=loslaureles'"
+                                                data-aos="fade-up">
+                                                <div class="suraxis-card-image">
                                                     <img src="assets/img/all-img/Los-Laureles.jpg" alt="Los Laureles">
-                                                    <div class="number">
-                                                        <h3>01</h3>
-                                                    </div>
+                                                    <div class="suraxis-card-number">01</div>
                                                 </div>
-                                                <div class="content">
-                                                    <h4>Los Laureles</h4>
-                                                    <p class="location-info">
-                                                        <i class='bx bx-map-pin'></i> Osorno
-                                                    </p>
-                                                    <a class="btn" href="#"
-                                                        onclick="openModal('losLaurelesModal'); return false;">
-                                                        Próximamente <i class='bx bx-right-arrow-alt'></i>
+                                                <div class="suraxis-card-content">
+                                                    <h4 class="suraxis-card-title">Los Laureles</h4>
+                                                    <div class="suraxis-card-location">
+                                                        <i class='bx bx-map-pin'></i>
+                                                        <span>Osorno</span>
+                                                    </div>
+                                                    <a href="proyectos.html?id=loslaureles" class="suraxis-card-btn"
+                                                        onclick="event.stopPropagation()">
+                                                        Ir al proyecto <i class='bx bx-right-arrow-alt'></i>
                                                     </a>
                                                 </div>
                                             </div>
 
-                                            <!-- Proyecto 2: Estero Molgue -->
-                                            <div class="academic-item" data-aos="fade-up" data-aos-delay="200"
-                                                onclick="openModal('esteroMolgueModal'); return false;"
-                                                style="cursor: pointer;">
-                                                <div class="image">
-                                                    <img src="assets/img/all-img/academic-image-2.png"
-                                                        alt="Estero Molgue">
-                                                    <div class="number">
-                                                        <h3>02</h3>
+                                            <!-- Los Hualles -->
+                                            <div class="suraxis-project-card"
+                                                onclick="window.location.href='proyectos.html?id=parcelas-loshualles'"
+                                                data-aos="fade-up" data-aos-delay="100">
+                                                <div class="suraxis-card-image">
+                                                    <img src="assets/proyectos/loshualles/hero.jpeg" alt="Los Hualles">
+                                                    <div class="suraxis-card-number">02</div>
+                                                </div>
+                                                <div class="suraxis-card-content">
+                                                    <h4 class="suraxis-card-title">Los Hualles</h4>
+                                                    <div class="suraxis-card-location">
+                                                        <i class='bx bx-map-pin'></i>
+                                                        <span>Osorno</span>
                                                     </div>
-                                                </div>
-                                                <div class="content">
-                                                    <h4>Estero Molgue</h4>
-                                                    <p class="location-info">
-                                                        <i class='bx bx-map-pin'></i> Río Bueno
-                                                    </p>
-                                                    <a class="btn" href="#"
-                                                        onclick="openModal('esteroMolgueModal'); return false;">
-                                                        Próximamente <i class='bx bx-right-arrow-alt'></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Desktop: Slide 2 con dos cards -->
-                                        <div class="projects-slide desktop-slide" data-slide="1">
-                                            <!-- Proyecto 3: Laguna Bonita -->
-                                            <div class="academic-item" data-aos="fade-up" data-aos-delay="300"
-                                                onclick="openModal('lagunaBonitaModal'); return false;"
-                                                style="cursor: pointer;">
-                                                <div class="image">
-                                                    <img src="assets/img/all-img/academic-image-1.png"
-                                                        alt="Laguna Bonita">
-                                                    <div class="number">
-                                                        <h3>03</h3>
-                                                    </div>
-                                                </div>
-                                                <div class="content">
-                                                    <h4>Laguna Bonita</h4>
-                                                    <p class="location-info">
-                                                        <i class='bx bx-map-pin'></i> Rupanco
-                                                    </p>
-                                                    <a class="btn" href="#"
-                                                        onclick="openModal('lagunaBonitaModal'); return false;">
-                                                        Próximamente <i class='bx bx-right-arrow-alt'></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-
-                                            <!-- Proyecto 4: Tacamó -->
-                                            <div class="academic-item" data-aos="fade-up" data-aos-delay="400"
-                                                onclick="openModal('tacamoModal'); return false;"
-                                                style="cursor: pointer;">
-                                                <div class="image">
-                                                    <img src="assets/img/all-img/Tacamó.jpg" alt="Tacamó">
-                                                    <div class="number">
-                                                        <h3>04</h3>
-                                                    </div>
-                                                </div>
-                                                <div class="content">
-                                                    <h4>Tacamó</h4>
-                                                    <p class="location-info">
-                                                        <i class='bx bx-map-pin'></i> Osorno
-                                                    </p>
-                                                    <a class="btn" href="#"
-                                                        onclick="openModal('tacamoModal'); return false;">
-                                                        Próximamente <i class='bx bx-right-arrow-alt'></i>
+                                                    <a href="proyectos.html?id=parcelas-loshualles"
+                                                        class="suraxis-card-btn" onclick="event.stopPropagation()">
+                                                        Ir al proyecto <i class='bx bx-right-arrow-alt'></i>
                                                     </a>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <!-- Desktop: Slide 3 con un card -->
-                                        <div class="projects-slide desktop-slide" data-slide="2">
-                                            <!-- Proyecto 5: Trafún -->
-                                            <div class="academic-item" data-aos="fade-up" data-aos-delay="500"
-                                                onclick="openModal('trafunModal'); return false;"
-                                                style="cursor: pointer;">
-                                                <div class="image">
+                                        <!-- Slide 2: Trafún + Laguna Bonita -->
+                                        <div class="suraxis-slide">
+                                            <!-- Trafún -->
+                                            <div class="suraxis-project-card"
+                                                onclick="window.location.href='proyectos.html?id=trafun'"
+                                                data-aos="fade-up">
+                                                <div class="suraxis-card-image">
                                                     <img src="assets/img/all-img/Trafún.jpg" alt="Trafún">
-                                                    <div class="number">
-                                                        <h3>05</h3>
-                                                    </div>
+                                                    <div class="suraxis-card-number">03</div>
                                                 </div>
-                                                <div class="content">
-                                                    <h4>Trafún</h4>
-                                                    <p class="location-info">
-                                                        <i class='bx bx-map-pin'></i> Osorno
-                                                    </p>
-                                                    <a class="btn" href="#"
-                                                        onclick="openModal('trafunModal'); return false;">
-                                                        Próximamente <i class='bx bx-right-arrow-alt'></i>
+                                                <div class="suraxis-card-content">
+                                                    <h4 class="suraxis-card-title">Trafún</h4>
+                                                    <div class="suraxis-card-location">
+                                                        <i class='bx bx-map-pin'></i>
+                                                        <span>Osorno</span>
+                                                    </div>
+                                                    <a href="proyectos.html?id=trafun" class="suraxis-card-btn"
+                                                        onclick="event.stopPropagation()">
+                                                        Ir al proyecto <i class='bx bx-right-arrow-alt'></i>
                                                     </a>
                                                 </div>
                                             </div>
-                                        </div>
 
-                                        <!-- Móvil: Slides individuales -->
-                                        <!-- Móvil Slide 1: Los Laureles -->
-                                        <div class="projects-slide mobile-slide" data-slide="0">
-                                            <div class="academic-item" data-aos="fade-up" data-aos-delay="100"
-                                                onclick="openModal('losLaurelesModal'); return false;"
-                                                style="cursor: pointer;">
-                                                <div class="image">
-                                                    <img src="assets/img/all-img/Los-Laureles.jpg" alt="Los Laureles">
-                                                    <div class="number">
-                                                        <h3>01</h3>
-                                                    </div>
-                                                </div>
-                                                <div class="content">
-                                                    <h4>Los Laureles</h4>
-                                                    <p class="location-info">
-                                                        <i class='bx bx-map-pin'></i> Osorno
-                                                    </p>
-                                                    <a class="btn" href="#"
-                                                        onclick="openModal('losLaurelesModal'); return false;">
-                                                        Próximamente <i class='bx bx-right-arrow-alt'></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Móvil Slide 2: Estero Molgue -->
-                                        <div class="projects-slide mobile-slide" data-slide="1">
-                                            <div class="academic-item" data-aos="fade-up" data-aos-delay="200"
-                                                onclick="openModal('esteroMolgueModal'); return false;"
-                                                style="cursor: pointer;">
-                                                <div class="image">
-                                                    <img src="assets/img/all-img/academic-image-2.png"
-                                                        alt="Estero Molgue">
-                                                    <div class="number">
-                                                        <h3>02</h3>
-                                                    </div>
-                                                </div>
-                                                <div class="content">
-                                                    <h4>Estero Molgue</h4>
-                                                    <p class="location-info">
-                                                        <i class='bx bx-map-pin'></i> Rupanco
-                                                    </p>
-                                                    <a class="btn" href="#"
-                                                        onclick="openModal('esteroMolgueModal'); return false;">
-                                                        Próximamente <i class='bx bx-right-arrow-alt'></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Móvil Slide 3: Laguna Bonita -->
-                                        <div class="projects-slide mobile-slide" data-slide="2">
-                                            <div class="academic-item" data-aos="fade-up" data-aos-delay="300"
+                                            <!-- Laguna Bonita -->
+                                            <div class="suraxis-project-card"
                                                 onclick="openModal('lagunaBonitaModal'); return false;"
-                                                style="cursor: pointer;">
-                                                <div class="image">
+                                                data-aos="fade-up" data-aos-delay="100">
+                                                <div class="suraxis-card-image">
                                                     <img src="assets/img/all-img/academic-image-1.png"
                                                         alt="Laguna Bonita">
-                                                    <div class="number">
-                                                        <h3>03</h3>
-                                                    </div>
+                                                    <div class="suraxis-card-number">04</div>
                                                 </div>
-                                                <div class="content">
-                                                    <h4>Laguna Bonita</h4>
-                                                    <p class="location-info">
-                                                        <i class='bx bx-map-pin'></i> Río Bueno
-                                                    </p>
-                                                    <a class="btn" href="#"
+                                                <div class="suraxis-card-content">
+                                                    <h4 class="suraxis-card-title">Laguna Bonita</h4>
+                                                    <div class="suraxis-card-location">
+                                                        <i class='bx bx-map-pin'></i>
+                                                        <span>Rupanco</span>
+                                                    </div>
+                                                    <a href="#" class="suraxis-card-btn"
                                                         onclick="openModal('lagunaBonitaModal'); return false;">
                                                         Próximamente <i class='bx bx-right-arrow-alt'></i>
                                                     </a>
@@ -583,48 +729,46 @@
                                             </div>
                                         </div>
 
-                                        <!-- Móvil Slide 4: Tacamó -->
-                                        <div class="projects-slide mobile-slide" data-slide="3">
-                                            <div class="academic-item" data-aos="fade-up" data-aos-delay="400"
-                                                onclick="openModal('tacamoModal'); return false;"
-                                                style="cursor: pointer;">
-                                                <div class="image">
-                                                    <img src="assets/img/all-img/Tacamó.jpg" alt="Tacamó">
-                                                    <div class="number">
-                                                        <h3>04</h3>
-                                                    </div>
+                                        <!-- Slide 3: Estero Molgue + Tacamó -->
+                                        <div class="suraxis-slide">
+                                            <!-- Estero Molgue -->
+                                            <div class="suraxis-project-card"
+                                                onclick="openModal('esteroMolgueModal'); return false;"
+                                                data-aos="fade-up">
+                                                <div class="suraxis-card-image">
+                                                    <img src="assets/img/all-img/academic-image-2.png"
+                                                        alt="Estero Molgue">
+                                                    <div class="suraxis-card-number">05</div>
                                                 </div>
-                                                <div class="content">
-                                                    <h4>Tacamó</h4>
-                                                    <p class="location-info">
-                                                        <i class='bx bx-map-pin'></i> Osorno
-                                                    </p>
-                                                    <a class="btn" href="#"
-                                                        onclick="openModal('tacamoModal'); return false;">
+                                                <div class="suraxis-card-content">
+                                                    <h4 class="suraxis-card-title">Estero Molgue</h4>
+                                                    <div class="suraxis-card-location">
+                                                        <i class='bx bx-map-pin'></i>
+                                                        <span>Río Bueno</span>
+                                                    </div>
+                                                    <a href="#" class="suraxis-card-btn"
+                                                        onclick="openModal('esteroMolgueModal'); return false;">
                                                         Próximamente <i class='bx bx-right-arrow-alt'></i>
                                                     </a>
                                                 </div>
                                             </div>
-                                        </div>
 
-                                        <!-- Móvil Slide 5: Trafún -->
-                                        <div class="projects-slide mobile-slide" data-slide="4">
-                                            <div class="academic-item" data-aos="fade-up" data-aos-delay="500"
-                                                onclick="openModal('trafunModal'); return false;"
-                                                style="cursor: pointer;">
-                                                <div class="image">
-                                                    <img src="assets/img/all-img/Trafún.jpg" alt="Trafún">
-                                                    <div class="number">
-                                                        <h3>05</h3>
-                                                    </div>
+                                            <!-- Tacamó -->
+                                            <div class="suraxis-project-card"
+                                                onclick="openModal('tacamoModal'); return false;" data-aos="fade-up"
+                                                data-aos-delay="100">
+                                                <div class="suraxis-card-image">
+                                                    <img src="assets/img/all-img/Tacamó.jpg" alt="Tacamó">
+                                                    <div class="suraxis-card-number">06</div>
                                                 </div>
-                                                <div class="content">
-                                                    <h4>Trafún</h4>
-                                                    <p class="location-info">
-                                                        <i class='bx bx-map-pin'></i> Osorno
-                                                    </p>
-                                                    <a class="btn" href="#"
-                                                        onclick="openModal('trafunModal'); return false;">
+                                                <div class="suraxis-card-content">
+                                                    <h4 class="suraxis-card-title">Tacamó</h4>
+                                                    <div class="suraxis-card-location">
+                                                        <i class='bx bx-map-pin'></i>
+                                                        <span>Osorno</span>
+                                                    </div>
+                                                    <a href="#" class="suraxis-card-btn"
+                                                        onclick="openModal('tacamoModal'); return false;">
                                                         Próximamente <i class='bx bx-right-arrow-alt'></i>
                                                     </a>
                                                 </div>
@@ -633,11 +777,31 @@
                                     </div>
                                 </div>
 
-                                <button class="nav-arrow nav-arrow-right desktop-nav"
-                                    onclick="navigateProjects('next')">
+                                <!-- Navegación desktop derecha -->
+                                <button class="suraxis-nav-btn suraxis-nav-next" onclick="suraxisNavigate(1)">
                                     <i class='bx bx-chevron-right'></i>
                                 </button>
                             </div>
+
+                            <!-- JavaScript para navegación -->
+                            <script>
+                                let suraxisCurrentSlide = 0;
+                                const suraxisTotalSlides = 3;
+
+                                function suraxisNavigate(direction) {
+                                    const container = document.getElementById('suraxisSlidesContainer');
+                                    suraxisCurrentSlide += direction;
+
+                                    if (suraxisCurrentSlide < 0) {
+                                        suraxisCurrentSlide = suraxisTotalSlides - 1;
+                                    } else if (suraxisCurrentSlide >= suraxisTotalSlides) {
+                                        suraxisCurrentSlide = 0;
+                                    }
+
+                                    const offset = -suraxisCurrentSlide * 100;
+                                    container.style.transform = `translateX(${offset}%)`;
+                                }
+                            </script>
                         </div>
                     </div>
                 </div>
