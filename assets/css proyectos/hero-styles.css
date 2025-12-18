@@ -65,6 +65,15 @@
     pointer-events: none;
 }
 
+.hero-logo {
+    max-height: 300px;
+    max-width: 95%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    z-index: 11;
+}
+
 .hero-section .carousel-caption {
     position: absolute;
     top: 50%;
@@ -96,21 +105,88 @@
 /* Responsive adjustments for mobile devices */
 @media (max-width: 768px) {
     .hero-section {
+        height: 80vh !important;
+    }
+
+    .hero-section .carousel-caption {
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        z-index: 10 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 10px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .hero-logo {
+        width: auto !important;
+        height: auto !important;
+        max-width: 80% !important;
+        max-height: 180px !important;
+        /* Aumentado de los 100-120 aprox que parecía tener */
+        transform: scale(1.5) !important;
+        /* 50% de aumento */
+        margin: 25px auto !important;
+        display: block !important;
+    }
+
+    #hero-tagline {
+        width: 95% !important;
+        max-width: 95% !important;
+        margin: 15px auto 0 !important;
+        font-size: 24px !important;
+        line-height: 1.2 !important;
+        white-space: normal !important;
+    }
+
+    #hero-location {
+        font-size: 20px !important;
+        margin-bottom: 5px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
         height: 80vh;
     }
 
-    .hero-overlay-bottom {
-        height: 150px;
+    .hero-logo {
+        min-height: 100px !important;
+        transform: scale(1.6) !important;
+        margin: 35px auto !important;
+    }
+
+    #hero-tagline {
+        font-size: 24px !important;
     }
 }
 
 @media (max-width: 480px) {
     .hero-section {
-        height: 70vh;
+        height: 75vh !important;
+    }
+
+    .hero-logo {
+        max-height: 150px !important;
+        transform: scale(1.6) !important;
+        margin: 30px auto !important;
+    }
+
+    #hero-tagline {
+        width: 100% !important;
+        max-width: 100% !important;
+        font-size: 21px !important;
+        line-height: 1.1 !important;
+        padding: 0 5px !important;
     }
 
     .hero-overlay-bottom {
-        height: 120px;
+        height: 100px !important;
     }
 }
 
