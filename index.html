@@ -683,37 +683,16 @@
                                             </div>
                                         </div>
 
-                                        <!-- Slide 2: Trafún + Laguna Bonita -->
+                                        <!-- Slide 2: Laguna Bonita + Estero Molgue -->
                                         <div class="suraxis-slide">
-                                            <!-- Trafún -->
-                                            <div class="suraxis-project-card"
-                                                onclick="window.location.href='proyectos.html?id=trafun'"
-                                                data-aos="fade-up">
-                                                <div class="suraxis-card-image">
-                                                    <img src="assets/img/all-img/Trafún.jpg" alt="Trafún">
-                                                    <div class="suraxis-card-number">03</div>
-                                                </div>
-                                                <div class="suraxis-card-content">
-                                                    <h4 class="suraxis-card-title">Trafún</h4>
-                                                    <div class="suraxis-card-location">
-                                                        <i class='bx bx-map-pin'></i>
-                                                        <span>Osorno</span>
-                                                    </div>
-                                                    <a href="proyectos.html?id=trafun" class="suraxis-card-btn"
-                                                        onclick="event.stopPropagation()">
-                                                        Ir al proyecto <i class='bx bx-right-arrow-alt'></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-
                                             <!-- Laguna Bonita -->
                                             <div class="suraxis-project-card"
                                                 onclick="openModal('lagunaBonitaModal'); return false;"
-                                                data-aos="fade-up" data-aos-delay="100">
+                                                data-aos="fade-up">
                                                 <div class="suraxis-card-image">
                                                     <img src="assets/img/all-img/academic-image-1.png"
                                                         alt="Laguna Bonita">
-                                                    <div class="suraxis-card-number">04</div>
+                                                    <div class="suraxis-card-number">03</div>
                                                 </div>
                                                 <div class="suraxis-card-content">
                                                     <h4 class="suraxis-card-title">Laguna Bonita</h4>
@@ -727,18 +706,15 @@
                                                     </a>
                                                 </div>
                                             </div>
-                                        </div>
 
-                                        <!-- Slide 3: Estero Molgue + Tacamó -->
-                                        <div class="suraxis-slide">
                                             <!-- Estero Molgue -->
                                             <div class="suraxis-project-card"
                                                 onclick="openModal('esteroMolgueModal'); return false;"
-                                                data-aos="fade-up">
+                                                data-aos="fade-up" data-aos-delay="100">
                                                 <div class="suraxis-card-image">
                                                     <img src="assets/img/all-img/academic-image-2.png"
                                                         alt="Estero Molgue">
-                                                    <div class="suraxis-card-number">05</div>
+                                                    <div class="suraxis-card-number">04</div>
                                                 </div>
                                                 <div class="suraxis-card-content">
                                                     <h4 class="suraxis-card-title">Estero Molgue</h4>
@@ -752,14 +728,16 @@
                                                     </a>
                                                 </div>
                                             </div>
+                                        </div>
 
+                                        <!-- Slide 3: Tacamó -->
+                                        <div class="suraxis-slide">
                                             <!-- Tacamó -->
                                             <div class="suraxis-project-card"
-                                                onclick="openModal('tacamoModal'); return false;" data-aos="fade-up"
-                                                data-aos-delay="100">
+                                                onclick="openModal('tacamoModal'); return false;" data-aos="fade-up">
                                                 <div class="suraxis-card-image">
                                                     <img src="assets/img/all-img/Tacamó.jpg" alt="Tacamó">
-                                                    <div class="suraxis-card-number">06</div>
+                                                    <div class="suraxis-card-number">05</div>
                                                 </div>
                                                 <div class="suraxis-card-content">
                                                     <h4 class="suraxis-card-title">Tacamó</h4>
@@ -773,6 +751,10 @@
                                                     </a>
                                                 </div>
                                             </div>
+                                            <!-- Espacio vacío o segunda card para mantener ancho si es necesario, 
+                                                 pero el flex-col de la card suele manejarlo bien. 
+                                                 Añadimos un div invisible si se ve raro. -->
+                                            <div style="flex: 1; visibility: hidden;"></div>
                                         </div>
                                     </div>
                                 </div>

@@ -1,20 +1,24 @@
 {
   "id": "loslaureles",
-  "name": "Los Laureles",
+  "name": "Refugio Los Laureles",
   "location": "Osorno",
   "tagline": "Entorno privilegiado con una conexión única",
   "whatsapp_button_text": "¡Hola! Quiero más información del Proyecto de parcelas “Refugio los Laureles”.",
-  "whatsapp_message": "Hola, me gustaría tener más información sobre este proyecto",
+  "whatsapp_message": "Hola, me gustaría tener más información sobre Refugio Los Laureles",
   "logo": "assets/proyectos/loslaureles/logo.png",
   "hero": [
     "assets/proyectos/loslaureles/hero.JPG",
     "assets/proyectos/loslaureles/hero2.JPG"
   ],
+  "hero_balloon": {
+    "text": "Valores desde $39.990.000",
+    "color": "#fb5607"
+  },
   "about": {
     "subtitle": "Proyecto de parcelas a solo 1.3 Km de Osorno",
-    "summary_title": "Refugio los Laureles",
+    "summary_title": "Refugio Los Laureles",
     "summary_top": "Un proyecto hecho para los amantes de la naturaleza.",
-    "summary_text": "El proyecto “Los Hualles”, es una parcelación que se encuentra ubicada a solo 1.3 km de Osorno, la cual genera un equilibrio perfecto entre tranquilidad, la anturaleza y cercanía con la ciudad. Su diseño permite que cada parcela se integre de forma orgánica al entorno, protegiendo la belleza natural que lo hace único. Parcelas “Refugio los Laureles” no es tan sólo un lugar para vivir cerca de la ciudad: es un lugar de descanso, un rincón de calma donde cada espacio invita a respirar profundo, reconectar con lo esencial y construir un futuro en armonía con la naturaleza.",
+    "summary_text": "El proyecto “Refugio Los Laureles”, es una parcelación que se encuentra ubicada a solo 1.3 km de Osorno, la cual genera un equilibrio perfecto entre tranquilidad, la anturaleza y cercanía con la ciudad. Su diseño permite que cada parcela se integre de forma orgánica al entorno, protegiendo la belleza natural que lo hace único. Parcelas “Refugio los Laureles” no es tan sólo un lugar para vivir cerca de la ciudad: es un lugar de descanso, un rincón de calma donde cada espacio invita a respirar profundo, reconectar con lo esencial y construir un futuro en armonía con la naturaleza.",
     "attractives_title": "Conectado con lo esencial",
     "attractives_description": "El proyecto se encuentra perfectamente ubicado",
     "attractives_items": [
@@ -24,7 +28,8 @@
       "1 hora 50 minutos de Valdivia"
     ],
     "map_iframe": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7336.544028155406!2d-73.1514008!3d-40.5295802!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x961637000c525855%3A0x5a924540ed768a77!2sRefugio%20Los%20Laureles!5e1!3m2!1ses-419!2scl!4v1765381798477!5m2!1ses-419!2scl",
-    "masterplan_url": "assets/proyectos/loslaureles/1.JPG"
+    "masterplan_url": "assets/proyectos/loslaureles/1.JPG",
+    "masterplan_pdf": "assets/proyectos/loslaureles/plano.pdf"
   },
   "features_section": {
     "subtitle": "Equipamiento ",
@@ -34,13 +39,13 @@
     {
       "icon": "fa fa-bolt",
       "title": "Red Eléctrica",
-      "description": "Cada parcela cuando con su respectivo arranque eléctrico de tipo mixto, con el fin de que puedas disfrutar de la comodidad de tener luz en tu hogar.",
+      "description": "Cada parcela cuenta con su respectivo arranque electrico de tipo aéreo, con el fin de disponer de una factibilidad real de electricidad.",
       "image": "assets/img/service-1.jpg"
     },
     {
       "icon": "fa fa-tint",
       "title": "Red de agua",
-      "description": "Cada parcela cuenta con su respectivo arranque de agua, el cual se genera de un pozo profundo del mismo proyecto.",
+      "description": "Cada parcela cuenta con su respectivo arranque de agua, el cual se alimenta de un pozo profundo del mismo proyecto con derechos de agua y resolución sanitaria.",
       "image": "assets/img/service-2.jpg"
     },
     {

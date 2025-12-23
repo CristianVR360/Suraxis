@@ -8,6 +8,10 @@
   "hero": [
     "assets/proyectos/trafun/hero.jpg"
   ],
+  "hero_balloon": {
+    "text": "Vida tranquila",
+    "color": "#fb5607"
+  },
   "about": {
     "subtitle": "Proyecto de parcelas a solo 15 km de Osorno",
     "summary_title": "Trafún",

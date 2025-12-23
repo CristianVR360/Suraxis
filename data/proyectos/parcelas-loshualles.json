@@ -4,12 +4,16 @@
   "location": "Osorno",
   "tagline": "Tu oportunidad de invertir es hoy",
   "whatsapp_button_text": "¡Hola! Quiero más información del Proyecto de parcelas “Los Hualles”.",
-  "whatsapp_message": "Hola, me gustaría tener más información sobre este proyecto",
+  "whatsapp_message": "Hola, me gustaría tener más información sobre Parcelas Los Hualles",
   "logo": "assets/proyectos/loshualles/logo.svg",
   "hero": [
     "assets/proyectos/loshualles/hero.jpeg",
     "assets/proyectos/loshualles/hero2.jpeg"
   ],
+  "hero_balloon": {
+    "text": "Valores desde $19.990.000",
+    "color": "#fb5607"
+  },
   "about": {
     "subtitle": "Proyecto de parcelas a solo 15 km de Osorno",
     "summary_title": "Los Hualles",
@@ -24,7 +28,8 @@
       "48 minutos de Lago Ranco"
     ],
     "map_iframe": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29364.524048242056!2d-73.00469821615546!3d-40.48766309041!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96164f0016bf2cf7%3A0x257239a63cb6de44!2sParcelaci%C3%B3n%20Los%20Hualles!5e1!3m2!1ses-419!2scl!4v1765374411595!5m2!1ses-419!2scl",
-    "masterplan_url": "assets/proyectos/loshualles/02.jpeg"
+    "masterplan_url": "assets/proyectos/loshualles/02.jpeg",
+    "masterplan_pdf": "assets/proyectos/loshualles/plano.pdf"
   },
   "features_section": {
     "subtitle": "Equipamiento",
@@ -34,13 +39,13 @@
     {
       "icon": "fa fa-bolt",
       "title": "Red Eléctrica",
-      "description": "Cada parcela cuando con su respectivo arranque electrico de tipo aéreo, con el fin de que puedas disfrutar de la comodidad de tener luz en tu hogar.",
+      "description": "Cada parcela cuenta con su respectivo arranque electrico de tipo aéreo, con el fin de disponer de una factibilidad real de electricidad.",
       "image": "assets/img/service-1.jpg"
     },
     {
       "icon": "fa fa-tint",
-      "title": "Red de Agua",
-      "description": "Cada parcela cuenta con su respectivo arranque de agua, el cual se genera de un pozo profundo del mismo proyecto.",
+      "title": "Red de agua",
+      "description": "Cada parcela cuenta con su respectivo arranque de agua, el cual se alimenta de un pozo profundo del mismo proyecto con derechos de agua y resolución sanitaria.",
       "image": "assets/img/service-2.jpg"
     },
     {

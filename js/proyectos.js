@@ -70,6 +70,9 @@ async function loadProject() {
         // Renderizar las preguntas del formulario
         renderFormQuestions(data);
 
+        // Renderizar el slideshow del formulario
+        renderFormSlideshow(data);
+
         // Actualizar el título de la galería
         const galleryTitle = document.querySelector('#gallery-title');
         if (galleryTitle) {
@@ -95,15 +98,33 @@ function renderHero(data) {
         ? `<img src="${data.logo}" alt="${data.name}" class="hero-logo">`
         : `<h1 class="display-1 text-white m-0" id="hero-title">${data.name}</h1>`;
 
+    // Balloon content if exists
+    const balloonHtml = data.hero_balloon
+        ? `<div class="hero-balloon" style="background: ${data.hero_balloon.color || '#fb5607'}">
+            ${data.hero_balloon.text}
+           </div>`
+        : '';
+
+    // CTA Balloon
+    const ctaBalloonHtml = `
+        <a href="#form-section" class="hero-balloon-cta">
+            Cotiza tu parcela aquí
+        </a>
+    `;
+
     carouselInner.innerHTML = data.hero.map((src, i) => `
         <div class="carousel-item ${i === 0 ? 'active' : ''}">
             <img class="w-100 hero-image" src="${src}" alt="${data.name} Hero ${i + 1}">
             <div class="hero-overlay"></div>
             <div class="hero-overlay-bottom"></div>
             <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                <h2 class="font-weight-medium m-0" style="color: #ffffff;" id="hero-location">${data.location}</h2>
-                ${titleContent}
-                <h2 class="text-white m-0" id="hero-tagline">${data.tagline}</h2>
+                <div class="hero-content-wrapper">
+                    <h2 class="font-weight-medium m-0" style="color: #ffffff;" id="hero-location">${data.location}</h2>
+                    ${titleContent}
+                    <h2 class="text-white m-0" id="hero-tagline">${data.tagline}</h2>
+                    ${balloonHtml}
+                    ${ctaBalloonHtml}
+                </div>
             </div>
         </div>
     `).join('');
@@ -133,6 +154,17 @@ function renderAbout(data) {
     const summaryText = document.querySelector('#about-summary-text');
     if (summaryText) {
         summaryText.textContent = data.about.summary_text;
+    }
+
+    // Botón descargar Master Plan
+    const downloadBtn = document.querySelector('#download-masterplan');
+    if (downloadBtn) {
+        if (data.about.masterplan_pdf) {
+            downloadBtn.href = data.about.masterplan_pdf;
+            downloadBtn.style.display = 'inline-block';
+        } else {
+            downloadBtn.style.display = 'none';
+        }
     }
 
     // Título de atractivos
@@ -324,6 +356,40 @@ function renderFormQuestions(data) {
             </div>
         `;
     }).join('');
+}
+
+// Función para renderizar el slideshow del formulario con imágenes del proyecto
+function renderFormSlideshow(data) {
+    const container = document.querySelector('#form-slideshow');
+    if (!container || !data.gallery || data.gallery.length === 0) return;
+
+    // Seleccionar hasta 4 imágenes de la galería para el slideshow
+    const slideshowImages = data.gallery.slice(0, 4);
+
+    // Crear el HTML de las imágenes
+    const imagesHTML = slideshowImages.map((src, index) => `
+        <img src="${src}" alt="${data.name} Slideshow ${index + 1}" class="slideshow-image ${index === 0 ? 'active' : ''}" 
+            style="width: 100%; height: 100%; position: absolute; top: 0; left: 0; opacity: ${index === 0 ? '1' : '0'}; transition: opacity 1s ease-in-out; object-fit: cover;">
+    `).join('');
+
+    container.innerHTML = imagesHTML;
+
+    // Lógica del slideshow
+    const images = container.querySelectorAll('.slideshow-image');
+    let currentIndex = 0;
+
+    if (images.length > 1) {
+        setInterval(() => {
+            // Ocultar imagen actual
+            images[currentIndex].style.opacity = '0';
+
+            // Calcular siguiente índice
+            currentIndex = (currentIndex + 1) % images.length;
+
+            // Mostrar siguiente imagen
+            images[currentIndex].style.opacity = '1';
+        }, 3000);
+    }
 }
 
 // Variable global para el índice de la galería

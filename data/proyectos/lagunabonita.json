@@ -7,6 +7,10 @@
     "assets/img/proyectos/lagunabonita/hero.jpg",
     "assets/img/proyectos/lagunabonita/hero-2.jpg"
   ],
+  "hero_balloon": {
+    "text": "Próximamente",
+    "color": "#fb5607"
+  },
   "about": {
     "subtitle": "En el corazón del sur de chile - Rupanco, Pto. Octay",
     "summary_title": "Resumen",
