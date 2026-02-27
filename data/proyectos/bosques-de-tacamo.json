@@ -1,14 +1,14 @@
 {
-  "id": "bosques-de-tocamo",
-  "name": "Bosques de Tocamo",
+  "id": "bosques-de-tacamo",
+  "name": "Bosques de Tacamó",
   "location": "Osorno",
   "tagline": "Oportunidad única en el sector oriente de Osorno",
-  "whatsapp_button_text": "¡Hola! Quiero más información del Proyecto “Bosques de Tocamó”.",
-  "whatsapp_message": "Hola, me gustaría tener más información sobre Bosques de Tocamó",
-  "logo": "assets/proyectos/tocamo/logo.png",
+  "whatsapp_button_text": "¡Hola! Quiero más información del Proyecto “Bosques de Tacamó”.",
+  "whatsapp_message": "Hola, me gustaría tener más información sobre Bosques de Tacamó",
+  "logo": "assets/proyectos/tacamo/logo.png",
   "hero": [
-    "assets/proyectos/tocamo/hero.jpg",
-    "assets/proyectos/tocamo/hero2.jpg"
+    "assets/proyectos/tacamo/hero.jpg",
+    "assets/proyectos/tacamo/hero2.jpg"
   ],
   "hero_balloon": {
     "text": "Valores desde $34.990.000",
@@ -28,9 +28,9 @@
       "12 minutos de Osorno Collegue",
       "14 minutos de Clínica Alemana"
     ],
-    "map_iframe": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29364.524048242056!2d-73.00469821615546!3d-40.48766309041!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96164f0016bf2cf7%3A0x257239a63cb6de44!2sParcelaci%C3%B3n%20Los%20Hualles!5e1!3m2!1ses-419!2scl!4v1765374411595!5m2!1ses-419!2scl",
-    "masterplan_url": "assets/proyectos/tocamo/2.jpg",
-    "masterplan_pdf": "assets/proyectos/tocamo/masterplan.pdf"
+    "map_iframe": "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3552.38478164421!2d-73.036068!3d-40.629796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDDCsDM3JzQ3LjMiUyA3M8KwMDInMDkuOCJX!5e1!3m2!1ses!2scl!4v1772217625259!5m2!1ses!2scl",
+    "masterplan_url": "assets/proyectos/tacamo/2.jpg",
+    "masterplan_pdf": "assets/proyectos/tacamo/masterplan.pdf"
   },
   "features_section": {
     "subtitle": "Equipamiento",
@@ -63,22 +63,22 @@
     }
   ],
   "gallery": [
-    "assets/proyectos/tocamo/1.jpg",
-    "assets/proyectos/tocamo/2.jpg",
-    "assets/proyectos/tocamo/3.jpg",
-    "assets/proyectos/tocamo/4.jpg",
-    "assets/proyectos/tocamo/5.jpg",
-    "assets/proyectos/tocamo/6.jpg",
-    "assets/proyectos/tocamo/7.jpg",
-    "assets/proyectos/tocamo/8.jpg",
-    "assets/proyectos/tocamo/9.jpg",
-    "assets/proyectos/tocamo/10.jpg",
-    "assets/proyectos/tocamo/11.jpg",
-    "assets/proyectos/tocamo/12.jpg",
-    "assets/proyectos/tocamo/13.jpg",
-    "assets/proyectos/tocamo/14.jpg",
-    "assets/proyectos/tocamo/15.jpg",
-    "assets/proyectos/tocamo/16.jpg"
+    "assets/proyectos/tacamo/1.jpg",
+    "assets/proyectos/tacamo/2.jpg",
+    "assets/proyectos/tacamo/3.jpg",
+    "assets/proyectos/tacamo/4.jpg",
+    "assets/proyectos/tacamo/5.jpg",
+    "assets/proyectos/tacamo/6.jpg",
+    "assets/proyectos/tacamo/7.jpg",
+    "assets/proyectos/tacamo/8.jpg",
+    "assets/proyectos/tacamo/9.jpg",
+    "assets/proyectos/tacamo/10.jpg",
+    "assets/proyectos/tacamo/11.jpg",
+    "assets/proyectos/tacamo/12.jpg",
+    "assets/proyectos/tacamo/13.jpg",
+    "assets/proyectos/tacamo/14.jpg",
+    "assets/proyectos/tacamo/15.jpg",
+    "assets/proyectos/tacamo/16.jpg"
   ],
   "form_questions": [
     {
