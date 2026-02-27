@@ -104,24 +104,17 @@
                     <a href="index.html" class="accordion-link">
                         Inicio
                     </a>
-                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#navbarAccordion">
-                        <div class="accordion-body">
-                            <div class="accordion" id="navbarAccordion7">
-                                <div class="accordion-item">
-                                    <a href="index.html" class="accordion-link">
-                                        Inicio
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-                <a href="proyectos-suraxis.html" class="accordion-link">
-                    Proyectos
-                </a>
-                <a href="about-us.html" class="accordion-link">
-                    Sobre nosotros
-                </a>
+                <div class="accordion-item">
+                    <a href="proyectos-suraxis.html" class="accordion-link">
+                        Proyectos
+                    </a>
+                </div>
+                <div class="accordion-item">
+                    <a href="about-us.html" class="accordion-link">
+                        Sobre nosotros
+                    </a>
+                </div>
             </div>
 
             <div class="offcanvas-contact-info">
@@ -417,7 +410,7 @@
                                 overflow: hidden;
                             }
 
-                            .suraxis-card-image img {
+                            .suraxis-card-image img:not(.suraxis-card-logo) {
                                 position: absolute;
                                 top: 0;
                                 left: 0;
@@ -425,6 +418,20 @@
                                 height: 100%;
                                 object-fit: cover;
                                 transition: transform 0.5s ease;
+                            }
+
+                            .suraxis-card-logo {
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                max-width: 80%;
+                                max-height: 100px;
+                                width: auto;
+                                height: auto;
+                                object-fit: contain;
+                                z-index: 3;
+                                filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.6));
                             }
 
                             .suraxis-project-card:hover .suraxis-card-image img {
@@ -646,10 +653,12 @@
                                                 data-aos="fade-up">
                                                 <div class="suraxis-card-image">
                                                     <img src="assets/img/all-img/Los-Laureles.jpg" alt="Los Laureles">
+                                                    <img src="assets/proyectos/loslaureles/logo.png"
+                                                        alt="Los Laureles Logo" class="suraxis-card-logo">
                                                     <div class="suraxis-card-number">01</div>
                                                 </div>
                                                 <div class="suraxis-card-content">
-                                                    <h4 class="suraxis-card-title">Los Laureles</h4>
+                                                    <h4 class="suraxis-card-title">Refugio Los Laureles</h4>
                                                     <div class="suraxis-card-location">
                                                         <i class='bx bx-map-pin'></i>
                                                         <span>Osorno</span>
@@ -667,6 +676,8 @@
                                                 data-aos="fade-up" data-aos-delay="100">
                                                 <div class="suraxis-card-image">
                                                     <img src="assets/proyectos/loshualles/hero.jpeg" alt="Los Hualles">
+                                                    <img src="assets/proyectos/loshualles/logo.svg"
+                                                        alt="Los Hualles Logo" class="suraxis-card-logo">
                                                     <div class="suraxis-card-number">02</div>
                                                 </div>
                                                 <div class="suraxis-card-content">
@@ -683,16 +694,39 @@
                                             </div>
                                         </div>
 
-                                        <!-- Slide 2: Laguna Bonita + Estero Molgue -->
+                                        <!-- Slide 2: Tacamó + Laguna Bonita -->
                                         <div class="suraxis-slide">
+                                            <!-- Tacamó -->
+                                            <div class="suraxis-project-card"
+                                                onclick="window.location.href='proyectos.html?id=bosques-de-tocamo'"
+                                                data-aos="fade-up">
+                                                <div class="suraxis-card-image">
+                                                    <img src="assets/img/all-img/Tacamó.jpg" alt="Bosques de Tacamó">
+                                                    <img src="assets/proyectos/tocamo/logo.svg" alt="Tacamó Logo"
+                                                        class="suraxis-card-logo">
+                                                    <div class="suraxis-card-number">03</div>
+                                                </div>
+                                                <div class="suraxis-card-content">
+                                                    <h4 class="suraxis-card-title">Bosques de Tacamó</h4>
+                                                    <div class="suraxis-card-location">
+                                                        <i class='bx bx-map-pin'></i>
+                                                        <span>Osorno</span>
+                                                    </div>
+                                                    <a href="proyectos.html?id=bosques-de-tocamo"
+                                                        class="suraxis-card-btn" onclick="event.stopPropagation()">
+                                                        Ir al proyecto <i class='bx bx-right-arrow-alt'></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+
                                             <!-- Laguna Bonita -->
                                             <div class="suraxis-project-card"
                                                 onclick="openModal('lagunaBonitaModal'); return false;"
-                                                data-aos="fade-up">
+                                                data-aos="fade-up" data-aos-delay="100">
                                                 <div class="suraxis-card-image">
                                                     <img src="assets/img/all-img/academic-image-1.png"
                                                         alt="Laguna Bonita">
-                                                    <div class="suraxis-card-number">03</div>
+                                                    <div class="suraxis-card-number">04</div>
                                                 </div>
                                                 <div class="suraxis-card-content">
                                                     <h4 class="suraxis-card-title">Laguna Bonita</h4>
@@ -706,15 +740,18 @@
                                                     </a>
                                                 </div>
                                             </div>
+                                        </div>
 
+                                        <!-- Slide 3: Estero Molgue -->
+                                        <div class="suraxis-slide">
                                             <!-- Estero Molgue -->
                                             <div class="suraxis-project-card"
                                                 onclick="openModal('esteroMolgueModal'); return false;"
-                                                data-aos="fade-up" data-aos-delay="100">
+                                                data-aos="fade-up">
                                                 <div class="suraxis-card-image">
                                                     <img src="assets/img/all-img/academic-image-2.png"
                                                         alt="Estero Molgue">
-                                                    <div class="suraxis-card-number">04</div>
+                                                    <div class="suraxis-card-number">05</div>
                                                 </div>
                                                 <div class="suraxis-card-content">
                                                     <h4 class="suraxis-card-title">Estero Molgue</h4>
@@ -724,29 +761,6 @@
                                                     </div>
                                                     <a href="#" class="suraxis-card-btn"
                                                         onclick="openModal('esteroMolgueModal'); return false;">
-                                                        Próximamente <i class='bx bx-right-arrow-alt'></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Slide 3: Tacamó -->
-                                        <div class="suraxis-slide">
-                                            <!-- Tacamó -->
-                                            <div class="suraxis-project-card"
-                                                onclick="openModal('tacamoModal'); return false;" data-aos="fade-up">
-                                                <div class="suraxis-card-image">
-                                                    <img src="assets/img/all-img/Tacamó.jpg" alt="Tacamó">
-                                                    <div class="suraxis-card-number">05</div>
-                                                </div>
-                                                <div class="suraxis-card-content">
-                                                    <h4 class="suraxis-card-title">Tacamó</h4>
-                                                    <div class="suraxis-card-location">
-                                                        <i class='bx bx-map-pin'></i>
-                                                        <span>Osorno</span>
-                                                    </div>
-                                                    <a href="#" class="suraxis-card-btn"
-                                                        onclick="openModal('tacamoModal'); return false;">
                                                         Próximamente <i class='bx bx-right-arrow-alt'></i>
                                                     </a>
                                                 </div>

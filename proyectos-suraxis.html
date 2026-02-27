@@ -78,13 +78,7 @@
             border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(251, 86, 7, 0.15);
         }
 
         .project-card-image {
@@ -93,15 +87,10 @@
             overflow: hidden;
         }
 
-        .project-card-image img {
+        .project-card-image img:not(.project-card-logo) {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .project-card:hover .project-card-image img {
-            transform: scale(1.1);
         }
 
         .project-card-badge {
@@ -117,6 +106,20 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
             z-index: 2;
+        }
+
+        .project-card-logo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 80%;
+            max-height: 120px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            z-index: 3;
+            filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.6));
         }
 
         .project-card-overlay {
@@ -309,16 +312,13 @@
                 <div class="collapse navbar-collapse justify-content-between">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                        <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+                            <a href="index.html" class="nav-link">Inicio</a>
                         </li>
                         <li class="nav-item">
-                        <li class="nav-item"><a href="proyectos-suraxis.html" class="nav-link active">Proyectos</a></li>
+                            <a href="proyectos-suraxis.html" class="nav-link active">Proyectos</a>
                         </li>
                         <li class="nav-item">
-                        <li class="nav-item"><a href="about-us.html" class="nav-link">Sobre nosotros</a></li>
-                        <ul class="dropdown-menu">
-                            <li class="nav-item"><a href="about-us.html" class="nav-link">Sobre nosotros</a></li>
-                        </ul>
+                            <a href="about-us.html" class="nav-link">Sobre nosotros</a>
                         </li>
                     </ul>
                 </div>
@@ -347,9 +347,11 @@
                         Proyectos
                     </a>
                 </div>
-                <a href="about-us.html" class="accordion-link">
-                    Sobre nosotros
-                </a>
+                <div class="accordion-item">
+                    <a href="about-us.html" class="accordion-link">
+                        Sobre nosotros
+                    </a>
+                </div>
             </div>
 
             <div class="offcanvas-contact-info">
@@ -357,7 +359,7 @@
                 <ul class="contact-info list-style">
                     <li>
                         <i class="bx bxs-envelope"></i>
-                        <a href="contacto@suraxis.cl">contacto@suraxis.cl</a>
+                        <a href="mailto:contacto@suraxis.cl">contacto@suraxis.cl</a>
                     </li>
                 </ul>
                 <ul class="social-profile list-style">
@@ -471,10 +473,10 @@
     <!-- End Footer Area -->
 
     <!-- Scripts -->
-    <script src="assets/js/jquery-3.6.0.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/aos.js"></script>
-    <script src="assets/js/common.js"></script>
+    <script src="assets/js/main.js"></script>
 
     <script>
         // Initialize AOS
@@ -492,6 +494,7 @@
                 tagline: 'Tu oportunidad de invertir es hoy',
                 description: 'El proyecto "Los Hualles", es una parcelación que se encuentra ubicada a solo 15 km de Osorno, la cual genera un equilibrio perfecto entre tranquilidad, el campo y cercanía con la ciudad. Su diseño permite que cada parcela se integre de forma orgánica al entorno, protegiendo la belleza natural que lo hace único.',
                 image: 'assets/proyectos/loshualles/hero.jpeg',
+                logo: 'assets/proyectos/loshualles/logo.svg',
                 badge: 'Disponible'
             },
             {
@@ -501,7 +504,18 @@
                 tagline: 'Proyecto de alta plusvalía',
                 description: 'Un proyecto hecho para los amantes de la naturaleza, ubicado a solo 1.3 km de Osorno, ofreciendo tranquilidad y conexión con lo esencial.',
                 image: 'assets/proyectos/loslaureles/hero.JPG',
+                logo: 'assets/proyectos/loslaureles/logo.png',
                 badge: 'Disponible'
+            },
+            {
+                id: 'bosques-de-tocamo',
+                name: 'Bosques de Tacamó',
+                location: 'Osorno',
+                tagline: 'Oportunidad única en el sector oriente de Osorno',
+                description: 'Un proyecto pensado para quienes valoran estar cerca de todo, sin renunciar a la tranquilidad.',
+                image: 'assets/proyectos/tocamo/hero.jpg',
+                logo: 'assets/proyectos/tocamo/logo.png',
+                badge: 'Nuevo'
             },
             /* {
                 id: 'trafun',
@@ -529,6 +543,7 @@
                         <img src="${project.image}" alt="${project.name}">
                         <div class="project-card-overlay"></div>
                         <div class="project-card-badge">${project.badge}</div>
+                        ${project.logo ? `<img src="${project.logo}" alt="${project.name} logo" class="project-card-logo">` : ''}
                     </div>
                     <div class="project-card-content">
                         <div class="project-card-location">

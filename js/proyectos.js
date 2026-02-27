@@ -120,10 +120,12 @@ function renderHero(data) {
             <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                 <div class="hero-content-wrapper">
                     <h2 class="font-weight-medium m-0" style="color: #ffffff;" id="hero-location">${data.location}</h2>
-                    ${titleContent}
+                    <div class="hero-logo-container">
+                        ${titleContent}
+                        ${balloonHtml}
+                        ${ctaBalloonHtml}
+                    </div>
                     <h2 class="text-white m-0" id="hero-tagline">${data.tagline}</h2>
-                    ${balloonHtml}
-                    ${ctaBalloonHtml}
                 </div>
             </div>
         </div>

@@ -1,0 +1,126 @@
+{
+  "id": "bosques-de-tocamo",
+  "name": "Bosques de Tocamo",
+  "location": "Osorno",
+  "tagline": "Oportunidad única en el sector oriente de Osorno",
+  "whatsapp_button_text": "¡Hola! Quiero más información del Proyecto “Bosques de Tocamó”.",
+  "whatsapp_message": "Hola, me gustaría tener más información sobre Bosques de Tocamó",
+  "logo": "assets/proyectos/tocamo/logo.png",
+  "hero": [
+    "assets/proyectos/tocamo/hero.jpg",
+    "assets/proyectos/tocamo/hero2.jpg"
+  ],
+  "hero_balloon": {
+    "text": "Valores desde $34.990.000",
+    "color": "#fb5607"
+  },
+  "about": {
+    "subtitle": "Proyecto de parcelas a solo 7.4 km de Osorno",
+    "summary_title": "Bosques de Tacamó",
+    "summary_top": "Un proyecto pensado para quienes valoran estar cerca de todo, sin renunciar a la tranquilidad",
+    "summary_text": "El proyecto “Bosques de Tacamó” es una parcelación ubicada a solo 7,4 km de la entrada oriente de Osorno, por la ruta a Puerto Octay, conocida como Ruta U-55. Su privilegiada ubicación, en uno de los sectores más cotizados de la ciudad, permite vivir el equilibrio perfecto entre conectividad y entorno natural. Bosques de Tacamó no es solo cercanía. Es la oportunidad de proyectar tu vida en un sector con alta plusvalía, donde el crecimiento urbano convive con espacios abiertos y un entorno que invita a bajar el ritmo. Aquí, cada parcela representa una decisión estratégica: estar a minutos de la ciudad, pero con la sensación de vivir lejos del ruido. Más que un lugar para construir, es un lugar para avanzar. Un espacio donde la ubicación marca la diferencia y el futuro se construye con visión.",
+    "attractives_title": "Conectado con lo esencial",
+    "attractives_description": "El proyecto se encuentra perfectamente ubicado",
+    "attractives_items": [
+      "7 minutos de Osorno",
+      "10 minutos de Lider “La casona”",
+      "12 minutos de Aeropuerto",
+      "12 minutos de Osorno Collegue",
+      "14 minutos de Clínica Alemana"
+    ],
+    "map_iframe": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29364.524048242056!2d-73.00469821615546!3d-40.48766309041!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96164f0016bf2cf7%3A0x257239a63cb6de44!2sParcelaci%C3%B3n%20Los%20Hualles!5e1!3m2!1ses-419!2scl!4v1765374411595!5m2!1ses-419!2scl",
+    "masterplan_url": "assets/proyectos/tocamo/2.jpg",
+    "masterplan_pdf": "assets/proyectos/tocamo/masterplan.pdf"
+  },
+  "features_section": {
+    "subtitle": "Equipamiento",
+    "title": "del proyecto"
+  },
+  "features": [
+    {
+      "icon": "fa fa-bolt",
+      "title": "Red Eléctrica",
+      "description": "Cada parcela cuenta con su respectivo arranque electrico de tipo aéreo, con el fin de disponer de una factibilidad real de electricidad.",
+      "image": "assets/img/service-1.jpg"
+    },
+    {
+      "icon": "fa fa-tint",
+      "title": "Red de agua",
+      "description": "Cada parcela cuenta con su respectivo arranque de agua, el cual se alimenta de un pozo profundo del mismo proyecto con derechos de agua y resolución sanitaria.",
+      "image": "assets/img/service-2.jpg"
+    },
+    {
+      "icon": "fa fa-road",
+      "title": "Caminos Ripiados",
+      "description": "Contamos con caminos ripiados y compactados, para que puedas disfrutar de tener el mejor acceso a tu parcela.",
+      "image": "assets/img/service-3.jpg"
+    },
+    {
+      "icon": "fa fa-lock",
+      "title": "Acceso controlado",
+      "description": "El proyecto contempla un acceso controlado con el fin de tener la máxima seguridad para tu hogar.",
+      "image": "assets/img/service-4.jpg"
+    }
+  ],
+  "gallery": [
+    "assets/proyectos/tocamo/1.jpg",
+    "assets/proyectos/tocamo/2.jpg",
+    "assets/proyectos/tocamo/3.jpg",
+    "assets/proyectos/tocamo/4.jpg",
+    "assets/proyectos/tocamo/5.jpg",
+    "assets/proyectos/tocamo/6.jpg",
+    "assets/proyectos/tocamo/7.jpg",
+    "assets/proyectos/tocamo/8.jpg",
+    "assets/proyectos/tocamo/9.jpg",
+    "assets/proyectos/tocamo/10.jpg",
+    "assets/proyectos/tocamo/11.jpg",
+    "assets/proyectos/tocamo/12.jpg",
+    "assets/proyectos/tocamo/13.jpg",
+    "assets/proyectos/tocamo/14.jpg",
+    "assets/proyectos/tocamo/15.jpg",
+    "assets/proyectos/tocamo/16.jpg"
+  ],
+  "form_questions": [
+    {
+      "name": "forma_pago",
+      "label": "¿Formas de pago?",
+      "required": true,
+      "margin_bottom": "25px",
+      "options": [
+        {
+          "value": "Contado",
+          "label": "Contado",
+          "icon": "💰"
+        },
+        {
+          "value": "Crédito Hipotecario",
+          "label": "Crédito Hipotecario",
+          "icon": "🏦"
+        }
+      ]
+    },
+    {
+      "name": "¿Cuentas con al menos $20.000.000 de pie?",
+      "label": "¿Cuentas con al menos $20.000.000 de pie?",
+      "required": true,
+      "margin_bottom": "30px",
+      "options": [
+        {
+          "value": "Sí",
+          "label": "Sí",
+          "icon": "✅"
+        },
+        {
+          "value": "No",
+          "label": "No",
+          "icon": "✅"
+        },
+        {
+          "value": "$31.990.000 - $34.990.000",
+          "label": "$31.990.000 - $34.990.000",
+          "icon": "💰"
+        }
+      ]
+    }
+  ]
+}

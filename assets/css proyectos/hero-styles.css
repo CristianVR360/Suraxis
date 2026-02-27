@@ -22,7 +22,7 @@
     overflow: hidden;
 }
 
-.hero-section .carousel-item img {
+.hero-section .carousel-item .hero-image {
     height: 100%;
     object-fit: cover;
     width: 100%;
@@ -67,8 +67,8 @@
 
 .hero-logo {
     max-height: 320px;
+    width: 600px;
     max-width: 100%;
-    width: auto;
     height: auto;
     object-fit: contain;
     z-index: 11;
@@ -90,11 +90,19 @@
 }
 
 .hero-content-wrapper {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
-    max-width: 90%;
+    max-width: 95%;
+    margin: 0 auto;
+    overflow: visible !important;
+}
+
+.hero-logo-container {
+    position: relative;
+    display: block;
+    width: fit-content;
     margin: 0 auto;
     overflow: visible !important;
 }
@@ -120,8 +128,8 @@
 
 .hero-balloon {
     position: absolute;
-    bottom: 40px;
-    left: calc(100% + 30px);
+    bottom: 20%;
+    left: calc(100% + 20px);
     background: #fb5607;
     color: white;
     padding: 10px 20px;
@@ -166,8 +174,8 @@
 
 .hero-balloon-cta {
     position: absolute;
-    top: 40px;
-    right: calc(100% + 30px);
+    top: 20%;
+    right: calc(100% + 20px);
     background: white;
     color: #fb5607;
     padding: 10px 20px;
@@ -205,30 +213,47 @@
 }
 
 @media (max-width: 1199px) {
+    .hero-logo-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 100%;
+    }
 
     .hero-balloon,
     .hero-balloon-cta {
         position: relative;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: 15px auto;
-        display: inline-block;
+        top: 0 !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        margin: 10px auto !important;
+        display: block;
         white-space: normal;
         max-width: 90%;
-        order: 10;
+        width: fit-content;
         padding: 12px 24px;
-        font-size: 16px;
+        font-size: 15px;
+        text-align: center;
+        animation: floatBalloonMobile 3s ease-in-out infinite;
     }
 
     .hero-balloon::after,
     .hero-balloon-cta::after {
         display: none;
     }
+}
 
-    .hero-balloon-cta {
-        order: 11;
+@keyframes floatBalloonMobile {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-8px);
     }
 }
 
@@ -249,7 +274,7 @@
 /* Responsive adjustments for mobile devices */
 @media (max-width: 768px) {
     .hero-section {
-        height: 80vh !important;
+        height: 100vh !important;
     }
 
     .hero-section .carousel-caption {
@@ -260,26 +285,33 @@
         z-index: 10 !important;
         width: 100% !important;
         max-width: 100% !important;
-        padding: 0 10px !important;
+        padding: 0 15px !important;
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
         justify-content: center !important;
     }
 
+    .hero-content-wrapper {
+        display: flex !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
     .hero-logo {
-        width: auto !important;
+        width: 90% !important;
         height: auto !important;
-        max-width: 80% !important;
-        max-height: 140px !important;
-        margin: 10px auto !important;
+        max-width: 90% !important;
+        max-height: none !important;
+        margin: 15px auto !important;
         display: block !important;
         transform: none !important;
+        object-fit: contain !important;
     }
 
     #hero-tagline {
-        width: 95% !important;
-        max-width: 95% !important;
+        width: 90% !important;
+        max-width: 90% !important;
         margin: 10px auto 0 !important;
         font-size: 24px !important;
         line-height: 1.2 !important;
@@ -294,13 +326,16 @@
 
 @media (max-width: 576px) {
     .hero-section {
-        height: 80vh;
+        height: 100vh !important;
     }
 
     .hero-logo {
-        min-height: 100px !important;
-        transform: scale(1.6) !important;
-        margin: 35px auto !important;
+        width: 90% !important;
+        max-width: 90% !important;
+        height: auto !important;
+        margin: 15px auto !important;
+        transform: none !important;
+        min-height: auto !important;
     }
 
     #hero-tagline {
@@ -310,11 +345,13 @@
 
 @media (max-width: 480px) {
     .hero-section {
-        height: 75vh !important;
+        height: 100vh !important;
     }
 
     .hero-logo {
-        max-height: 120px !important;
+        width: 90% !important;
+        max-width: 90% !important;
+        max-height: none !important;
         transform: none !important;
         margin: 10px auto !important;
     }
