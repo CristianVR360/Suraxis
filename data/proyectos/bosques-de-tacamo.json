@@ -1,24 +1,24 @@
 {
   "id": "bosques-de-tacamo",
-  "name": "Bosques de Tacamó",
+  "name": "Bosque de Tacamó",
   "location": "Osorno",
   "tagline": "Oportunidad única en el sector oriente de Osorno",
-  "whatsapp_button_text": "¡Hola! Quiero más información del Proyecto “Bosques de Tacamó”.",
-  "whatsapp_message": "Hola, me gustaría tener más información sobre Bosques de Tacamó",
+  "whatsapp_button_text": "¡Hola! Quiero más información del Proyecto “Bosque de Tacamó”.",
+  "whatsapp_message": "Hola, me gustaría tener más información sobre Bosque de Tacamó",
   "logo": "assets/proyectos/tacamo/logo.png",
   "hero": [
     "assets/proyectos/tacamo/hero.jpg",
     "assets/proyectos/tacamo/hero2.jpg"
   ],
   "hero_balloon": {
-    "text": "Valores desde $34.990.000",
+    "text": "Valores desde $35.000.000",
     "color": "#fb5607"
   },
   "about": {
     "subtitle": "Proyecto de parcelas a solo 7.4 km de Osorno",
-    "summary_title": "Bosques de Tacamó",
+    "summary_title": "Bosque de Tacamó",
     "summary_top": "Un proyecto pensado para quienes valoran estar cerca de todo, sin renunciar a la tranquilidad",
-    "summary_text": "El proyecto “Bosques de Tacamó” es una parcelación ubicada a solo 7,4 km de la entrada oriente de Osorno, por la ruta a Puerto Octay, conocida como Ruta U-55. Su privilegiada ubicación, en uno de los sectores más cotizados de la ciudad, permite vivir el equilibrio perfecto entre conectividad y entorno natural. Bosques de Tacamó no es solo cercanía. Es la oportunidad de proyectar tu vida en un sector con alta plusvalía, donde el crecimiento urbano convive con espacios abiertos y un entorno que invita a bajar el ritmo. Aquí, cada parcela representa una decisión estratégica: estar a minutos de la ciudad, pero con la sensación de vivir lejos del ruido. Más que un lugar para construir, es un lugar para avanzar. Un espacio donde la ubicación marca la diferencia y el futuro se construye con visión.",
+    "summary_text": "El proyecto “Bosque de Tacamó” es una parcelación ubicada a solo 7,4 km de la entrada oriente de Osorno, por la ruta a Puerto Octay, conocida como Ruta U-55. Su privilegiada ubicación, en uno de los sectores más cotizados de la ciudad, permite vivir el equilibrio perfecto entre conectividad y entorno natural. Bosque de Tacamó no es solo cercanía. Es la oportunidad de proyectar tu vida en un sector con alta plusvalía, donde el crecimiento urbano convive con espacios abiertos y un entorno que invita a bajar el ritmo. Aquí, cada parcela representa una decisión estratégica: estar a minutos de la ciudad, pero con la sensación de vivir lejos del ruido. Más que un lugar para construir, es un lugar para avanzar. Un espacio donde la ubicación marca la diferencia y el futuro se construye con visión.",
     "attractives_title": "Conectado con lo esencial",
     "attractives_description": "El proyecto se encuentra perfectamente ubicado",
     "attractives_items": [
