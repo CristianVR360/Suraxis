@@ -164,6 +164,21 @@ function renderAbout(data) {
         if (data.about.masterplan_pdf) {
             downloadBtn.href = data.about.masterplan_pdf;
             downloadBtn.style.display = 'inline-block';
+
+            // Personalizar texto si existe en el JSON
+            if (data.about.masterplan_button_text) {
+                downloadBtn.textContent = data.about.masterplan_button_text;
+                // Si es un link externo, quitar atributo download y abrir en nueva pestaña
+                if (data.about.masterplan_pdf.startsWith('http')) {
+                    downloadBtn.removeAttribute('download');
+                    downloadBtn.target = '_blank';
+                }
+            } else {
+                // Valores por defecto
+                downloadBtn.textContent = 'Descargar Master Plan';
+                downloadBtn.setAttribute('download', '');
+                downloadBtn.target = '_self';
+            }
         } else {
             downloadBtn.style.display = 'none';
         }
@@ -226,6 +241,30 @@ function renderMasterplan(data) {
     } else {
         masterplanIframe.style.display = 'block';
         masterplanIframe.src = masterplanUrl;
+        
+        // Aumentar altura para tours virtuales
+        if (masterplanUrl.includes('lanube360.com')) {
+            masterplanIframe.style.height = '600px';
+
+            // Añadir overlay de interacción para no entorpecer la navegación
+            let interactionOverlay = masterplanContainer.querySelector('.interaction-overlay');
+            if (!interactionOverlay) {
+                interactionOverlay = document.createElement('div');
+                interactionOverlay.className = 'interaction-overlay';
+                interactionOverlay.innerHTML = `
+                    <div class="overlay-content">
+                        <i class="fa fa-mouse-pointer"></i>
+                        <span>Click para interactuar</span>
+                    </div>
+                `;
+                masterplanContainer.appendChild(interactionOverlay);
+
+                interactionOverlay.addEventListener('click', function () {
+                    this.style.opacity = '0';
+                    this.style.pointerEvents = 'none';
+                });
+            }
+        }
 
         if (masterplanImage) {
             masterplanImage.remove();
