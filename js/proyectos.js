@@ -215,13 +215,25 @@ function renderMap(data) {
 
 // Función para renderizar el masterplan
 function renderMasterplan(data) {
+    const masterplanSection = document.querySelector('#masterplan-section');
     const masterplanIframe = document.querySelector('#masterplan-iframe');
     const masterplanContainer = document.querySelector('.masterplan-container');
-    if (!masterplanIframe || !masterplanContainer) {
+
+    if (!masterplanSection || !masterplanIframe || !masterplanContainer) {
         return;
     }
 
     const masterplanUrl = data.about.masterplan_url;
+
+    // Si no hay URL, ocultar toda la sección
+    if (!masterplanUrl || masterplanUrl.trim() === "") {
+        masterplanSection.style.display = 'none';
+        return;
+    }
+
+    // Mostrar la sección por si estaba oculta
+    masterplanSection.style.display = 'block';
+
     const isImage = /\.(jpe?g|png|gif|webp)$/i.test(masterplanUrl);
     let masterplanImage = masterplanContainer.querySelector('.masterplan-image');
 
@@ -267,7 +279,7 @@ function renderMasterplan(data) {
         }
 
         if (masterplanImage) {
-            masterplanImage.remove();
+            masterplanImage.style.display = 'none';
         }
     }
 }
