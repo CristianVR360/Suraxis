@@ -216,8 +216,10 @@ function renderMap(data) {
 // Función para renderizar el masterplan
 function renderMasterplan(data) {
     const masterplanSection = document.querySelector('#masterplan-section');
+    const masterplanTitle = document.querySelector('#masterplan-title');
     const masterplanIframe = document.querySelector('#masterplan-iframe');
     const masterplanContainer = document.querySelector('.masterplan-container');
+    const fullscreenBtn = document.querySelector('#masterplan-fullscreen-btn');
 
     if (!masterplanSection || !masterplanIframe || !masterplanContainer) {
         return;
@@ -233,6 +235,16 @@ function renderMasterplan(data) {
 
     // Mostrar la sección por si estaba oculta
     masterplanSection.style.display = 'block';
+
+    // Actualizar el título si está definido en el JSON
+    if (masterplanTitle) {
+        masterplanTitle.textContent = data.about.masterplan_title || 'Vista 360';
+    }
+
+    // Actualizar el botón de pantalla completa
+    if (fullscreenBtn) {
+        fullscreenBtn.href = masterplanUrl;
+    }
 
     const isImage = /\.(jpe?g|png|gif|webp)$/i.test(masterplanUrl);
     let masterplanImage = masterplanContainer.querySelector('.masterplan-image');
