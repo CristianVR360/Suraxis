@@ -11,7 +11,7 @@
     "assets/proyectos/loshualles/hero2.jpeg"
   ],
   "hero_balloon": {
-    "text": "Valores desde $22.990.000",
+    "text": "Valores desde $26.990.000",
     "color": "#fb5607"
   },
   "about": {
@@ -66,7 +66,9 @@
     "assets/proyectos/loshualles/01.jpeg",
     "assets/proyectos/loshualles/02.jpeg",
     "assets/proyectos/loshualles/03.jpeg",
-    "assets/proyectos/loshualles/04.jpeg"
+    "assets/proyectos/loshualles/04.jpeg",
+    "assets/proyectos/loshualles/05.jpg",
+    "assets/proyectos/loshualles/06.jpg"
   ],
   "form_questions": [
     {
@@ -94,18 +96,13 @@
       "margin_bottom": "30px",
       "options": [
         {
-          "value": "$22.900.000 - $27.990.000",
-          "label": "$22.900.000 - $27.990.000",
+          "value": "$26.990.000 - $31.990.000",
+          "label": "$26.990.000 - $31.990.000",
           "icon": "💵"
         },
         {
-          "value": "$27.990.000 - $31.990.000",
-          "label": "$27.990.000 - $31.990.000",
-          "icon": "💰"
-        },
-        {
-          "value": "$31.990.000 - $34.990.000",
-          "label": "$31.990.000 - $34.990.000",
+          "value": "$29.990.000 - $34.990.000",
+          "label": "$29.990.000 - $34.990.000",
           "icon": "💰"
         }
       ]
