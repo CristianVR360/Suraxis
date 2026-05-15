@@ -28,8 +28,9 @@
       "48 minutos de Lago Ranco"
     ],
     "map_iframe": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29364.524048242056!2d-73.00469821615546!3d-40.48766309041!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96164f0016bf2cf7%3A0x257239a63cb6de44!2sParcelaci%C3%B3n%20Los%20Hualles!5e1!3m2!1ses-419!2scl!4v1765374411595!5m2!1ses-419!2scl",
-    "masterplan_url": "assets/proyectos/loshualles/02.jpeg",
-    "masterplan_pdf": "assets/proyectos/loshualles/plano.pdf"
+    "masterplan_url": "https://www.lanube360.com/los-hualles/",
+    "masterplan_pdf": "https://www.lanube360.com/los-hualles/",
+    "masterplan_button_text": "Nube 360"
   },
   "features_section": {
     "subtitle": "Equipamiento",

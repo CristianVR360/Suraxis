@@ -29,8 +29,9 @@
       "14 minutos de Clínica Alemana"
     ],
     "map_iframe": "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3552.38478164421!2d-73.036068!3d-40.629796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDDCsDM3JzQ3LjMiUyA3M8KwMDInMDkuOCJX!5e1!3m2!1ses!2scl!4v1772217625259!5m2!1ses!2scl",
-    "masterplan_url": "assets/proyectos/tacamo/2.jpg",
-    "masterplan_pdf": "assets/proyectos/tacamo/masterplan.pdf"
+    "masterplan_url": "https://www.lanube360.com/bosque-tacamo/",
+    "masterplan_pdf": "https://www.lanube360.com/bosque-tacamo/",
+    "masterplan_button_text": "Nube 360"
   },
   "features_section": {
     "subtitle": "Equipamiento",
