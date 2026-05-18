@@ -301,11 +301,18 @@ function renderGallery(data) {
     const galleryGrid = document.querySelector('#gallery-grid');
     if (!galleryGrid) return;
 
-    galleryGrid.innerHTML = data.gallery.map((src, index) => `
+    galleryGrid.innerHTML = data.gallery.map((item, index) => {
+        let src = typeof item === 'string' ? item : item.src;
+        let labelHTML = '';
+        if (typeof item === 'object' && item.label) {
+            labelHTML = `<div class="gallery-label" style="position: absolute; top: 15px; left: 15px; background-color: #fb5607; color: white; padding: 6px 12px; border-radius: 4px; font-weight: bold; z-index: 2; font-size: 14px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); text-transform: uppercase;">${item.label}</div>`;
+        }
+        return `
         <div class="gallery-item" data-aos="fade-up" data-aos-delay="${(index + 1) * 100}">
+            ${labelHTML}
             <img src="${src}" alt="${data.name} ${index + 1}" class="gallery-image">
         </div>
-    `).join('');
+    `}).join('');
 
     // Re-inicializar AOS para las nuevas imágenes
     if (typeof AOS !== 'undefined') {
@@ -432,10 +439,12 @@ function renderFormSlideshow(data) {
     const slideshowImages = data.gallery.slice(0, 4);
 
     // Crear el HTML de las imágenes
-    const imagesHTML = slideshowImages.map((src, index) => `
+    const imagesHTML = slideshowImages.map((item, index) => {
+        let src = typeof item === 'string' ? item : item.src;
+        return `
         <img src="${src}" alt="${data.name} Slideshow ${index + 1}" class="slideshow-image ${index === 0 ? 'active' : ''}" 
             style="width: 100%; height: 100%; position: absolute; top: 0; left: 0; opacity: ${index === 0 ? '1' : '0'}; transition: opacity 1s ease-in-out; object-fit: cover;">
-    `).join('');
+    `}).join('');
 
     container.innerHTML = imagesHTML;
 
